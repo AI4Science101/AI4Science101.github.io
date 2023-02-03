@@ -1,16 +1,16 @@
 - label: 
   items:
     - name: Background
-      link: /blogs/announcement/background
+      link: /blogs/announcement#background
 - label: 
   items:
     - name: Mission
-      link: /blogs/announcement/mission
+      link: /blogs/announcement#mission
 - label: 
   items:
     - name: Feedback
-      link: /blogs/announcement/feedback
+      link: /blogs/announcement#feedback
 - label: 
   items:
     - name: Contribution
-      link: /blogs/announcement/contribution
+      link: /blogs/announcement#contribution

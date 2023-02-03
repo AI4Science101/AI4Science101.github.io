@@ -3,7 +3,7 @@ layout: page
 title: AI for Science 101
 subtitle: Building the new knowledge system to support AI for Science
 hero_height: is-medium
-hero_link: /start/
+hero_link: /blogs/
 hero_link_text: Get Started
 show_sidebar: false
 callouts: example_callouts
