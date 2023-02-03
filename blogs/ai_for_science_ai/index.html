@@ -117,11 +117,14 @@
     <div class="menu">
         <p class="menu-label">Scientific Discovery in the era of AI</p>
         <ul class="menu-list">
-  <li><a href="#background">Background</a></li>
-  <li><a href="#aim-and-scope">Aim and Scope</a></li>
-  <li><a href="#acknowledgement">Acknowledgement</a></li>
-  <li><a href="#feedbackcomment-or-join-us">Feedback/comment or Join us</a></li>
-  <li><a href="#contribution-guidelines">Contribution Guidelines</a></li>
+  <li><a href="#manifesto">Manifesto</a></li>
+  <li><a href="#news-you-may-hear-about-ai">News you may hear about AI</a></li>
+  <li><a href="#what-is-artificial-intelligence">What is Artificial Intelligence?</a></li>
+  <li><a href="#what-does-ai-bring-to-the-scientific-community">What does AI bring to the scientific Community?</a></li>
+  <li><a href="#mindsets-for-ai">Mindsets for AI</a></li>
+  <li><a href="#how-does-ai-work">How does AI work?</a></li>
+  <li><a href="#ai-systematic-learning-roadmap">AI Systematic Learning Roadmap</a></li>
+  <li><a href="#references">References</a></li>
 </ul>
     </div>
 </div>
@@ -130,116 +133,597 @@
 
 
 <div class="content">
-    <h1 id="announcing-ai-for-science-blog-series">Announcing AI for Science Blog Series</h1>
+    <h2 id="manifesto">Manifesto</h2>
 
-<h2 id="background">Background</h2>
-<p>With the rapid development of AI, people have started to apply AI methods to almost every field, from natural language processing to computer vision. Recent breakthroughs have demonstrated the power of AI in solving grand challenges in the scientific community. Particular examples include predicting highly accurate protein structures with AlphaFold2, simulating 100 million particle systems with DPMD, imagining the first-ever picture of a black hole, etc. Nevertheless, many researchers in both AI and scientific fields are not able to approach AI for Science research due to many gaps, from limited domain knowledge to the misunderstanding of AI capability. In addition, the educational materials for AI for science are scattered and poorly organized. We announce this initiative (a blog series) to bring people who are interested in AI for Science into the forefront of AI for Science with knowledge collected at different levels, from motivational overview of the field, and lecture-style tutorials on specific topics to knowledge base over common terminologies.</p>
+<p>In recent years, AI has almost been everywhere, from our daily life to life-critical systems. AI for science is a new terminology representing a growing community that attracts more and more people from both AI and science communities to work on scientific discovery with AI. You may wonder what AI really is? How AI for science works? How is it related to my daily work? In this blog, we introduce AI to people who are interested in AI for science (especially from the view of the scientific community) and answer the above questions, including what AI brings to the scientific community, successful examples of AI in scientific applications, AI mindsets in tackling different types of scientific problems.</p>
 
-<h2 id="aim-and-scope">Aim and Scope</h2>
-<p>We are a group of students, researchers, and practitioners who are interested in AI for science and devoted to advancing AI for science as a new field and community. We write blogs to promote AI for science research at different levels from motivations for new researchers, resources for interdisciplinary researchers, etc. As we announce this AI for science blog series, we release two main documents with titles <em>AI for Scientific Discovery</em> and <em>Scientific Discovery in the era of AI</em>, which are different views on AI for science from the AI and scientific communities. In addition, we compile a list of common terminologies in different disciplines as a <em>knowledge base</em>. As our first <em>lecture-style tutorial</em>, we highlight a study of molecular dynamics, one of the most commonly used tools in computational chemistry.</p>
-
-<h2 id="acknowledgement">Acknowledgement</h2>
-<p>The project is a part of the DeepModeling community, an open-source community that aims to define the future of scientific computing together. 
-This effort is primarily led by Yuanqi Du (Cornell), Yingze Wang (UCB), Yanze Wang (PKU), Yibo Wang (DP) and contributors Jiayue Wang (DP), Jiameng Huang (PKU), Arian Jamasb (Cambridge), Jihao Long (Princeton), Guiyu Cao (PKU), Zhenfeng Deng (PKU), Xi Chen (DP), Siyuan Zhou (BFSU), Yinkai Wang (Tufts). We also like to express our gratitude to Weinan E (Princeton \&amp; PKU), Linfeng Zhang (DP), Ping Tuo (DP), Zheng Cheng (AISI), Han Wen (DP), Dongdong Wang (DP), Xinming Tu (UW), Nilay Shah (UCLA), Hannes Stark (MIT), Chaitanya Joshi (Cambridge), Ryan-Rhys Griffiths (Cambridge), Sang Truong (Stanford), Junhan Chang (PKU), Chenbing Wang (PKU), Ziming Liu (MIT), Weiliang Luo (PKU), Zhen Wang (DP), Yucheng Zhang (UTokyo), Ferry Hooft (UvA), Ziyao Li (PKU) for providing expertise, feedback and support.</p>
-
-<h2 id="feedbackcomment-or-join-us">Feedback/comment or Join us</h2>
-<p>Please reach out to us at <a href="mailto:ai4science101@deepmodeling.com">ai4science101@deepmodeling.com</a> or join our <a href="https://join.slack.com/t/aiforscience/shared_invite/zt-1bdof1jmf-YtIjkUVA5DquXguEiOXGPQ">slack channel</a> if you have any feedback or comments.
-As this is a community effort, we welcome anyone interested to join us. Any kind of volunteer work is welcomed, including writing tutorials, drawing illustrations, etc. Do not hesitate to let us know!</p>
-
-<h2 id="contribution-guidelines">Contribution Guidelines</h2>
-<p>We are looking for contributors/experts for specific areas related to AI for Science. The expected contributions include a three-level write-up, a one-paragraph introduction and learning material in section 2 or 3 (depending on the topic in AI or Science), common terminologies and short explanations in section 5, and a specialized chapter similar to section 4. For each specialized chapter, we expect to include (1) target audience and motivations, (2) brief review of literature/history, (3) current advances and future promises, (4) takeaways, and (5) a running sample/demo (optional).</p>
-<h4 id="how-to-get-involved">How to get involved</h4>
-<ul>
-  <li>Github discussion</li>
-</ul>
-
-<p><img src="https://dp-public.oss-cn-beijing.aliyuncs.com/community/pictures/1.PNG" alt="image" /></p>
-
-<p>Welcome everyone to participate in the discussion about AI4Science in the discussion module of our GitHub. The website is <a href="https://github.com/deepmodeling/AI4Science101/discussions">here</a></p>
+<h2 id="news-you-may-hear-about-ai">News you may hear about AI</h2>
 
 <ul>
-  <li>Email</li>
+  <li>
+    <p><a href="https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)">DeepBlue</a> [1] is the first computer chess player to win a game, and the first to win a match, against a reigning world champion under regular time controls. Deep Blue’s victory was considered a milestone in the history of artificial intelligence.</p>
+  </li>
+  <li>
+    <p><a href="https://deepmind.com/research/case-studies/alphago-the-story-so-far">AlphaGo</a> [2] is a computer Go player that defeats a professional human Go player, and defeats a Go world champion for the first time.</p>
+  </li>
+  <li>
+    <p><a href="https://deepmind.com/blog/article/alphafold-a-solution-to-a-50-year-old-grand-challenge-in-biology">AlphaFold2</a> [3] provides a solution to a 50-year-old   grand challenge in biology, determining protein structure given its sequence.</p>
+  </li>
 </ul>
 
-<p>Our email address is <a href="mailto:ai-for-science101@googlegroups.com">ai-for-science101@googlegroups.com</a>. If you are interested in sharing your knowledge about any particular aspect of AI for Science (e.g. a common AI tool, practical guidance, an overview of a scientific topic, etc.), we encourage you to send us an email before you start preparing the material.</p>
+<center> &lt;img src=https://dp-public.oss-cn-beijing.aliyuncs.com/community/Scientific%20Discovery%20in%20the%20era%20of%20AI/astronaut_basketball.png# pic_center width="80%" height="80%"/&gt;  </center>
+
+<p><br /></p>
+<center>Figure 1: DALL·E 2 synthesized image from text description</center>
+<p><br /></p>
 
 <ul>
-  <li>Slack group</li>
+  <li><a href="https://openai.com/dall-e-2/">DALL·E 2</a> (2022) [4] is one of the largest AI systems that can create realistic images and art from a description in human-readable language.</li>
 </ul>
 
-<p>In addition to our reading documents, you can also join the AI4Science101 <a href="https://aiforscience.slack.com/join/shared_invite/zt-1bdof1jmf-YtIjkUVA5DquXguEiOXGPQ#/shared-invite/email">Slack channel</a> to introduce yourself, drop comments/feedback, discuss related material, network with peers, and contribute new material.</p>
+<h2 id="what-is-artificial-intelligence">What is Artificial Intelligence?</h2>
 
-<h4 id="how-to-make-a-new-request">How to make a new request</h4>
+<p>Many words describe areas closely related to AI, sometimes they could be called AI generally, but we illustrate their relationships below. (examples shown in each level are disjoint examples from the overlapping subjects):</p>
+
+<center> &lt;img src=https://dp-public.oss-cn-beijing.aliyuncs.com/community/Scientific%20Discovery%20in%20the%20era%20of%20AI/Flowchart.jpg# pic_center width="30%" height="30%"/&gt;  </center>
+
+<p><br /></p>
+<center>Figure 2: Relationship of words referring to AI</center>
+<p><br /></p>
+
 <ul>
-  <li>Make a new issue</li>
+  <li>
+    <p><strong>Artificial Intelligence</strong> is a generic word that represents intelligence demonstrated by machines which include a broad set of methods from traditional reasoning and planning methods to modern machine learning approaches.</p>
+  </li>
+  <li>
+    <p><strong>Machine Learning</strong> is the study of computer algorithms that can improve automatically through experience and by the use of data. It is seen as a part of artificial intelligence.</p>
+  </li>
+  <li>
+    <p><strong>Deep Learning</strong> is one type of machine learning methods that leverages artificial neural networks with back propagation for representation learning.</p>
+  </li>
+  <li>
+    <p><strong>Statistics</strong> is the discipline that concerns the collection, organization, analysis, interpretation, and presentation of data, which shares great overlaps with AI in terms of methodologies.</p>
+  </li>
+  <li>
+    <p><strong>Data Mining</strong> is a process of extracting and discovering patterns in large data sets involving methods at the intersection of AI, statistics, and database systems (access and storage of data).</p>
+  </li>
 </ul>
 
-<p>If you have any suggestions for any of the documents, have any new requests for material that you are interested in, or you are interested in contributing your knowledge and expertise to this initiative, we encourage you to participate in the AI4Science101 project.</p>
+<h2 id="what-does-ai-bring-to-the-scientific-community">What does AI bring to the scientific Community?</h2>
 
-<p>In order to increase the visibility of all requests and comments, and to facilitate the organization of this project, we recommend that you submit a new issue with examples shown below.</p>
+<center> &lt;img src=https://dp-public.oss-cn-beijing.aliyuncs.com/community/AI4Science101/20220629-180726.jpg# pic_center width="80%" height="80%"/&gt;  </center>
 
-<p><img src="https://dp-public.oss-cn-beijing.aliyuncs.com/community/pictures/2.PNG" alt="image" /></p>
+<p><br /></p>
+<center>Figure 3: Scientific discovery process</center>
+<p><br /></p>
 
-<p>Then you can click the button pointed by the red arrow to open an issue.</p>
+<h4 id="traditional-discovery-process-in-science-a-day-of-a-scientist">Traditional Discovery Process in Science (a day of a scientist)</h4>
 
-<p><img src="https://dp-public.oss-cn-beijing.aliyuncs.com/community/pictures/3.PNG" alt="image" /></p>
-
-<p>After this, you can write your issue in the section inside the red box.</p>
-
-<p><img src="https://dp-public.oss-cn-beijing.aliyuncs.com/community/pictures/4.PNG" alt="image" /></p>
+<ul>
+  <li>
+    <p>Goal - Drug design (AI can help in different phases of drug design)</p>
+  </li>
+  <li>
+    <p>Hypothesis - Hand-crafted design (AI can help search the vast chemical space and propose drug candidates)</p>
+  </li>
+  <li>
+    <p>Simulation - Computer simulation (AI can accelerate and improve the accuracy of computer simulation)</p>
+  </li>
+  <li>
+    <p>Experiment - lab experiment (AI can guide lab experiment design)</p>
+  </li>
+  <li>
+    <p>Result analysis - Statistical analysis (AI can analyze high-dimensional data)</p>
+  </li>
+  <li>
+    <p>Repeat</p>
+  </li>
+  <li>
+    <p>Conclusion &amp; Finding</p>
+  </li>
+</ul>
 
 <table>
+  <thead>
+    <tr>
+      <th>Goals</th>
+      <th>Traditional Methods</th>
+      <th>AI-Based Methods</th>
+    </tr>
+  </thead>
   <tbody>
     <tr>
-      <td>In order to make your request/comments more organized, we hope you help us classify the type of request by stating in the title as one of  [error report</td>
-      <td>question</td>
-      <td>new material request</td>
-      <td>new material contribution</td>
-      <td>others], e.g., [new material request] Protein Structure Prediction Tutorial.</td>
+      <td>Drug Design</td>
+      <td>- Error-prone and intuition-based workflows</td>
+      <td>- AI aided rational drug design</td>
+    </tr>
+    <tr>
+      <td>Virtual Screening</td>
+      <td>- Docking (based on physical scoring functions) <br /> - 2D/3D/based on pharmacophore similarity search</td>
+      <td>- Neural network-based scoring functions <br /> - Generative models</td>
+    </tr>
+    <tr>
+      <td>Lead Optimization</td>
+      <td>- MD-based free energy calculation with empirical force field<br /> - Wet-lab experiment</td>
+      <td>- AI-predicted binding<br />- Simulation with more accurate force fields developed with neural networks  affinity</td>
+    </tr>
+    <tr>
+      <td>Drug Synthesize</td>
+      <td>- Error-prone experiments to find optimal synthesis route and reaction conditions</td>
+      <td>- Retro-synthesis analysis by AI models <br />- AI predicted reaction outcomes<br />- Automated wet-Lab experiment</td>
+    </tr>
+    <tr>
+      <td>ADMET</td>
+      <td>- Experiments</td>
+      <td>- AI-based prediction models</td>
     </tr>
   </tbody>
 </table>
 
-<h4 id="how-to-make-corrections-to-the-docspull-request">How to make corrections to the docs/pull request</h4>
+<center><span id="tab:addlabel" label="tab:addlabel">Table 1: Examples of AI methods in assisting the drug discovery process</span></center>
+<p><br /></p>
 
-<p>If you find any inaccurate expressions/typos/grammatical errors in our documents or you would like to add more relevant content to our documents, you are welcome to submit a pull request on our GitHub. The community’s volunteers will merge your pull request after reviewing your submission.</p>
+<h4 id="even-decades-ago-ai-was-widely-used-in-the-scientific-community">Even decades ago, AI was widely used in the scientific community</h4>
 
-<p>There are two ways for you to modify the document：</p>
+<ul>
+  <li>Example: principal component analysis/PCA, linear regression, Kalman Filter, clustering algorithms, etc.</li>
+</ul>
 
-<p>First, if you just want to modify a sentence or a few sentences, you can do it directly in the document,as shown below.</p>
+<h4 id="data-analysis-empowered-by-modern-ai">Data analysis empowered by modern AI</h4>
 
-<p><img src="https://dp-public.oss-cn-beijing.aliyuncs.com/community/pictures/5.PNG" alt="image" /></p>
+<ul>
+  <li>
+    <p><strong>Why has AI become so popular recently? (What changed the game?)</strong></p>
 
-<p>Then find the place you want to modify and modify it.</p>
+    <ul>
+      <li>
+        <p><strong>Accumulated Big Data</strong></p>
+      </li>
+      <li>
+        <p><strong>Advanced Algorithms (especially Rising of Deep Learning)</strong></p>
+      </li>
+      <li>
+        <p><strong>Improved Computing Power and Storage</strong></p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>What is data?</strong> Data are individual facts, statistics, or items of information, often numeric. In a more technical sense, data are a set of values of qualitative or quantitative variables about one or more persons or objects.</p>
+  </li>
+  <li>
+    <p><strong>What is learning?</strong> Learning refers to machine learning, which is the study of computer algorithms that improve automatically through experience.</p>
+  </li>
+  <li>
+    <p><strong>Why do we learn from data?</strong> Learning from accumulated data enables us to analyze data and execute certain tasks.</p>
+  </li>
+  <li>
+    <p><strong>What are common tasks that could be solved by AI?</strong></p>
 
-<p><img src="https://dp-public.oss-cn-beijing.aliyuncs.com/community/pictures/6.PNG" alt="image" /></p>
+    <ul>
+      <li>
+        <p><strong>Predictive tasks</strong> refer to predicting the value or status of something of interest.</p>
 
-<p>You can then describe your changes at the bottom of the page and submit them.</p>
+        <ul>
+          <li>Example: predict whether an image is a cat or dog.</li>
+        </ul>
+      </li>
+      <li>
+        <p><strong>Generative tasks</strong> refer to generating new data by learning from existing data.</p>
 
-<p><img src="https://dp-public.oss-cn-beijing.aliyuncs.com/community/pictures/7.PNG" alt="image" /></p>
+        <ul>
+          <li>Example: generate new drug-like molecules.</li>
+        </ul>
+      </li>
+      <li>
+        <p><strong>Decision-making tasks</strong> refer to making decisions based on the information provided.</p>
 
-<p>The system will automatically generate a new branch,  and you can click the button in the green box to create a new pull request</p>
+        <ul>
+          <li>Example: decide on trading strategies for the stock market.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>How do we learn from data?</strong> Two essential components of learning from data are (1) data and (2) learning.</p>
 
-<p><img src="https://dp-public.oss-cn-beijing.aliyuncs.com/community/pictures/8.PNG" alt="image" />
-(Note: please commit pr to the <strong>devel branch</strong>)</p>
+    <ul>
+      <li>
+        <p><strong>Data</strong> includes two main components, data points, and labels, data points refer to the single instances of facts, statistics, or items of information, while labels are meaningful and informative tags for the data points. (Note the labels are often expensive to obtain, thus most of the data are unlabelled)</p>
 
-<p>Second, if you want to modify a lot of places, we recommend that you fork to your own repository to modify, and then create a pull request after modifying all the places.</p>
+        <ul>
+          <li>
+            <p>Data Points:(X) cab be in any format, text, image, graph, etc.</p>
 
-<p><img src="https://dp-public.oss-cn-beijing.aliyuncs.com/community/pictures/9.PNG" alt="image" /></p>
+            <p>- Example: images of cats and dogs</p>
+          </li>
+          <li>
+            <p>Labels: (Y) are informative tags</p>
 
-<p>After making changes in your repository, you can create a pull request.</p>
+            <p>- Example: cat or dog</p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p><strong>Learning</strong> essentially involves three main broad categories, <strong>Supervised Learning</strong>, <strong>Unsupervised Learning, and Reinforcement Learning</strong>. We include an additional learning diagram, <strong>Active Learning</strong>, which is commonly used in scientific discovery.</p>
 
-<p><img src="https://dp-public.oss-cn-beijing.aliyuncs.com/community/pictures/10.PNG" alt="image" /></p>
+        <ul>
+          <li>
+            <p><strong>Supervised Learning</strong> learns with labeled data, usually, for predictive tasks, a special case is Semi-supervised Learning where only partial data are labeled, since labels allow us to directly assess the predictive performance of a machine learning model in certain circumstances.</p>
 
-<p>Then you can click the button pointed by the red arrow to open a new pull request.</p>
+            <p>- Example: predicting molecular properties from molecular structures</p>
+          </li>
+          <li>
+            <p><strong>Unsupervised Learning</strong> learns with unlabeled data and discovers patterns from data, usually for clustering, dimensionality reduction, and visualization tasks. Another rising topic, Self-supervised Learning, also requires no labeled data by training models to predict “missing” or masked parts of the input, and it focuses more on predictive tasks similar to supervised learning.</p>
 
-<p><img src="https://dp-public.oss-cn-beijing.aliyuncs.com/community/pictures/11.PNG" alt="image" /></p>
+            <p>- Example 1: clustering galaxy images with similar patterns</p>
 
-<p>It is worth noting that you must switch to the devel branch before submitting the pull request. After collecting and sorting out a certain number of changes, we will merge them into the main branch, as shown below. So when submitting a pull request, please change the comparison branch to the devel branch, as shown below.</p>
+            <p>- Example 2: clustering molecule conformations with similar patterns which reduces the workloads for MD analysis</p>
+          </li>
+          <li>
+            <p><strong>Reinforcement Learning</strong> concerns how intelligent agents ought to take actions in an environment in order to maximize the notion of cumulative reward.</p>
 
-<p><img src="https://dp-public.oss-cn-beijing.aliyuncs.com/community/pictures/12.PNG" alt="image" /></p>
+            <p>- Example: AI agent for nuclear fusion reactor control</p>
+          </li>
+          <li>
+            <p><strong>Active Learning</strong> is a learning algorithm that can request labels (or propose experiments) that provide information that be most useful for it to improve predictive performance. It is also referred to as optimal experimental design.</p>
 
-<p>In addition, due to the problem of markdown format, some formulas of documents on GitHub may appear garbled. Please refer to the content on the project <a href="ai4science101.deepmodeling.com">website</a></p>
+            <p>- Example: uncertainty estimation to guide the experiment/data collection</p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>How do we collect or represent data?</strong></p>
+
+    <ul>
+      <li>
+        <p><strong>Representation Learning</strong> is a set of techniques that allows a system to automatically discover the representations needed for feature detection or classification from raw data. This replaces manual feature engineering and allows a machine to both learn the features and use them to perform a specific task.</p>
+
+        <ul>
+          <li>
+            <p><strong>Tabular Representation (columns are features)</strong></p>
+
+            <p>- Example: weather data stored in tables</p>
+          </li>
+          <li>
+            <p><strong>Grid Representation (stored in grids)</strong></p>
+
+            <p>- Example: cell images</p>
+          </li>
+          <li>
+            <p><strong>Sequence Representation (stored in sequences)</strong></p>
+
+            <p>- Example: genes</p>
+          </li>
+          <li>
+            <p><strong>Graph Representation (stored in nodes and edges)</strong></p>
+
+            <p>- Example: molecular graphs</p>
+          </li>
+          <li>
+            <p><strong>Geometry Representation (stored in 3D geometries)</strong></p>
+
+            <p>- Example: protein structures</p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Could we generate new data?</strong></p>
+
+    <ul>
+      <li>
+        <p><strong>Generative Modeling</strong> learns the distributions of observed samples and generates unseen samples.</p>
+
+        <ul>
+          <li>Example: goal-oriented molecule generation, protein conformations sampling</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="mindsets-for-ai">Mindsets for AI</h2>
+
+<h4 id="key-abilities-of-ai">Key abilities of AI</h4>
+
+<ul>
+  <li>
+    <p><strong>Automated feature learning.</strong> Instead of traditionally manual design of features for various tasks, AI takes data in raw formats and automatically learns the features while optimizing the task objectives.</p>
+  </li>
+  <li>
+    <p><strong>Learning from big data</strong>. AI can learn from the accumulated “big” data in many domains that traditional methods are not capable of.</p>
+  </li>
+  <li>
+    <p><strong>Inductive bias</strong> (e.g. symmetry preservation). AI models are flexible and can be designed to respect natural laws such as symmetries.</p>
+  </li>
+  <li>
+    <p><strong>Generalizability</strong> (to unseen data). After training the AI model, it is expected to generalize to new scenarios and unseen data. In some scenarios, it is also expected to generalize to new dataset or similar task after training with one general dataset or task.</p>
+  </li>
+  <li>
+    <p><strong>Fit high-dimensional function</strong>. AI models can fit complex functions, such as free energy surface, Schrodinger equation, etc.</p>
+  </li>
+  <li>
+    <p><strong>Differentiable programming</strong>. AI brings a new wave of differentiable programming and pushes forward the development of many tools for automatic differentiation, such as PyTorch, Tensorflow, Theano, etc.</p>
+  </li>
+</ul>
+
+<h4 id="limitations-of-ai">Limitations of AI</h4>
+
+<ul>
+  <li>
+    <p><strong>Overfitting</strong>. AI models sometimes overfit into the given data set which hinders their abilities to generalize to other datasets.</p>
+  </li>
+  <li>
+    <p><strong>Data requirement.</strong> No free lunch, AI models usually rely on large-scale datasets.</p>
+  </li>
+  <li>
+    <p><strong>Computational cost.</strong> AI models usually consume plenty of computational resources, especially with the growth of the model and data sizes.</p>
+  </li>
+  <li>
+    <p><strong>Explainability.</strong> AI models usually have poor explainability and are thus considered “black-boxes”, though it is an active area of research.</p>
+  </li>
+</ul>
+
+<h2 id="how-does-ai-work">How does AI work?</h2>
+
+<center> &lt;img src=https://dp-public.oss-cn-beijing.aliyuncs.com/community/Scientific%20Discovery%20in%20the%20era%20of%20AI/AI_work.jpg# pic_center width="90%" height="90%"/&gt;  </center>
+
+<p><br /></p>
+<center>Figure 4: AI pipeline</center>
+<p><br /></p>
+
+<h4 id="typical-pipeline">Typical pipeline</h4>
+
+<ul>
+  <li>
+    <p><strong>Problem Formulation</strong> is an essential step to formulate a problem in a “machine learning language”</p>
+
+    <ul>
+      <li>
+        <p>What is the input? What is the output? What is the task?</p>
+
+        <ul>
+          <li>
+            <p>Input: images of cats and dogs;</p>
+          </li>
+          <li>
+            <p>Output: whether the images are cats or dogs;</p>
+          </li>
+          <li>
+            <p>Task: Predictive or Classification task.</p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>What is the input representation? What is the output representation? What is the objective function?</p>
+
+        <ul>
+          <li>
+            <p>Input representation: Images.</p>
+          </li>
+          <li>
+            <p>Output representation: Scalars.</p>
+          </li>
+          <li>
+            <p>Objective function: measurement between the predicted labels and ground truth labels (cross-entropy loss is very common for classification tasks)</p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Data Preparation/Processing</strong> is conducted after problem formulation. The data could be accumulated, or specifically curated for the formulated problem. It is utilized to collect and manipulate the data to produce meaningful information under the formulation of the problem.</p>
+  </li>
+  <li>
+    <p><strong>Data Representation</strong> is another important step to represent data in a machine-readable (or numeric) format. The type of representation is also critical to model choice and which type of specific information it aims to capture.</p>
+  </li>
+  <li>
+    <p><strong>Model Choice</strong> is another important step in the pipeline which determines the key model used to learn to fulfill the task. It mainly includes traditional machine learning models and deep learning models. In addition to the model choice itself, for a model to learn from data efficiently, we often need to design a measurement or objective function such that the model can be aware of how good or bad it is performing, then an optimizer is needed to adjust the model accordingly.</p>
+
+    <ul>
+      <li>
+        <p><strong>Traditional ML Models</strong> (Modeling data w/ limited structured inductive bias (i.e. data is not always assumed to be in certain structure like graph))</p>
+
+        <ul>
+          <li><strong>Random Forests, Support Vector Machine, Gradient Boosting,</strong> etc.</li>
+        </ul>
+      </li>
+      <li>
+        <p><strong>Deep Learning Models</strong> (Modeling data w/ structured inductive bias)</p>
+
+        <ul>
+          <li>
+            <p><strong>Multi-layer Perceptron (MLP)</strong> models all types of data (without structure inductive bias)</p>
+          </li>
+          <li>
+            <p><strong>Convolutional Neural Network (CNN)</strong> models grid data</p>
+          </li>
+          <li>
+            <p><strong>Recurrent Neural Network (RNN)</strong> models sequence data</p>
+          </li>
+          <li>
+            <p><strong>Graph Neural Network (GNN)</strong> models graph data</p>
+          </li>
+          <li>
+            <p><strong>Transformer</strong> models sequence data originally, but later adapted to model all types of data</p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p><strong>Objective/Loss Function</strong></p>
+
+        <ul>
+          <li>
+            <p>Mean-squared error loss for regression task</p>
+          </li>
+          <li>
+            <p>Cross-entropy loss for classification task</p>
+          </li>
+          <li>
+            <p>More to read: Common Loss functions in machine learning [5]</p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p><strong>Optimizer</strong> is the algorithm used to minimize the objective/loss function and update the parameters of the machine learning model. More to read [6]</p>
+
+        <ul>
+          <li>Common optimizers include SGD, Adam, RMSProp, etc.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <p><strong>Evaluation/Result Analysis</strong> is conducted to evaluate the performance of the model and provide feedback to improve the whole pipeline.</p>
+
+    <ul>
+      <li>
+        <p>Training/Validation/Testing Set Evaluation (Common procedure: tuning parameters on the training set, select the parameters that have the best performance on the validation set and report the result on the testing set to mimic the real-world scenario when unseen/new data come as the testing set)</p>
+      </li>
+      <li>
+        <p>Evaluation Metrics measure the performance of the model.</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<center> &lt;img src=https://dp-public.oss-cn-beijing.aliyuncs.com/community/Scientific%20Discovery%20in%20the%20era%20of%20AI/Protain_S_P.png# pic_center width="90%" height="90%"/&gt;  </center>
+
+<p><br /></p>
+<center>Figure 5: How AI predicts protein structures by AlphaFold2</center>
+<p><br /></p>
+
+<h4 id="real-world-example-protein-structure-prediction---alphafold2">Real-world Example (Protein Structure Prediction - Alphafold2)</h4>
+
+<ul>
+  <li>
+    <p>Problem Formulation</p>
+
+    <ul>
+      <li>
+        <p>Input: protein sequence (a sequence of N amino acids)</p>
+      </li>
+      <li>
+        <p>Output: protein structure (coordinates of amino acids in 3D space -&gt; (N \times 3))</p>
+      </li>
+      <li>
+        <p>Task: predictive or regression task</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Data Preparation</p>
+
+    <ul>
+      <li>
+        <p>Accumulated protein structures from Protein Data Bank (PDB) (sequence, structure pairs)</p>
+      </li>
+      <li>
+        <p>Searching Multiple Sequence Alignment (MSA) for each protein sequence (demonstrated to help with learning coevolutionary information)</p>
+      </li>
+      <li>
+        <p>Accumulated protein templates (existing templates for some proteins)</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Model Choice - Deep Learning Models</p>
+
+    <ul>
+      <li>
+        <p>Transformers in modeling MSA embeddings and producing pairwise and single-sequence features</p>
+      </li>
+      <li>
+        <p>Transformers in modeling pairwise and single-sequence features and output structures</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Objective Function</p>
+
+    <ul>
+      <li>Cross-entropy loss, mean-squared-error loss, etc.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Optimizer - Adam Optimizer</p>
+  </li>
+  <li>
+    <p>Evaluation/Result Analysis</p>
+
+    <ul>
+      <li>
+        <p>TMScore, lDDT (measurement between two structures)</p>
+      </li>
+      <li>
+        <p>plDDT, pTMScore (predicted lDDT/TMScore for uncertainty estimation)</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="ai-systematic-learning-roadmap">AI Systematic Learning Roadmap</h2>
+
+<ul>
+  <li>
+    <p><a href="https://www.coursera.org/learn/ai-for-everyone">AI for Everyone</a></p>
+  </li>
+  <li>
+    <p><a href="https://cs50.harvard.edu/x/2022/">Python (Programming)</a></p>
+  </li>
+  <li>
+    <p><a href="https://ocw.mit.edu/courses/mathematics/18-01sc-single-variable-calculus-fall-2010/syllabus/">Calculus</a></p>
+  </li>
+  <li>
+    <p><a href="https://ocw.mit.edu/courses/mathematics/18-06sc-linear-algebra-fall-2011/syllabus/">Linear Algebra</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.eecs70.org/">Discrete Math</a></p>
+  </li>
+  <li>
+    <p><a href="https://inst.eecs.berkeley.edu/~ee126/fa20/content.html">Probabilistic Statistics</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.coursera.org/learn/machine-learning">Machine Learning</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.coursera.org/specializations/deep-learning">Deep Learning</a></p>
+  </li>
+  <li>
+    <p>Specialized/Advances Topics</p>
+
+    <ul>
+      <li>
+        <p><a href="http://web.stanford.edu/class/cs224w/">Machine Learning with Graphs</a></p>
+      </li>
+      <li>
+        <p><a href="http://cs231n.stanford.edu/">Computer Vision</a></p>
+      </li>
+      <li>
+        <p><a href="http://rail.eecs.berkeley.edu/deeprlcourse/">Reinforcement Learning</a></p>
+      </li>
+      <li>
+        <p>More…</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="references">References</h2>
+
+<p>[1] Wikipedia Contributors. Deep learning, 05 2019.</p>
+
+<p>[2] DeepMind. Alphago: the story so far, 2016.</p>
+
+<p>[3] The AlphaFold Team. Alphafold: a solution to a 50-year-old grand challenge in biology, 11 2020.</p>
+
+<p>[4] OpenAI. Dall·e 2, Apr 2022</p>
+
+<p>[5] Ravindra Parmar. Common loss functions in machine learning, 09 2018.</p>
+
+<p>[6] Sebastian Ruder. An overview of gradient descent optimization algorithms, 01 2016.</p>
 
 </div>
                 </div>
