@@ -152,10 +152,8 @@
 
 <p>Gaussian processes (GPs) [1] are a central model in probabilistic machine learning with particularly favourable properties for uncertainty quantification and Bayesian optimisation [2, 3, 4]. To date, however there has been little investigation into GPs applied to conventional representations of molecules such as fingerprints [5], SMILES strings [6, 7] and graphs. In this blogpost, I showcase some of the use-cases for GPs in chemistry using GAUCHE [8, 9], an open-source library implementing GPs kernels that allow GPs to operate on molecular representations. Such use-cases include the representation of model uncertainty in virtual screening where one wishes to prioritise molecules or materials for laboratory synthesis based on machine learning property prediction. In this setting, using model uncertainty to assess how likely the model is to be wrong about its prediction can expedite discovery efforts.</p>
 
-<p align="center">
-<img src="./molgp.png#center" />
-</p>
-<p align="center">Figure 1: Gaussian process regression over molecular space.</p>
+<center><img src="/img/Gaussian_Processes/molgp.png" width="40%" height="40%" /></center>
+<center>Figure 1: Gaussian process regression over molecular space.</center>
 
 <h2 id="gaussian-processes">Gaussian Processes</h2>
 
@@ -166,43 +164,17 @@
 <p>In analogy to a neural network, the GPs prior encodes the hypothesis space (set of functions that could explain the data) of the
 GPs in much the same way as the choice of architecture (number of layers, activation functions) defines the hypothesis space of a neural network. While these hypothesis spaces are often sufficiently broad to encompass a wide range of functions, it can sometimes be difficult to find (learn) these functions given a dataset; this is the machine learning model optimisation problem and the choice of initial GPs prior or network architecture can make this optimisation problem easier or harder. In continuous spaces, an object called the GPs kernel plays a central role in determining the nature of the GPs prior hypothesis space. As an example, in , the squared exponential kernel (SQE) encodes a hypothesis space that prioritises smoother functions relative to the Matérn kernel.</p>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center"><img src="sqexp_small_length.png" alt="" /></th>
-      <th style="text-align: center"><img src="matern52_small_length.png" alt="" /></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center"><b>(a) SQE</b></td>
-      <td style="text-align: center"><b> (b) Matérn 5/2 </b></td>
-    </tr>
-  </tbody>
-</table>
+<center><img src="/img/Gaussian_Processes/sqexp_small_length.png" width="40%" height="20%" />
+<img src="/img/Gaussian_Processes/matern52_small_length.png" width="40%" height="20%" /></center>
 
-<p>Figure 2: A comparison of the SQE and Matérn 5/2 kernels. Shading indicates a GPs prior distribution over functions (defined by the choice of kernel) and the solid red and blue lines are individual draws from the distribution over functions. The SQE kernel represents a hypothesis space containing smoother functions relative to the Matérn 5/2 kernel. Reprinted with permission from [11]</p>
+<center>Figure 2: A comparison of the SQE and Matérn 5/2 kernels. Shading indicates a GPs prior distribution over functions (defined by the choice of kernel) and the solid red and blue lines are individual draws from the distribution over functions. The SQE kernel represents a hypothesis space containing smoother functions relative to the Matérn 5/2 kernel. Reprinted with permission from [11].</center>
 
 <p>Additionally, GPs kernels possess hyperparameters that control the behaviour of the functions and may be learned from the data. As an example, in Figure 3 the lengthscale hyperparameter controls how quickly the functions vary across the input space.</p>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center"><img src="sqexp_small_length.png" alt="" /></th>
-      <th style="text-align: center"><img src="sqexp_long_length.png" alt="" /></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center"><b>(a) SQE small lengthscale</b></td>
-      <td style="text-align: center"><b> (b) SQE large lengthscale </b></td>
-    </tr>
-  </tbody>
-</table>
+<center><img src="/img/Gaussian_Processes/sqexp_small_length.png" width="40%" height="20%" />
+<img src="/img/Gaussian_Processes/sqexp_long_length.png" width="40%" height="20%" /></center>
 
-<p align="center">
-Figure 3: GPs with small and large lengthscale hyperparameters.
-</p>
+<center>Figure 3: (a) SQE small lengthscale, (b) SQE large lengthscale.</center>
 
 <h3 id="why-should-we-fit-a-gaussian-process-instead-of-a-neural-network">Why Should We Fit a Gaussian Process Instead of a Neural Network?</h3>
 
@@ -213,15 +185,12 @@ Figure 3: GPs with small and large lengthscale hyperparameters.
 
 <p>These properties make GPs ideal for uncertainty quantification and as surrogate models for Bayesian optimisation BO, an algorithm that is showing promise for scientific discovery in the search for novel molecules[14], materials, and optimal chemical reaction conditions [15,16]. An illustration of the GP’s ability to represent uncertainty is given in Figure 4 where one can observe how the GP updates its predictive uncertainty based on the data it has observed. This property makes GPs useful for a wide range of chemical applications.</p>
 
-<p><img src="post1.png" width="415" /> <img src="post2.png" width="486" /></p>
+<center><img src="/img/Gaussian_Processes/post1.png" width="40%" height="20%" />
+<img src="/img/Gaussian_Processes/post2.png" width="40%" height="20%" /></center>
 
-<p align="center">
-<img src="post4.png" width="500" />
-</p>
-<p align="center">
+<center><img src="/img/Gaussian_Processes/post4.png" width="40%" height="40%" /></center>
 
-Figure 4: An illustration of the GP posterior update on fitting 1, 2 and 4 data points (Blue). The posterior distribution encodes the distribution over possible functions that may explain the data. Reprinted with permission from [11].
-</p>
+<center>Figure 4: An illustration of the GP posterior update on fitting 1, 2 and 4 data points (Blue). The posterior distribution encodes the distribution over possible functions that may explain the data. Reprinted with permission from [11].</center>
 
 <h3 id="adapting-gaussian-processes-for-chemistry">Adapting Gaussian Processes for Chemistry</h3>
 
@@ -235,12 +204,10 @@ Figure 4: An illustration of the GP posterior update on fitting 1, 2 and 4 data 
 
 <p>It is well known that machine learning models can be employed as molecular property predictors for virtual screening. In addition to providing a predicted property value, however, models can also provide an uncertainty estimate, in other words a measure of the prediction confidence. GPs are typically some of the best-calibrated probabilistic models due to the facility to perform exact Bayesian inference. In order to empirically assess the quality of molecular gp uncertainty estimates, we use a diagnostic tool known as a confidence-error curve [17] (also featured in the Jupyter notebook demo). The confidence-error curve for the SMILES string kernel is given in Figure 5. The TLDR is that the model achieves smaller prediction error on test molecules for which it has higher confidence.</p>
 
-<p align="center">
-  <img src="confidence_curve.png" />
+<center><img src="/img/Gaussian_Processes/confidence_curve.png" width="40%" height="40%" /></center>
 
-Figure 5: GP confidence error curve. The x-axis, Confidence Percentile, ranks each test datapoint prediction according to the GP predictive variance. For example, molecules that reside above the 80th confidence percentile will correspond to the 20\% of test set molecules with the lowest GP predictive uncertainty. The prediction error at each confidence percentile is then measured over 20 random train/test splits (the standard error over the random splits is plotted in the figure above) to gauge if the model’s confidence is correlated with the prediction error. This figure shows that the SMILES GP's uncertainty estimates are positively correlated with the prediction error. As such, it is possible that model uncertainty could be used as a component in the decision-making process for prioritising molecules for laboratory synthesis.
-A natural extension to the idea of using model uncertainty to prioritise the immediate next choice of molecule for laboratory synthesis is to automate a sequence of choices, feeding each queried molecule back into the GP model to provide a better model for the next step in an iterative fashion. This is the idea behind Bayesian optimisation.
-</p>
+<p>Figure 5: GP confidence error curve. The x-axis, Confidence Percentile, ranks each test datapoint prediction according to the GP predictive variance. For example, molecules that reside above the 80th confidence percentile will correspond to the 20\% of test set molecules with the lowest GP predictive uncertainty. The prediction error at each confidence percentile is then measured over 20 random train/test splits (the standard error over the random splits is plotted in the figure above) to gauge if the model’s confidence is correlated with the prediction error. This figure shows that the SMILES GP’s uncertainty estimates are positively correlated with the prediction error. As such, it is possible that model uncertainty could be used as a component in the decision-making process for prioritising molecules for laboratory synthesis.
+A natural extension to the idea of using model uncertainty to prioritise the immediate next choice of molecule for laboratory synthesis is to automate a sequence of choices, feeding each queried molecule back into the GP model to provide a better model for the next step in an iterative fashion. This is the idea behind Bayesian optimisation.</p>
 
 <p>A natural extension to the idea of using model uncertainty to prioritise the immediate next choice of molecule for laboratory synthesis is to automate a sequence of choices, feeding each queried molecule back into the GP model to provide a better model for the next step in an iterative fashion. This is the idea behind Bayesian optimisation.</p>
 
@@ -258,11 +225,9 @@ A natural extension to the idea of using model uncertainty to prioritise the imm
   <li>Noise: Evaluation of a molecule $\mathbf{x}$ is a noisy process.</li>
 </ol>
 
-<p align="center">
-  <img src="bayesopt_illustration5.png" />
-</p>
+<center><img src="/img/Gaussian_Processes/bayesopt_illustration5.png" width="40%" height="40%" /></center>
 
-<p>Figure 6: An illustration of the Bayesian optimisation algorithm. Reprinted with permission from [11].</p>
+<center>Figure 6: An illustration of the Bayesian optimisation algorithm. Reprinted with permission from [11].</center>
 
 <p>BO is a solution method for such black-box optimisation problems comprised of a probabilistic surrogate model and an acquisition function. The surrogate model is fit to a dataset of pointwise observations from the unknown black-box function and the acquisition function suggests new inputs to query based on the model’s predictions and uncertainties (exploitation vs. exploration). The BO algorithm is illustrated graphically in Figure 6.</p>
 

@@ -301,11 +301,8 @@
 <ul>
   <li>Molecules have an associated energy, which can be divided to potential energy (denoted by $V$) and kinetic energy (denoted by $T$). Potential energy is related to the coordinates of the atoms in molecules, while kinetic energy is related to the velocity (or momentum) of the atoms.</li>
 </ul>
-
 <center>
-\begin{aligned}
-E &amp;= T + V  \\
-\end{aligned} 
+    $E = T + V$
 </center>
 
 <center>
@@ -334,7 +331,7 @@ F_i &amp;= -\frac{\partial E}{\partial q_i} =  - \frac{\partial V}{\partial q_i}
 
 <p>How do we get the potential energy surface? The most straightforward way is to calculate the energy by solving Schrödinger equations, and then calculate forces from derivatives. Then our simulation process becomes:</p>
 
-<p><img src="https://dp-public.oss-cn-beijing.aliyuncs.com/community/molecular_dynamics/force_field.jpg" alt="Force field flow chart." /></p>
+<center> <img src="/img/Molecular_Dynamics/md_ff.jpeg" pic_center="" width="90%" height="90%" />  </center>
 
 <p>Every time we get a new position in the coordinate space, we need to solve a new set of Schrödinger equations. It is very time-consuming and laborious for complex systems. However, to calculate the motion of hydrogen atoms, we don’t need to know the exact information of the electrons in hydrogen atom, but only the position information of the nucleus. Thus we need <strong>the Born-Oppenheimer approximation</strong>.</p>
 
@@ -405,11 +402,12 @@ U &amp;=\sum_{\text {bonds }} \frac{1}{2} k_{b}\left(r-r_{0}\right)^{2}+\sum_{\t
 <p>Now, we have modeled a hydrogen molecule. For simplicity, let the force constant of the hydrogen molecule be $0.1 kJ/\mathring A^2$. Then let the equilibrium bond length be $0.5\mathring A$, and the mass of the hydrogen atom is assumed to be (1) (just for demonstration).</p>
 
 <ul>
-  <li>
-    <p>To start the simulation, we also need the initial conditions (initial conformation and initial velocity). Also for simplicity, we assume that the coordinates of the two atoms are [0.7, 0, 0], [0, 0, 0] (Unit: angstrom), and the velocities are [-0.1, 0, 0], [0.1, 0 , 0] (Unit: angstrom/fs)</p>
+  <li>To start the simulation, we also need the initial conditions (initial conformation and initial velocity). Also for simplicity, we assume that the coordinates of the two atoms are [0.7, 0, 0], [0, 0, 0] (Unit: angstrom), and the velocities are [-0.1, 0, 0], [0.1, 0 , 0] (Unit: angstrom/fs)</li>
+</ul>
 
-    <p><img src="https://dp-public.oss-cn-beijing.aliyuncs.com/community/molecular_dynamics/example1.jpg" alt="image" /></p>
-  </li>
+<center> <img src="/img/Molecular_Dynamics/example1.jpeg" pic_center="" width="90%" height="90%" />  </center>
+
+<ul>
   <li>
     <p>Next, let’s set the simulation parameters: since we calculate the differential equation numerically, we need to give the minimum simulation time interval, which is generally set to be 2 fs.(which is actually the grid size for time dimension in finite difference method).</p>
   </li>
@@ -475,7 +473,7 @@ a_x &amp;= \frac{F}{m}=0.05 \\
   </li>
 </ol>
 
-<p><img src="https://dp-public.oss-cn-beijing.aliyuncs.com/community/molecular_dynamics/example2.jpg" alt="image" /></p>
+<center> <img src="/img/Molecular_Dynamics/example2.jpeg" pic_center="" width="90%" height="90%" />  </center>
 
 <h3 id="results">Results</h3>
 
@@ -570,11 +568,9 @@ a_x &amp;= \frac{F}{m}=0.05 \\
   </li>
 </ol>
 
-<center> &lt;img src=https://dp-public.oss-cn-beijing.aliyuncs.com/community/molecular_dynamics/periddic_system.jpg# pic_center width="30%" height="30%"/&gt;  </center>
+<center> <img src="/img/Molecular_Dynamics/periodic_system.jpeg" pic_center="" width="30%" height="30%" />  </center>
 
-<p><br /></p>
 <center>Figure 1: Periodic system</center>
-<p><br /></p>
 
 <ol>
   <li>
