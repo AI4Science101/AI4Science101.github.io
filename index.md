@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Therapeutics Data Commons
-subtitle: Artificial intelligence foundation for therapeutic science
+title: AI for Science 101
+subtitle: Building the new knowledge system to support AI for Science
 hero_height: is-medium
 hero_link: /start/
 hero_link_text: Get Started
@@ -29,56 +29,6 @@ hero_image: /hero.jpg
 ```
 -->
 
-[comment]: <> (<div class="container">)
-
-[comment]: <> (        <div class="columns is-vcentered">)
-
-[comment]: <> (            <div class="column is-10 is-offset-1 has-text-centered">)
-
-[comment]: <> (                <p class="is-size-4"> Loading a dataset in TDC: </p>)
-
-[comment]: <> (            </div>)
-
-[comment]: <> (        </div>)
-
-[comment]: <> (</div>)
-
-[comment]: <> (<div class="container">)
-
-[comment]: <> (    <div class="columns is-vcentered">)
-
-[comment]: <> (        <div class="column is-12 is-size-2 has-text-centered">)
-
-[comment]: <> (        </div>)
-
-[comment]: <> (    </div>)
-
-[comment]: <> (</div>)
-
-[comment]: <> (<div class="container">)
-
-[comment]: <> (    <div class="columns is-vcentered">)
-
-[comment]: <> (        <div class="column is-12 is-size-2 has-text-centered">)
-
-[comment]: <> (        </div>)
-
-[comment]: <> (    </div>)
-
-[comment]: <> (</div>)
-
-
-[comment]: <> (```python)
-
-[comment]: <> (from tdc.single_pred import ADME)
-
-[comment]: <> (data = ADME&#40;name='Caco2_Wang'&#41;)
-
-[comment]: <> (df = data.get_data&#40;&#41;)
-
-[comment]: <> (split = data.get_split&#40;&#41;)
-
-[comment]: <> (```)
 
 <div class="container">
     <div class="columns is-vcentered">

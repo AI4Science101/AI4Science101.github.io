@@ -1,6 +1,6 @@
 ---
 layout: page
-title: TDC Team
+title: AI4Science Team
 subtitle: 
 sponsors: my_sponsors
 show_sidebar: false
