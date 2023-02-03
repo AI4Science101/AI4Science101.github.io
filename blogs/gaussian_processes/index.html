@@ -148,7 +148,10 @@
 
 
 <div class="content">
-    <h2 id="introduction">Introduction</h2>
+    <script type="text/javascript" async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<h2 id="introduction">Introduction</h2>
 
 <p>Gaussian processes (GPs) [1] are a central model in probabilistic machine learning with particularly favourable properties for uncertainty quantification and Bayesian optimisation [2, 3, 4]. To date, however there has been little investigation into GPs applied to conventional representations of molecules such as fingerprints [5], SMILES strings [6, 7] and graphs. In this blogpost, I showcase some of the use-cases for GPs in chemistry using GAUCHE [8, 9], an open-source library implementing GPs kernels that allow GPs to operate on molecular representations. Such use-cases include the representation of model uncertainty in virtual screening where one wishes to prioritise molecules or materials for laboratory synthesis based on machine learning property prediction. In this setting, using model uncertainty to assess how likely the model is to be wrong about its prediction can expedite discovery efforts.</p>
 
@@ -217,12 +220,12 @@ A natural extension to the idea of using model uncertainty to prioritise the imm
 
 \[\mathbf{x}^{\star} = \arg\max_{\mathbf{x} \in \mathcal{X}} f(\mathbf{x})\]
 
-<p>where $f:\mathcal{X} \rightarrow\mathbb{R}$ is a function over an input space $\mathcal{X}$. $\mathcal{X}$ is discrete for molecular representations such as graphs and strings. Equation above is a black-box optimisation problem when the following properties hold:</p>
+<p>where \(f:\mathcal{X} \rightarrow\mathbb{R}\) is a function over an input space \(\mathcal{X}\). \(\mathcal{X}\) is discrete for molecular representations such as graphs and strings. Equation above is a black-box optimisation problem when the following properties hold:</p>
 
 <ol>
-  <li>Black-Box Objective: The analytic form of $f$ and its gradients are unavailable. We may, however, evaluate $f$ pointwise anywhere in the input space $\mathcal{X}$.</li>
-  <li>Expensive Evaluations: Evaluating $f(\mathbf{x})$ at a given molecule $\mathbf{x}$ takes a long time or incurs a large financial penalty.</li>
-  <li>Noise: Evaluation of a molecule $\mathbf{x}$ is a noisy process.</li>
+  <li>Black-Box Objective: The analytic form of \(f\) and its gradients are unavailable. We may, however, evaluate \(f\) pointwise anywhere in the input space \(\mathcal{X}\).</li>
+  <li>Expensive Evaluations: Evaluating \(f(\mathbf{x})\) at a given molecule \(\mathbf{x}\) takes a long time or incurs a large financial penalty.</li>
+  <li>Noise: Evaluation of a molecule \(\mathbf{x}\) is a noisy process.</li>
 </ol>
 
 <center><img src="/img/Gaussian_Processes/bayesopt_illustration5.png" width="40%" height="40%" /></center>
