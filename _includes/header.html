@@ -27,6 +27,7 @@
                     {% else %}
                     <a href="{{ item.link | prepend: site.baseurl }}" class="navbar-item {% if item.link == page.url %}is-active{% endif %}">{{ item.name }}</a>
                     {% endif %}
+                {% endfor %}
             </div>
 
         </div>
