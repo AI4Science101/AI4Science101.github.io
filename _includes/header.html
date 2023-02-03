@@ -27,12 +27,6 @@
                     {% else %}
                     <a href="{{ item.link | prepend: site.baseurl }}" class="navbar-item {% if item.link == page.url %}is-active{% endif %}">{{ item.name }}</a>
                     {% endif %}
-                {% endfor %}
-                <a href="https://arxiv.org/abs/2102.09548" class="navbar-item">NeurIPS Paper</a>
-                <a href="https://www.nature.com/articles/s41589-022-01131-2" class="navbar-item">Nat Chem Bio Paper</a>
-                <a href="https://tdc.readthedocs.io" class="navbar-item">Docs</a>
-                <a href="https://github.com/mims-harvard/TDC" class="navbar-item">GitHub</a>
-                {% endif %}
             </div>
 
         </div>
