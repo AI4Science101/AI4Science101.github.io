@@ -1,0 +1,25 @@
+{% assign menus = site.data.[page.menubar] %}
+
+<aside class="menu">
+{% for menu in menus %}
+    <p class="menu-label">{{ menu.label }}</p>
+    <ul class="menu-list">
+        {% for item in menu.items %}
+        <li>
+            <a href="{{ item.link | prepend: site.baseurl }}" class="{% if item.link == page.url %}is-active{% endif %}"><strong>{{ item.name }}</strong></a>
+            {% if item.items %}
+            <ul>
+                {% for subitem in item.items %}
+                {% if subitem.abbv %}
+                <li><a href="{{ subitem.link | prepend: site.baseurl }}" class="{% if subitem.link == page.url %}is-active{% endif %}"><code>{{ subitem.abbv }}</code> {{ subitem.name }}</a></li>
+                {% else %}
+                <li><a href="{{ subitem.link | prepend: site.baseurl }}" class="{% if subitem.link == page.url %}is-active{% endif %}">{{ subitem.name }}</a></li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </li>
+        {% endfor %}    
+    </ul>
+{% endfor %}
+</aside>

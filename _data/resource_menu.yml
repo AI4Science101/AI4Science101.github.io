@@ -1,0 +1,19 @@
+- label: 
+  items:
+    - name: Resources
+      link: /resources/overview/
+      items:
+        - name: Biomedical Knowledge Graph
+          abbv: BioKG
+          link: /resources/biokg/
+- label: 
+  items:
+    - name: Others
+      link: /overview/
+      items:
+        - name: Single-instance Prediction Problem
+          link: /single_pred_tasks/overview/
+        - name: Multi-instance Prediction Problem
+          link: /multi_pred_tasks/overview/
+        - name: Generation Problem
+          link: /generation_tasks/overview/

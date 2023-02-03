@@ -1,0 +1,26 @@
+- label: 
+  items:
+    - name: Generation Problem
+      link: /generation_tasks/overview/
+      items:
+        - name: "Molecule Generation"
+          abbv: MolGen
+          link: /generation_tasks/molgen/
+        - name: "Retrosynthesis Prediction"
+          abbv: RetroSyn
+          link: /generation_tasks/retrosyn/
+        - name: "Reaction Outcome Prediction"
+          abbv: Reaction
+          link: /generation_tasks/reaction/
+        - name: "Structure-based Drug Design"
+          abbv: SBDD
+          link: /generation_tasks/sbdd/
+- label: 
+  items:
+    - name: Others
+      link: /overview/
+      items:
+        - name: Single-instance Prediction Problem
+          link: /single_pred_tasks/overview/
+        - name: Multi-instance Prediction Problem
+          link: /multi_pred_tasks/overview/

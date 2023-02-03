@@ -1,0 +1,41 @@
+- label: 
+  items:
+    - name: Single-instance Prediction Problem
+      link: /single_pred_tasks/overview/
+      items:
+        - name: Pharmaco-kinetics
+          abbv: ADME
+          link: /single_pred_tasks/adme/
+        - name: Toxicity
+          abbv: Tox
+          link: /single_pred_tasks/tox/
+        - name: High-Throughput Screening
+          abbv: HTS
+          link: /single_pred_tasks/hts/
+        - name: Quantum Mechanics
+          abbv: QM
+          link: /single_pred_tasks/qm/
+        - name: Reaction Yields Prediction
+          abbv: Yields
+          link: /single_pred_tasks/yields/
+        #- name: Paratope Prediction
+        #  abbv: Paratope
+        #  link: /single_pred_tasks/paratope/
+        - name: Epitope Prediction
+          abbv: Epitope
+          link: /single_pred_tasks/epitope/
+        - name: Developability Prediction
+          abbv: Develop
+          link: /single_pred_tasks/develop/
+        - name: CRISPR Repair Prediction
+          abbv: CRISPROutcome
+          link: /single_pred_tasks/CRISPROutcome/
+- label: 
+  items:
+    - name: Others
+      link: /overview/
+      items:
+        - name: Multi-instance Prediction Problem
+          link: /multi_pred_tasks/overview/
+        - name: Generation Problem
+          link: /generation_tasks/overview/
