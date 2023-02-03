@@ -1,9 +1,9 @@
 ---
 title: Scientific Discovery in the era of AI
+layout: page
 subtitle: 
 toc: true
 toc_title: Scientific Discovery in the era of AI
-layout: page
 show_sidebar: false
 menubar: ai_for_science_ai
 hide_hero: true
