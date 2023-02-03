@@ -5,7 +5,7 @@ toc: true
 toc_title: Knowledge Base
 layout: page
 show_sidebar: false
-menubar: knolwedge_base
+menubar: knowledge_base
 hide_hero: true
 ---
 
