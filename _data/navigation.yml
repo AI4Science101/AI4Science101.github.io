@@ -1,45 +1,8 @@
 - name: Home
   link: /
-- name: Start
-  link: /start/
-- name: Datasets
-  link: /overview/
-  dropdown:
-    - name: Overview
-      link: /overview/
-    - name: Single-instance Prediction
-      link: /single_pred_tasks/overview
-    - name: Multi-instance Prediction
-      link: /multi_pred_tasks/overview
-    - name: Generation
-      link: /generation_tasks/overview
-- name: Data Functions
-  link: /fct_overview/
-  dropdown:
-    - name: Overview
-      link: /fct_overview/
-    - name: Model Evaluation
-      link: /functions/data_evaluation/
-    - name: Dataset Splits
-      link: /functions/data_split/
-    - name: Data Processing
-      link: /functions/data_process/
-    - name: Molecule Generation Oracles
-      link: /functions/oracles/
-- name: Leaderboards
-  link: /benchmark/overview/
-  dropdown:
-    - name: Guidelines
-      link: /benchmark/overview/
-    - name: ADMET Group
-      link: /benchmark/admet_group/overview
-    - name: DrugCombo Group
-      link: /benchmark/drugcombo_group/overview
-    - name: Docking Group
-      link: /benchmark/docking_group/overview
-    - name: DTI DG Group
-      link: /benchmark/dti_dg_group/overview
-- name: News
-  link: /news/
+- name: Blogs
+  link: /blogs/
+- name: Resources
+  link: /resources/
 - name: Team
   link: /team/
