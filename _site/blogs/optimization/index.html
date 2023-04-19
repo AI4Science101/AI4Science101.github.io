@@ -1,0 +1,370 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gaussian Processes - AI4Science101</title>
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="shortcut icon" type="image/png"
+           href="/favicon.png" 
+    />
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Gaussian Processes | AI4Science101</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Gaussian Processes" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="AI for Science 101" />
+<meta property="og:description" content="AI for Science 101" />
+<link rel="canonical" href="http://localhost:4000/blogs/gaussian_processes/" />
+<meta property="og:url" content="http://localhost:4000/blogs/gaussian_processes/" />
+<meta property="og:site_name" content="AI4Science101" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Gaussian Processes" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"AI for Science 101","headline":"Gaussian Processes","url":"http://localhost:4000/blogs/gaussian_processes/"}</script>
+<!-- End Jekyll SEO tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-183522810-1"></script>
+<script>
+  window['ga-disable-UA-183522810-1'] = window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1";
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-183522810-1');
+</script><!-- head scripts --></head>
+
+  <body>
+    
+<nav class="navbar is-primary" >
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-brand" href="/">
+            <span><img src="/logonav.png" alt="Logo" style="height: auto; width: auto; max-height: 45px; max-width: 250px;"></span>
+            </a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu" id="navMenu">
+            <div class="navbar-end">
+                
+                
+                    
+                    <a href="/" class="navbar-item ">Home</a>
+                    
+                
+                    
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a href="/blogs/" class="navbar-link ">Blogs</a>
+                        <div class="navbar-dropdown">
+                            
+                            <a href="/blogs/announcement/" class="navbar-item ">Announcement</a>
+                            
+                            <a href="/blogs/ai_for_science_science/" class="navbar-item ">AI for Scientific Discovery</a>
+                            
+                            <a href="/blogs/ai_for_science_ai/" class="navbar-item ">Scientific Discovery in the era of AI</a>
+                            
+                            <a href="/blogs/molecular_simulation/" class="navbar-item ">Molecular Simulation</a>
+                            
+                            <a href="/blogs/gaussian_processes/" class="navbar-item is-active">Gaussian Processes</a>
+                            
+                            <a href="/blogs/causal_machine_learning/" class="navbar-item ">Causal Machine Learning</a>
+                            
+                            <a href="/blogs/statistical_learning_theory/" class="navbar-item ">Statistical Learning Theory</a>
+                            
+                            <a href="/blogs/knowledge_base/" class="navbar-item ">Knowledge Base</a>
+                            
+                        </div>
+                    </div>
+                    
+                
+                    
+                    <a href="/resources/" class="navbar-item ">Resources</a>
+                    
+                
+                
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+    
+    
+
+
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                
+                <div class="column is-4-desktop is-4-tablet">
+                    
+
+<aside class="menu">
+
+</aside>
+                </div>
+                
+                <div class="column is-8">
+                    
+                    
+                    
+                    
+    
+    
+
+<div class="contents">
+    <div class="menu">
+        <p class="menu-label">Gaussian Processes</p>
+        <ul class="menu-list">
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#gaussian-processes">Gaussian Processes</a>
+    <ul>
+      <li><a href="#how-do-gaussian-processes-work-roughly">How do Gaussian Processes Work Roughly?</a></li>
+      <li><a href="#why-should-we-fit-a-gaussian-process-instead-of-a-neural-network">Why Should We Fit a Gaussian Process Instead of a Neural Network?</a></li>
+      <li><a href="#adapting-gaussian-processes-for-chemistry">Adapting Gaussian Processes for Chemistry</a></li>
+    </ul>
+  </li>
+  <li><a href="#application">Application</a>
+    <ul>
+      <li><a href="#virtual-screening-with-model-uncertainty">Virtual Screening with Model Uncertainty</a></li>
+      <li><a href="#bayesian-optimisation">Bayesian Optimisation</a></li>
+    </ul>
+  </li>
+  <li><a href="#jupyter-notebook-demos">Jupyter Notebook Demos</a></li>
+  <li><a href="#further-reading">Further Reading</a>
+    <ul>
+      <li><a href="#gaussian-process">Gaussian Process</a></li>
+      <li><a href="#bayesian-optimisation-1">Bayesian Optimisation</a></li>
+      <li><a href="#gps-and-bo-for-science">GPs and BO for Science</a></li>
+    </ul>
+  </li>
+  <li><a href="#reference">Reference</a></li>
+</ul>
+    </div>
+</div>
+
+
+
+
+<div class="content">
+    <script type="text/javascript" async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Gaussian processes (GPs) [1] are a central model in probabilistic machine learning with particularly favourable properties for uncertainty quantification and Bayesian optimisation [2, 3, 4]. To date, however there has been little investigation into GPs applied to conventional representations of molecules such as fingerprints [5], SMILES strings [6, 7] and graphs. In this blogpost, I showcase some of the use-cases for GPs in chemistry using GAUCHE [8, 9], an open-source library implementing GPs kernels that allow GPs to operate on molecular representations. Such use-cases include the representation of model uncertainty in virtual screening where one wishes to prioritise molecules or materials for laboratory synthesis based on machine learning property prediction. In this setting, using model uncertainty to assess how likely the model is to be wrong about its prediction can expedite discovery efforts.</p>
+
+<center><img src="/img/Gaussian_Processes/molgp.png" width="40%" height="40%" /></center>
+<center>Figure 1: Gaussian process regression over molecular space.</center>
+
+<h2 id="gaussian-processes">Gaussian Processes</h2>
+
+<p>A GPs is a stochastic process which, in a machine learning context, is used to represent a distribution over functions that may explain a set of observed data. The focus of this section is on the properties of GPs that make them useful in the context of chemistry. For an exhaustive technical introduction to GPs the reader is referred to [1] and to a [10] for a slightly more accessible introduction. I also recommend the following distill article as an excellent aid for understanding the concepts behind GPs which can often be challenging on first presentation due to the need to think in different spaces (data space, the space on which the multivariate Gaussian distribution is defined, heatmaps of covariance matrices etc.). <a href="https://distill.pub/2019/visual-exploration-gaussian-processes/">https://distill.pub/2019/visual-exploration-gaussian-processes/</a></p>
+
+<h3 id="how-do-gaussian-processes-work-roughly">How do Gaussian Processes Work Roughly?</h3>
+
+<p>In analogy to a neural network, the GPs prior encodes the hypothesis space (set of functions that could explain the data) of the
+GPs in much the same way as the choice of architecture (number of layers, activation functions) defines the hypothesis space of a neural network. While these hypothesis spaces are often sufficiently broad to encompass a wide range of functions, it can sometimes be difficult to find (learn) these functions given a dataset; this is the machine learning model optimisation problem and the choice of initial GPs prior or network architecture can make this optimisation problem easier or harder. In continuous spaces, an object called the GPs kernel plays a central role in determining the nature of the GPs prior hypothesis space. As an example, in , the squared exponential kernel (SQE) encodes a hypothesis space that prioritises smoother functions relative to the Matérn kernel.</p>
+
+<center><img src="/img/Gaussian_Processes/sqexp_small_length.png" width="40%" height="20%" />
+<img src="/img/Gaussian_Processes/matern52_small_length.png" width="40%" height="20%" /></center>
+
+<center>Figure 2: A comparison of the SQE and Matérn 5/2 kernels. Shading indicates a GPs prior distribution over functions (defined by the choice of kernel) and the solid red and blue lines are individual draws from the distribution over functions. The SQE kernel represents a hypothesis space containing smoother functions relative to the Matérn 5/2 kernel. Reprinted with permission from [11].</center>
+
+<p>Additionally, GPs kernels possess hyperparameters that control the behaviour of the functions and may be learned from the data. As an example, in Figure 3 the lengthscale hyperparameter controls how quickly the functions vary across the input space.</p>
+
+<center><img src="/img/Gaussian_Processes/sqexp_small_length.png" width="40%" height="20%" />
+<img src="/img/Gaussian_Processes/sqexp_long_length.png" width="40%" height="20%" /></center>
+
+<center>Figure 3: (a) SQE small lengthscale, (b) SQE large lengthscale.</center>
+
+<h3 id="why-should-we-fit-a-gaussian-process-instead-of-a-neural-network">Why Should We Fit a Gaussian Process Instead of a Neural Network?</h3>
+
+<p>One might reasonably ask what advantagesGPs can afford over neural networks? While deep learning methods represent the state-of-the-art for large datasets, for small datasets, deep learning may often not be the methodology of choice. Indeed some notable deep learning experts have voiced a preference for GPs in the small data regime[12]. Furthermore, GPs possess advantages relative to neural networks in representing uncertainty and in their ease of training; GPs admit exact Bayesian inference and few of their parameters need to be determined by hand. In the words of Sir David MacKay [13],</p>
+<blockquote>
+  <p>“Gaussian processes are useful tools for automated tasks where fine tuning for each problem is not possible. We do not appear to sacrifice any performance for this simplicity.”</p>
+</blockquote>
+
+<p>These properties make GPs ideal for uncertainty quantification and as surrogate models for Bayesian optimisation BO, an algorithm that is showing promise for scientific discovery in the search for novel molecules[14], materials, and optimal chemical reaction conditions [15,16]. An illustration of the GP’s ability to represent uncertainty is given in Figure 4 where one can observe how the GP updates its predictive uncertainty based on the data it has observed. This property makes GPs useful for a wide range of chemical applications.</p>
+
+<center><img src="/img/Gaussian_Processes/post1.png" width="40%" height="20%" />
+<img src="/img/Gaussian_Processes/post2.png" width="40%" height="20%" /></center>
+
+<center><img src="/img/Gaussian_Processes/post4.png" width="40%" height="40%" /></center>
+
+<center>Figure 4: An illustration of the GP posterior update on fitting 1, 2 and 4 data points (Blue). The posterior distribution encodes the distribution over possible functions that may explain the data. Reprinted with permission from [11].</center>
+
+<h3 id="adapting-gaussian-processes-for-chemistry">Adapting Gaussian Processes for Chemistry</h3>
+
+<p>While the above examples consider GPs defined on continuous input spaces, it is possible to defineGPs on discrete molecular representations as well via the choice of GP kernel. Two recent libraries, FlowMO (Tensorflow) [8], and GAUCHE (PyTorch) [9] open-source several molecular GP kernels that operate on a range of molecular and chemical reaction representations.</p>
+
+<h2 id="application">Application</h2>
+
+<p>In many virtual screening applications one wishes to have not only a machine learning prediction for unseen regions of the search space but also to know how accurate such a prediction is likely to be. Intuitively one would expect models to be more confident when making predictions around observed data points than when making predictions far away from the training set. In this section we take a look at what GPs can offer in terms of “knowing what they don’t know” when making predictions.</p>
+
+<h3 id="virtual-screening-with-model-uncertainty">Virtual Screening with Model Uncertainty</h3>
+
+<p>It is well known that machine learning models can be employed as molecular property predictors for virtual screening. In addition to providing a predicted property value, however, models can also provide an uncertainty estimate, in other words a measure of the prediction confidence. GPs are typically some of the best-calibrated probabilistic models due to the facility to perform exact Bayesian inference. In order to empirically assess the quality of molecular gp uncertainty estimates, we use a diagnostic tool known as a confidence-error curve [17] (also featured in the Jupyter notebook demo). The confidence-error curve for the SMILES string kernel is given in Figure 5. The TLDR is that the model achieves smaller prediction error on test molecules for which it has higher confidence.</p>
+
+<center><img src="/img/Gaussian_Processes/confidence_curve.png" width="40%" height="40%" /></center>
+
+<p>Figure 5: GP confidence error curve. The x-axis, Confidence Percentile, ranks each test datapoint prediction according to the GP predictive variance. For example, molecules that reside above the 80th confidence percentile will correspond to the 20\% of test set molecules with the lowest GP predictive uncertainty. The prediction error at each confidence percentile is then measured over 20 random train/test splits (the standard error over the random splits is plotted in the figure above) to gauge if the model’s confidence is correlated with the prediction error. This figure shows that the SMILES GP’s uncertainty estimates are positively correlated with the prediction error. As such, it is possible that model uncertainty could be used as a component in the decision-making process for prioritising molecules for laboratory synthesis.
+A natural extension to the idea of using model uncertainty to prioritise the immediate next choice of molecule for laboratory synthesis is to automate a sequence of choices, feeding each queried molecule back into the GP model to provide a better model for the next step in an iterative fashion. This is the idea behind Bayesian optimisation.</p>
+
+<p>A natural extension to the idea of using model uncertainty to prioritise the immediate next choice of molecule for laboratory synthesis is to automate a sequence of choices, feeding each queried molecule back into the GP model to provide a better model for the next step in an iterative fashion. This is the idea behind Bayesian optimisation.</p>
+
+<h3 id="bayesian-optimisation">Bayesian Optimisation</h3>
+
+<p>The uncertainty estimates produced by a GP can be leveraged directly to accelerate scientific discovery via a scheme called Bayesian optimisation [3]. Informally, Bayesian optimisation (BO) aims to quickly identify promising molecules or materials by using model uncertainty estimates to explore a space of candidates to be prioritised for laboratory synthesis. Formally, Bayesian optimisation may be described as a solution method for a black-box global optimisation problem</p>
+
+\[\mathbf{x}^{\star} = \arg\max_{\mathbf{x} \in \mathcal{X}} f(\mathbf{x})\]
+
+<p>where \(f:\mathcal{X} \rightarrow\mathbb{R}\) is a function over an input space \(\mathcal{X}\). \(\mathcal{X}\) is discrete for molecular representations such as graphs and strings. Equation above is a black-box optimisation problem when the following properties hold:</p>
+
+<ol>
+  <li>Black-Box Objective: The analytic form of \(f\) and its gradients are unavailable. We may, however, evaluate \(f\) pointwise anywhere in the input space \(\mathcal{X}\).</li>
+  <li>Expensive Evaluations: Evaluating \(f(\mathbf{x})\) at a given molecule \(\mathbf{x}\) takes a long time or incurs a large financial penalty.</li>
+  <li>Noise: Evaluation of a molecule \(\mathbf{x}\) is a noisy process.</li>
+</ol>
+
+<center><img src="/img/Gaussian_Processes/bayesopt_illustration5.png" width="40%" height="40%" /></center>
+
+<center>Figure 6: An illustration of the Bayesian optimisation algorithm. Reprinted with permission from [11].</center>
+
+<p>BO is a solution method for such black-box optimisation problems comprised of a probabilistic surrogate model and an acquisition function. The surrogate model is fit to a dataset of pointwise observations from the unknown black-box function and the acquisition function suggests new inputs to query based on the model’s predictions and uncertainties (exploitation vs. exploration). The BO algorithm is illustrated graphically in Figure 6.</p>
+
+<p>BO has been successfully employed in a number of scientific domains including molecule generation [14], drug discovery [18], as well as chemical reaction condition optimisation [15].</p>
+
+<h2 id="jupyter-notebook-demos">Jupyter Notebook Demos</h2>
+
+<p>The following Jupyter notebook demos go into greater detail on the mechanics of GP regression, uncertainty quantification and Bayesian optimisation over molecular spaces.</p>
+
+<ol>
+  <li><a href="https://github.com/leojklarner/gauche/blob/main/notebooks/GP\%20Regression\%20on\%20Molecules.ipynb">Gaussian Process Regression on Molecules</a></li>
+  <li><a href="https://github.com/leojklarner/gauche/blob/main/notebooks/Bayesian\%20Optimisation\%20Over\%20Molecules.ipynb">Bayesian Optimisation on Molecules</a></li>
+</ol>
+
+<h2 id="further-reading">Further Reading</h2>
+<p>For further details on the methodology underpinning the methods discussed here I recommend the following resources grouped in ascending order of complexity/rigour:</p>
+
+<h3 id="gaussian-process">Gaussian Process</h3>
+
+<ol>
+  <li><strong>Webpage</strong>: A visual introduction to Gaussian processes. A great resource for visualising the different components of GP regression. https://distill.pub/2019/visual-exploration-gaussian-processes/</li>
+  <li><strong>Lecture</strong>: Introduction to Gaussian Processes by Prof. Sir David MacKay. Introductory lecture again with some nice visualisations https://www.youtube.com/watch?v=NegVuuHwa8Q</li>
+  <li><strong>Lecture</strong>: Introduction to Gaussian Processes by Prof. Philip Hennig. Lecture as part of the (highly recommended) probabilistic machine learning course at the University of Tuebingen. https://www.youtube.com/watch?v=s2_L86D4kUE</li>
+  <li><strong>PhD Thesis</strong>: David Duvenaud’s PhD thesis [10]. A great illustration of how different GP kernels can be combined. https://www.cs.toronto.edu/~duvenaud/thesis.pdf</li>
+  <li><strong>Book</strong>: Gaussian Processes for Machine Learning by Rasmussen and Williams. An encyclopedic resource on GP regression. Technically quite dense. https://gaussianprocess.org/gpml/ [1]</li>
+</ol>
+
+<h3 id="bayesian-optimisation-1">Bayesian Optimisation</h3>
+
+<ol>
+  <li><strong>YouTube Clip</strong>: A short and visual introduction to Bayesian optimisation. https://www.youtube.com/watch?v=M-NTkxfd7-8</li>
+  <li><strong>Review Paper</strong>: Comprehensive review paper that does a great job of covering all major advances in bo pre-2015. [2] https://www.cs.ox.ac.uk/people/nando.defreitas/publications/BayesOptLoop.pdf</li>
+  <li><strong>Review Pape</strong>r: Another comprehensive review with a slightly different flavour. https://arxiv.org/abs/1807.02811</li>
+  <li><strong>Book</strong>: The recently published Bayesian optimisation book which is at the same time a great resource for learning about the topic, as well as an encyclopedia for technical details. https://bayesoptbook.com/. [3]</li>
+</ol>
+
+<h3 id="gps-and-bo-for-science">GPs and BO for Science</h3>
+<ol>
+  <li><strong>Paper/Software Library</strong>: A Gaussian process regression software library for molecules used for the Jupyter notebook tutorials. https://arxiv.org/abs/2212.04450 [9]</li>
+  <li><strong>PhD Thesis</strong>: Applications of Gaussian Processes at Extreme Lengthscales: From Molecules to Black Holes - My PhD thesis - forthcoming!</li>
+  <li><strong>Review Paper</strong>: A nice review paper on Bayesian optimisation for accelerating drug discovery [18]. https://ieeexplore.ieee.org/abstract/document/8539993</li>
+  <li><strong>Paper</strong>: A recent high profile paper leveraging Bayesian optimisation for chemical reaction conditions [15, 16]. https://www.nature.com/articles/s41586-021-03213-y</li>
+  <li><strong>Paper</strong>: A shameless self-plug about an application of Gaussian processes for molecular photoswitch discovery. [17] https://pubs.rsc.org/en/content/articlehtml/2022/sc/d2sc04306h.</li>
+</ol>
+
+<h2 id="reference">Reference</h2>
+
+<p>[1] Christopher K Williams and Carl Edward Rasmussen. <em>Gaussian processes for machine learning</em>. MIT press Cambridge, MA, 2006.</p>
+
+<p>[2] Bobak Shahriari, Kevin Swersky, Ziyu Wang, Ryan P Adams, and Nando De Freitas. Taking the human out of the loop: A review of Bayesian optimization. <em>Proceedings of the IEEE</em>, 104(1):148–175, 2015.</p>
+
+<p>[3] Roman Garnett. <em>Bayesian Optimization</em>. Cambridge University Press, 2022. in preparation.</p>
+
+<p>[4] Antoine Grosnit, Alexander Imani Cowen-Rivers, Rasul Tutunov, Ryan-Rhys Griffiths, Jun Wang, and Haitham Bou-Ammar. Are we forgetting about compositional optimisers in Bayesian optimisation? <em>J. Mach. Learn. Res.</em>, 22:160–1, 2021.</p>
+
+<p>[5] David Rogers and Mathew Hahn. Extended-connectivity fingerprints. <em>Journal of Chemical Information and Modeling</em>, 2010.</p>
+
+<p>[6] Eric Anderson, Gilman D Veith, and David Weininger. SMILES, a line notation and computerized interpreter for chemical structures. <em>Environmental Research Laboratory</em>, 1987.</p>
+
+<p>[7] David Weininger. SMILES, a chemical language and information system. 1. introduction to methodology and encoding rules. <em>Journal of Chemical Information and Computer Sciences</em>, 1988.</p>
+
+<p>[8] Henry B. Moss and Ryan-Rhys Griffiths. Gaussian Process Molecule Property Prediction with FlowMO. <em>arXiv e-prints</em>, page arXiv:2010.01118, October 2020.</p>
+
+<p>[9] Ryan-Rhys Griffiths, Leo Klarner, Henry Moss, Aditya Ravuri, Sang T. Truong, Bojana Rankovic, Yuanqi Du, Arian Rokkum Jamasb, Julius Schwartz, Austin Tripp, Gregory Kell, Anthony Bourached, Alex Chan, Jacob Moss, Chengzhi Guo, Alpha Lee, Philippe Schwaller, and Jian Tang. GAUCHE: A library for Gaussian processes in chemistry. In <em>ICML 2022 2nd AI for Science Workshop</em>, 2022.</p>
+
+<p>[10] David Duvenaud. <em>Automatic Model Construction with Gaussian Processes.</em> PhD thesis, Computational and Biological Learning Laboratory, University of Cambridge, 2014.</p>
+
+<p>[11] Ryan-Rhys Griffiths. <em>Applications of Gaussian processes at Extreme Lengthscales from Molecules to Black Holes.</em> PhD thesis, University of Cambridge, 2022.</p>
+
+<p>[12] Yoshua Bengio. <em>What are some Advantages of Using Gaussian Process Models vs Neural Networks?</em>, 2011. https://www.quora.com/What-are-some-advantages-of-using-Gaussian-Process-Models-vs-Neural-Networks.</p>
+
+<p>[13] David JC MacKay, David JC Mac Kay, et al. <em>Information theory, inference and learning algorithms.</em> Cambridge University Press, 2003.</p>
+
+<p>[14] Ryan-Rhys Griffiths and Jos ́e Miguel Hern ́andez-Lobato. Constrained Bayesian optimization for automatic chemical design using variational autoencoders. <em>Chemical Science</em>, 11(2):577–586, 2020.</p>
+
+<p>[15] Benjamin J Shields, Jason Stevens, Jun Li, Marvin Parasram, Farhan Damani, Jesus I Martinez Alvarado, Jacob M Janey, Ryan P Adams, and Abigail G Doyle. Bayesian reaction optimization as a tool for chemical synthesis. <em>Nature</em>, 2021.</p>
+
+<p>[16] Bojana Rankovi ́c, Ryan-Rhys Griffiths, Henry B. Moss, and Philippe Schwaller. Bayesian optimisation for additive screening and yield improvements in chemical reactions – beyond one-hot encodings. <em>ChemRxiv</em>, 2022.</p>
+
+<p>[17] Ryan-Rhys Griffiths, Jake L Greenfield, Aditya R Thawani, Arian R Jamasb, Henry B Moss, Anthony Bourached, Penelope Jones, William McCorkindale, Alexander A Aldrick, Matthew J Fuchter, et al. Data-driven discovery of molecular photoswitches with multioutput Gaussian processes. <em>Chemical Science</em>, 13(45):13541–13551, 2022.</p>
+
+<p>[18] Edward O Pyzer-Knapp. Bayesian optimization for accelerated drug discovery. <em>IBM Journal of Research and Development</em>, 62(6):2–1, 2018.</p>
+
+
+</div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+        <!-- <footer class="footer">
+    <div class="container">
+        
+        <div class="columns is-mobile">
+            <div class="column is-8 has-text-left is-vcentered">
+                <a class="navbar-brand" href="/">
+                    <span><img src="/tdc_horizontal.png" alt="Logo" style="max-height: 40px; max-width: 250px;"></span>
+                </a>
+            </div>
+            <div class="column is-4 has-text-right is-vcentered">
+                <a href="https://arxiv.org/abs/2102.09548">
+                    <span class="icon is-large">
+                      <i class="fas fa-file-alt fa-3x"></i>
+                    </span>
+                </a>
+
+                <a href="https://github.com/mims-harvard/TDC">
+                    <span class="icon is-large">
+                      <i class="fas fab fa-github fa-3x"></i>
+                    </span>
+                </a>
+
+                <a href="https://twitter.com/ProjectTDC">
+                    <span class="icon is-large">
+                      <i class="fas fab fa-twitter fa-3x"></i>
+                    </span>
+                </a>
+
+                <a href="https://join.slack.com/t/pytdc/shared_invite/zt-x0ujg5v6-zwtQZt83fhRdgrYjXRFz5g">
+                    <span class="icon is-large">
+                      <i class="fas fab fa-slack fa-3x"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+        
+    </div>
+</footer> -->
+    
+    <script src="/assets/js/app.js" type="text/javascript"></script><!-- footer scripts --></body>
+</html>
+
