@@ -161,6 +161,8 @@
     <script type="text/javascript" async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
+<p>Author(s): <a href="https://twitter.com/Ryan__Rhys">Ryan-Rhys Griffiths</a> is currently a postdoctoral research scientist at Meta Research where he works on Bayesian optimization and Gaussian processes as part of the Adaptive Experimentation (BoTorch!) team. Previously he was a research scientist at Huawei Noah’s Ark Lab and completed his PhD in Machine Learning and Physics at the University of Cambridge. Ryan is broadly interested in molecular machine learning, astrophysics, materials science and many more!</p>
+
 <h2 id="introduction">Introduction</h2>
 
 <p>Gaussian processes (GPs) [1] are a central model in probabilistic machine learning with particularly favourable properties for uncertainty quantification and Bayesian optimisation [2, 3, 4]. To date, however there has been little investigation into GPs applied to conventional representations of molecules such as fingerprints [5], SMILES strings [6, 7] and graphs. In this blogpost, I showcase some of the use-cases for GPs in chemistry using GAUCHE [8, 9], an open-source library implementing GPs kernels that allow GPs to operate on molecular representations. Such use-cases include the representation of model uncertainty in virtual screening where one wishes to prioritise molecules or materials for laboratory synthesis based on machine learning property prediction. In this setting, using model uncertainty to assess how likely the model is to be wrong about its prediction can expedite discovery efforts.</p>
