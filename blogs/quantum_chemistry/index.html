@@ -442,15 +442,19 @@ where \(|n_1,n_2,\cdots\rangle\) is a Slater determinant with \(n_1\) electron(s
 \(C_{n_1n_2n_3\cdots}
   \approx \sum_{s_1s_2s_3\cdots}^M A_{n_1}^{s_1} A_{n_2}^{s_1s_2} A_{n_3}^{s_2s_3} \cdots\)
 where the \(\mathbf{A}\) tensors are variational parameters. The DMRG wavefunction can be progressively improved to approach FCI by increasing the “bond dimension”, \(M\), which controls the rank of the product tensor. The cost scaling of DMRG is \(O(N^4)\) but the prefactor grows with bond dimension as \(O(M^3)\). Recent implementations have demonstrated the ability to attain FCI-level accuracy for about 80 electrons (see e.g., a recent preprint from <a href="https://arxiv.org/abs/2310.03920">the Chan group</a>). Methods like DMRG thus significantly expand the scope for FCI-like methods.</li>
-  <li><strong>Variational Monte Carlo (VMC)</strong>. A major difficulty preventing one from using an arbitrary wavefunction <em>ansatz</em> in variational optimization is the high computational cost associated with evaluating the energy (and its gradients), which, when written explicitly, is a multi-dimensional integral explicitly
-\(E[\Psi]
-  = \frac{\int \mathrm{d} X |\Psi(X)|^2 H(X)}
-  {\int \mathrm{d} X |\Psi(X)|^2}\)
-<em>Varitional Monte Carlo (VMC)</em> bypasses this curse of dimensionality by using Monte Carlo sampling to stochastically evaluate the needed integrals. As a result, VMC enables using some wavefunction forms that are otherwise inaccessible to direct variational optimization. A commonly used one is the <em>Slater-Jastrow ansatz</em>
-\(\Psi_{\mathrm{SJ}}(X)
-  = \Phi_0(X) \exp\left[ \sum_{i &lt; j} u_{ij}(x_i,x_j) \right]\)
-where the Jastrow correlation factor \(u_{ij}\), being the variational degrees of freedom, explicitly encodes the correlation effect between two electrons. One disadvantage of VMC (and any other stochastic methods) is the inherent statistical error, which can complicate the evaluation of atomic forces and other properties.</li>
+  <li><strong>Variational Monte Carlo (VMC)</strong>. A major difficulty preventing one from using an arbitrary wavefunction <em>ansatz</em> in variational optimization is the high computational cost associated with evaluating the energy (and its gradients), which, when written explicitly, is a multi-dimensional integral explicitly</li>
 </ul>
+
+\[E[\Psi]
+    = \frac{\int \mathrm{d} X |\Psi(X)|^2 H(X)}
+    {\int \mathrm{d} X |\Psi(X)|^2}\]
+
+<p><em>Varitional Monte Carlo (VMC)</em> bypasses this curse of dimensionality by using Monte Carlo sampling to stochastically evaluate the needed integrals. As a result, VMC enables using some wavefunction forms that are otherwise inaccessible to direct variational optimization. A commonly used one is the <em>Slater-Jastrow ansatz</em></p>
+
+\[\Psi_{\mathrm{SJ}}(X)
+    = \Phi_0(X) \exp\left[ \sum_{i &lt; j} u_{ij}(x_i,x_j) \right]\]
+
+<p>where the Jastrow correlation factor \(u_{ij}\), being the variational degrees of freedom, explicitly encodes the correlation effect between two electrons. One disadvantage of VMC (and any other stochastic methods) is the inherent statistical error, which can complicate the evaluation of atomic forces and other properties.</p>
 
 <hr />
 
