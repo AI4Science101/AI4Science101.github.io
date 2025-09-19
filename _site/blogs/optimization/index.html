@@ -4,27 +4,27 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Gaussian Processes - AI4Science101</title>
+    <title>Optimization - AI4Science101</title>
     <link rel="stylesheet" href="/assets/css/app.css">
     <link rel="shortcut icon" type="image/png"
            href="/favicon.png" 
     />
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Gaussian Processes | AI4Science101</title>
+<title>Optimization | AI4Science101</title>
 <meta name="generator" content="Jekyll v4.3.2" />
-<meta property="og:title" content="Gaussian Processes" />
+<meta property="og:title" content="Optimization" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="AI for Science 101" />
 <meta property="og:description" content="AI for Science 101" />
-<link rel="canonical" href="http://localhost:4000/blogs/gaussian_processes/" />
-<meta property="og:url" content="http://localhost:4000/blogs/gaussian_processes/" />
+<link rel="canonical" href="http://localhost:4000/blogs/optimization/" />
+<meta property="og:url" content="http://localhost:4000/blogs/optimization/" />
 <meta property="og:site_name" content="AI4Science101" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Gaussian Processes" />
+<meta property="twitter:title" content="Optimization" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"AI for Science 101","headline":"Gaussian Processes","url":"http://localhost:4000/blogs/gaussian_processes/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"AI for Science 101","headline":"Optimization","url":"http://localhost:4000/blogs/optimization/"}</script>
 <!-- End Jekyll SEO tag -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-183522810-1"></script>
 <script>
@@ -67,14 +67,32 @@
                             <a href="/blogs/ai_for_science_science/" class="navbar-item ">AI for Scientific Discovery</a>
                             
                             <a href="/blogs/ai_for_science_ai/" class="navbar-item ">Scientific Discovery in the era of AI</a>
+
+                            <a href="/blogs/progress/" class="navbar-item ">Progress Summary</a>
                             
                             <a href="/blogs/molecular_simulation/" class="navbar-item ">Molecular Simulation</a>
                             
-                            <a href="/blogs/gaussian_processes/" class="navbar-item is-active">Gaussian Processes</a>
+                            <a href="/blogs/gaussian_processes/" class="navbar-item ">Gaussian Processes</a>
                             
                             <a href="/blogs/causal_machine_learning/" class="navbar-item ">Causal Machine Learning</a>
                             
                             <a href="/blogs/statistical_learning_theory/" class="navbar-item ">Statistical Learning Theory</a>
+                            
+                            <a href="/blogs/optimization/" class="navbar-item is-active">Optimization</a>
+                            
+                            <a href="/blogs/graph_machine_learning/" class="navbar-item ">Graph Machine Learning</a>
+                            
+                            <a href="/blogs/reinforcement_learning/" class="navbar-item ">Reinforcement Learning</a>
+                            
+                            <a href="/blogs/quantum_science/" class="navbar-item ">Quantum Science</a>
+                            
+                            <a href="/blogs/comp_sustainability/" class="navbar-item ">Computational Sustainability</a>
+                            
+                            <a href="/blogs/structural_biology/" class="navbar-item ">Structural Biology</a>
+                            
+                            <a href="/blogs/quantum_chemistry/" class="navbar-item ">Quantum Chemistry</a>
+                            
+                            <a href="/blogs/equivariant_neural_networks/" class="navbar-item ">Equivariant Neural Networks</a>
                             
                             <a href="/blogs/knowledge_base/" class="navbar-item ">Knowledge Base</a>
                             
@@ -119,31 +137,15 @@
 
 <div class="contents">
     <div class="menu">
-        <p class="menu-label">Gaussian Processes</p>
+        <p class="menu-label">Optimization</p>
         <ul class="menu-list">
-  <li><a href="#introduction">Introduction</a></li>
-  <li><a href="#gaussian-processes">Gaussian Processes</a>
-    <ul>
-      <li><a href="#how-do-gaussian-processes-work-roughly">How do Gaussian Processes Work Roughly?</a></li>
-      <li><a href="#why-should-we-fit-a-gaussian-process-instead-of-a-neural-network">Why Should We Fit a Gaussian Process Instead of a Neural Network?</a></li>
-      <li><a href="#adapting-gaussian-processes-for-chemistry">Adapting Gaussian Processes for Chemistry</a></li>
-    </ul>
-  </li>
-  <li><a href="#application">Application</a>
-    <ul>
-      <li><a href="#virtual-screening-with-model-uncertainty">Virtual Screening with Model Uncertainty</a></li>
-      <li><a href="#bayesian-optimisation">Bayesian Optimisation</a></li>
-    </ul>
-  </li>
-  <li><a href="#jupyter-notebook-demos">Jupyter Notebook Demos</a></li>
-  <li><a href="#further-reading">Further Reading</a>
-    <ul>
-      <li><a href="#gaussian-process">Gaussian Process</a></li>
-      <li><a href="#bayesian-optimisation-1">Bayesian Optimisation</a></li>
-      <li><a href="#gps-and-bo-for-science">GPs and BO for Science</a></li>
-    </ul>
-  </li>
-  <li><a href="#reference">Reference</a></li>
+  <li><a href="#before-we-start">Before we start</a></li>
+  <li><a href="#what-is-optimization">What is optimization?</a></li>
+  <li><a href="#what-is-the-role-of-optimization-in-deep-learning">What is the role of optimization in deep learning?</a></li>
+  <li><a href="#which-optimizers-are-used-in-deep-learning">Which optimizers are used in deep learning?</a></li>
+  <li><a href="#optimization-vs-sampling">Optimization vs. Sampling</a></li>
+  <li><a href="#interface-between-optimization-and-generalization-in-deep-learning-implicit-regularization">Interface between Optimization and Generalization in Deep Learning: Implicit Regularization</a></li>
+  <li><a href="#references">References</a></li>
 </ul>
     </div>
 </div>
@@ -155,169 +157,228 @@
     <script type="text/javascript" async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
-<h2 id="introduction">Introduction</h2>
+<p>Author(s): <a href="https://bhwangfy.github.io/">Bohan Wang</a> is a Ph.D. student of the joint Ph.D. Program of USTC and Microsoft Research (Asia) advised by Prof. Wei Chen and Prof. Zhi-Ming Ma. His research interest is optimization in deep learning. He is eager to understand the underlying mechanism of optimizers’ behavior over deep neural networks. His ultimate goal is to build effective and stable optimizers for deep learning, especially for large models.</p>
 
-<p>Gaussian processes (GPs) [1] are a central model in probabilistic machine learning with particularly favourable properties for uncertainty quantification and Bayesian optimisation [2, 3, 4]. To date, however there has been little investigation into GPs applied to conventional representations of molecules such as fingerprints [5], SMILES strings [6, 7] and graphs. In this blogpost, I showcase some of the use-cases for GPs in chemistry using GAUCHE [8, 9], an open-source library implementing GPs kernels that allow GPs to operate on molecular representations. Such use-cases include the representation of model uncertainty in virtual screening where one wishes to prioritise molecules or materials for laboratory synthesis based on machine learning property prediction. In this setting, using model uncertainty to assess how likely the model is to be wrong about its prediction can expedite discovery efforts.</p>
+<h1 id="blog-on-optimization-in-deep-learning">Blog on optimization in deep learning</h1>
 
-<center><img src="/img/Gaussian_Processes/molgp.png" width="40%" height="40%" /></center>
-<center>Figure 1: Gaussian process regression over molecular space.</center>
+<p>This blog aims to offer basic knowledges of optimization in deep learning. This blog is for beginners in deep learning who have little prior optimization knowledge. After reading this blog, you will be able to answer the following questions:</p>
 
-<h2 id="gaussian-processes">Gaussian Processes</h2>
+<ul>
+  <li>
+    <p>What is optimization? What is optimizer?</p>
+  </li>
+  <li>
+    <p>Why deep learning is an optimization-centric approach?</p>
+  </li>
+  <li>
+    <p>Which optimizers are used in deep learning?</p>
+  </li>
+</ul>
 
-<p>A GPs is a stochastic process which, in a machine learning context, is used to represent a distribution over functions that may explain a set of observed data. The focus of this section is on the properties of GPs that make them useful in the context of chemistry. For an exhaustive technical introduction to GPs the reader is referred to [1] and to a [10] for a slightly more accessible introduction. I also recommend the following distill article as an excellent aid for understanding the concepts behind GPs which can often be challenging on first presentation due to the need to think in different spaces (data space, the space on which the multivariate Gaussian distribution is defined, heatmaps of covariance matrices etc.). <a href="https://distill.pub/2019/visual-exploration-gaussian-processes/">https://distill.pub/2019/visual-exploration-gaussian-processes/</a></p>
+<h2 id="before-we-start">Before we start</h2>
 
-<h3 id="how-do-gaussian-processes-work-roughly">How do Gaussian Processes Work Roughly?</h3>
+<ul>
+  <li>
+    <p>This tutorial assumes that you have already learned:</p>
 
-<p>In analogy to a neural network, the GPs prior encodes the hypothesis space (set of functions that could explain the data) of the
-GPs in much the same way as the choice of architecture (number of layers, activation functions) defines the hypothesis space of a neural network. While these hypothesis spaces are often sufficiently broad to encompass a wide range of functions, it can sometimes be difficult to find (learn) these functions given a dataset; this is the machine learning model optimisation problem and the choice of initial GPs prior or network architecture can make this optimisation problem easier or harder. In continuous spaces, an object called the GPs kernel plays a central role in determining the nature of the GPs prior hypothesis space. As an example, in , the squared exponential kernel (SQE) encodes a hypothesis space that prioritises smoother functions relative to the Matérn kernel.</p>
+    <ul>
+      <li>
+        <p>Linear algebra</p>
+      </li>
+      <li>
+        <p>Calculus</p>
+      </li>
+    </ul>
+  </li>
+</ul>
 
-<center><img src="/img/Gaussian_Processes/sqexp_small_length.png" width="40%" height="20%" />
-<img src="/img/Gaussian_Processes/matern52_small_length.png" width="40%" height="20%" /></center>
+<h2 id="what-is-optimization">What is optimization?</h2>
 
-<center>Figure 2: A comparison of the SQE and Matérn 5/2 kernels. Shading indicates a GPs prior distribution over functions (defined by the choice of kernel) and the solid red and blue lines are individual draws from the distribution over functions. The SQE kernel represents a hypothesis space containing smoother functions relative to the Matérn 5/2 kernel. Reprinted with permission from [11].</center>
+<p>Optimization, or mathematical optimization, is “is the selection of a best element, with regard to some criterion, from some set of available alternatives” (copied from Wikipedia). Typically, optimization requires to solve the following optimization problem:</p>
 
-<p>Additionally, GPs kernels possess hyperparameters that control the behaviour of the functions and may be learned from the data. As an example, in Figure 3 the lengthscale hyperparameter controls how quickly the functions vary across the input space.</p>
+<p>\(\min_{x} f(x) \text{ subject to: } x\in D\) . Here \(f\) is called the optimization objective function, \(x\) is called the variable, and \(D\) is called the domain or the feasible set. \(D\) is usually specified by a set of equalities and/or inequalities, i.e, \(D=\{x\in \Omega : g_i(x) &lt; 0, h_j(x)=0, \forall i \in \{1,2,\cdots,N\}, j\in \{1,2,\cdots,M\}\}\) . The solution of the above optimization problem is called the optimal solution/global minimum, and the corresponding value of \(f\) is called the optimal value. We provide examples as below:</p>
 
-<center><img src="/img/Gaussian_Processes/sqexp_small_length.png" width="40%" height="20%" />
-<img src="/img/Gaussian_Processes/sqexp_long_length.png" width="40%" height="20%" /></center>
+<p>Example 1: \(\min_x x+\frac{1}{x} \text{ subject to: } x\in \mathbb{R}^+\). Here \(f:x\rightarrow x+1/x\) is the optimization objective function, \(\mathbb{R}^+\) is the domain. By the mean value inequality, the optimal solution of the optimization problem is \(x=1\) with optimal value \(2\).</p>
 
-<center>Figure 3: (a) SQE small lengthscale, (b) SQE large lengthscale.</center>
+<p>Example 2: \(\min_x x^2+y^2 \text{ subject to: } (x,y)\in \mathbb{R}^2, x=0\) . Here \(f:(x,y)\rightarrow x^2+y^2\)is the optimization objective function, \(\mathbb{R}^2\) is the domain. One can easily observe the optimal solution of the optimization problem is \(x=0,y=0\) with optimal value \(0\).</p>
 
-<h3 id="why-should-we-fit-a-gaussian-process-instead-of-a-neural-network">Why Should We Fit a Gaussian Process Instead of a Neural Network?</h3>
+<p>In the above examples, the optimization problems are simple and the optimal solutions are easy to obtain by simple observation or basic mathematical tricks. However, in practice, the problem can be rather complicated and the optimal solution cannot be easily derived through human calculation.</p>
 
-<p>One might reasonably ask what advantagesGPs can afford over neural networks? While deep learning methods represent the state-of-the-art for large datasets, for small datasets, deep learning may often not be the methodology of choice. Indeed some notable deep learning experts have voiced a preference for GPs in the small data regime[12]. Furthermore, GPs possess advantages relative to neural networks in representing uncertainty and in their ease of training; GPs admit exact Bayesian inference and few of their parameters need to be determined by hand. In the words of Sir David MacKay [13],</p>
+<p>Example 3: We use deep neural network \(\Phi\) to perform regression over the dataset \(S=\{(x_1,y_1),\cdots, (x_N,y_N)\}\). In other words, we aim to solve the following problem \(min_{w\in \mathbb{R}^p} \sum_{i=1}^N\Vert \Phi(x_i,w)-y_i\Vert^2\). Here \(\Phi: w\rightarrow \sum_{i=1}^N\Vert \Phi(x_i,w)-y_i\Vert^2\) is the optimization objective function, and \(\mathbb{R}^p\) is the domain. However, manully solving the problem is not easy due to the potentially complex structure of the neural network.</p>
+
+<p>Algorithms have been developed to automatically solve sophisticated optimization problems like Example 3. Such algorithms are called “optimizers”. The performance of an optimizer is evaluated from two perspectives: the time costed to achieve a “good” solution, and the the memory costed to run the algorithm. Note here the “good” means that the solution provided by the optimizer is close to the optimal solution, or has an objective function value close to the optimal value. We require a “good” solution instead of the precise optimal solution, because deriving the precise optimal solution is usually an NP-hard problem and thus expansive.</p>
+
+<h2 id="what-is-the-role-of-optimization-in-deep-learning">What is the role of optimization in deep learning?</h2>
+
+<p>It is never too exaggerated to say that deep learning is an optimization-centric learning method. This is because deep learning tasks typically require to derive the optimal parameters of the deep neural network with respect to some criteria. The “training” process in deep learning indeed refers to the optimization process. In Example 3, we have formulated the regression with deep neural networks task as an optimization problem. We further provide two examples to faciliate the understanding of optimization in deep learning.</p>
+
+<p>Example 4 (Supervised Learning): Suppose that we are now given a dataset \(S\) containing \(N\) pairs of feature \(x_i\) and label \(y_i\) (\(i\in \{1,2,\cdots, N\}\)), i.e., \(S=\{(x_1,y_1),\cdots, (x_N,y_N)\}\). The goal of supervised learning is to derive a neural network \(\Phi(w,\star)\) whose output \(\Phi(w,x_i)\) with input \(x_i\) is close to \(y_i\) \((i\in \{1,2,\cdots,N\})\). The “close” here is measured by some loss function \(\ell(\star,\star)\) satisfies \(\ell (y_i,\Phi(w,x_i))\) is smaller if \(\Phi(w,x_i)\) is closer to \(y_i\). The optimization problem of supervised learning can then be formulated as \(\min_{w} \sum_{i=1}^N \ell (y_i,\Phi(w,x_i)) \text{ subject to: } w\in D\). Here \(D\) is a subset of the whole parameter space \(\mathbb{R}^p\) , for example, a ball with radius \(r\): \(\{w: \Vert w\Vert\le r\}\).</p>
+
+<p>Example 5 (Contrastive Learning): Suppose that we are now given a dataset \(S\) containing \(N\) unlabeled data \(x_i\) (\(i\in \{1,2,\cdots, N\}\)), i.e., \(S=\{x_1,\cdots, x_N\}\). The goal of contrastive learning is to obtain a feature extractor \(h(w,\star)\) from these unlabeled data which can be further applied in the downstream tasks. Here \(w\) is the parameter of \(h\) and \(\star\) can be any unlabeled data. The output of \(h(w,\star)\) usually has smaller dimension than \(\star\), and can be treated as a low-dimension representation of \(\star\). The way to learn \(h\) is to (1). force the \(h\) of an unlabeled data \(x\) to be similar as that of a copy of \(x\) with data augmentation, i.e., \(T(x)\), where \(T\) is a data augmentation mapping such as rotation, color filter, etc., and (2). force the \(h\) of different data to be different. With a loss function \(\ell\) measuring the similarity between unlabeled data (smaller \(\ell\) means stronger alignment), the optimization problem of contrastive learning can then be formulated as</p>
+
+<p>\(\min_w \sum_{i=1}^N \ell (h(w,x_i),h(w,T(x_i))))-\sum_{i\ne j} \ell (h(w,x_i),h(w,x_j)) \text{ subject to: } w\in\mathbb{R}^p\).</p>
+
+<p>Example 4 and Example 5 cover a wide range of tasks in deep learning. For example, image classification and language translation are both supervised learning tasks, and pretraining can be done using contrastive learning. All in all, we have seen that optimization plays a central role in deep learning.</p>
+
+<h2 id="which-optimizers-are-used-in-deep-learning">Which optimizers are used in deep learning?</h2>
+
+<p>In the end of Section 2, we mentioned that optimization problems in deep learning is solved by optimizers. Since in the previous section we have formulated the deep learning tasks into optimization problems, the design of optimizers is then a key ingredient in deep learning. In this section, we will introduce the first-order (or gradient-based) optimizers. These optimizers are dominant choices for optimization in deep learning due to their satisfactory computation complexity.</p>
+
+<p>Now let’s revisit the Example 3 and Example 4. One can easily observe that these examples enjoy two properties: (1). The feasible set is continuous; (2). If the loss functions and the neural networks are continous and (sub-)differentiable, then the objective functions are also continous and differentiable with respect to the variables. These properties ensure that we can compute the gradient of the objective function,  which is great – marching towards the direction of the negative gradient reduce the objective function! We provide a abbreviate proof for this argument: suppose the objective function is \(f\) and the variable is \(w\), and suppose we are now at the point \(w_0\). Update \(w_0\) by adding \(-h\nabla f(w_0)\) with \(h\) a sufficiently small positive scalar yields that</p>
+
+\[f(w_0-h\nabla f(w_0))= f(w_0)-\langle h\nabla f(w_0), \nabla f(w_0)\rangle +o(h)\\\quad\quad\quad\quad= f(w_0)-h\Vert \nabla f(w_0)\Vert^2 +o(h)\]
+
+<p>We then observe that \(f(w_0-h\nabla f(w_0))&lt;f(w_0)\) if \(h\) is small and the gradient \(\nabla f(w_0)\) is not zero. On the other hand, when the gradient is zero, \(w_0\) is a saddle point for \(f\). Note that without the second or higher order derivatives, the best solutions we can find  are the saddle points. Thus, if \(w_0\) is a saddle point, it is already a “good” solution and the optimization problem has been solved. With the above methodology, we are able to derive a simple optimizer – the (vanilla) gradient descent (GD) optimizer. As we will see latter, GD is actually the footstone of first-order optimization, in the sense that all of the following optimizers are modified from it.</p>
+
 <blockquote>
-  <p>“Gaussian processes are useful tools for automated tasks where fine tuning for each problem is not possible. We do not appear to sacrifice any performance for this simplicity.”</p>
+  <p>Psedocode of GD</p>
+
+  <p><strong>Input:</strong> objective function \(f\), initial point \(w_1\), number of iterations \(T\), learning rate \(\{\eta_1,\cdots,\eta_T\}\)</p>
+
+  <p><strong>For</strong> \(t=1\rightarrow T\):</p>
+
+  <p>       \(w_{t+1}=w_{t}-\eta_t \nabla f(w_{t})\)</p>
+
+  <p><strong>Output:</strong> \(w_{T+1}\)</p>
 </blockquote>
 
-<p>These properties make GPs ideal for uncertainty quantification and as surrogate models for Bayesian optimisation BO, an algorithm that is showing promise for scientific discovery in the search for novel molecules[14], materials, and optimal chemical reaction conditions [15,16]. An illustration of the GP’s ability to represent uncertainty is given in Figure 4 where one can observe how the GP updates its predictive uncertainty based on the data it has observed. This property makes GPs useful for a wide range of chemical applications.</p>
+<center><img title="" src="/img/Optimization/iteration30_0.1lr.png" alt="" width="282" />           <img src="/img/Optimization/iteration30_0.7lr.png" title="" alt="" width="278" /></center>
 
-<center><img src="/img/Gaussian_Processes/post1.png" width="40%" height="20%" />
-<img src="/img/Gaussian_Processes/post2.png" width="40%" height="20%" /></center>
+<p>Figure 1: GD over \(f(x)=x^2\). Left: learning rate = 0.1; right: learning rate = 0.7.</p>
 
-<center><img src="/img/Gaussian_Processes/post4.png" width="40%" height="40%" /></center>
+<p>In the figure above, we run GD over a quadratic function \(f(w)=w^2\), and one can see that GD indeed converges to the global minimum. However, GD suffers from the following problem: when the learning rate is small (the left figure), \(w_t\) consistently marches towards the global minimum \(0\), but the step size is small; when the learning rate is large (the right figure), the step size is large and the convergence is faster, but the trajectory oscillates, which makes the update ineffective. Gradient descent with momentum (GDM, also called Polyak’s heavy ball), is proposed to tackle this drawback. The intuition of GDM is simple: oscillatory trajectory is rooted from oscillatory gradient. Therefore, if we replace the gradient in the update of GD by an average of gradients of the past iterations, the oscillation will cancel out and the convergence should be faster.  A psedocode of GDM is given as follows:</p>
 
-<center>Figure 4: An illustration of the GP posterior update on fitting 1, 2 and 4 data points (Blue). The posterior distribution encodes the distribution over possible functions that may explain the data. Reprinted with permission from [11].</center>
+<blockquote>
+  <p>Psedocode of GDM</p>
 
-<h3 id="adapting-gaussian-processes-for-chemistry">Adapting Gaussian Processes for Chemistry</h3>
+  <p><strong>Input:</strong> objective function f, initial point \(w_0\), number of iterations \(T\), learning rate \(\{\eta_1,\cdots,\eta_T\}\), momentum parameter \(\beta\)</p>
 
-<p>While the above examples consider GPs defined on continuous input spaces, it is possible to defineGPs on discrete molecular representations as well via the choice of GP kernel. Two recent libraries, FlowMO (Tensorflow) [8], and GAUCHE (PyTorch) [9] open-source several molecular GP kernels that operate on a range of molecular and chemical reaction representations.</p>
+\[m_{0}=0\]
 
-<h2 id="application">Application</h2>
+  <p><strong>For</strong> \(t=1\rightarrow T\):</p>
 
-<p>In many virtual screening applications one wishes to have not only a machine learning prediction for unseen regions of the search space but also to know how accurate such a prediction is likely to be. Intuitively one would expect models to be more confident when making predictions around observed data points than when making predictions far away from the training set. In this section we take a look at what GPs can offer in terms of “knowing what they don’t know” when making predictions.</p>
+  <p>    \(m_t=\beta m_{t-1}+(1-\beta)\nabla f(w_t)\)</p>
 
-<h3 id="virtual-screening-with-model-uncertainty">Virtual Screening with Model Uncertainty</h3>
+  <p>     \(w_{t+1}=w_{t}-\eta_t m_t\)</p>
 
-<p>It is well known that machine learning models can be employed as molecular property predictors for virtual screening. In addition to providing a predicted property value, however, models can also provide an uncertainty estimate, in other words a measure of the prediction confidence. GPs are typically some of the best-calibrated probabilistic models due to the facility to perform exact Bayesian inference. In order to empirically assess the quality of molecular gp uncertainty estimates, we use a diagnostic tool known as a confidence-error curve [17] (also featured in the Jupyter notebook demo). The confidence-error curve for the SMILES string kernel is given in Figure 5. The TLDR is that the model achieves smaller prediction error on test molecules for which it has higher confidence.</p>
+  <p><strong>Output:</strong> \(w_{T+1}\)</p>
+</blockquote>
 
-<center><img src="/img/Gaussian_Processes/confidence_curve.png" width="40%" height="40%" /></center>
+<p>Note both in GD and GDM, there are pre-determined hyperparameters \(\{\eta_1,\cdots,\eta_T\}\) called the learning rates. Practical choices are constant, diminishing and cosine, etc. In the above figure, we have demonstrated the power of learning rates, i.e., proper learning rates make the convergence faster. One can either picks learning rates through Grid Search, or through the prior knowledge of the objective function: theoretical analysis suggests that the optimal learning rate is negatively correlated with the local curvature (i.e., the norm of the Hessian matrix) of the objective funtion. As we usually can not predict the change of curvature along the optimization process, pre-determined learning rates do not suffice to offer satisfactory speed of convergence. A natural thought is to adaptively choose \(\eta_t\) according to the curvature during the optimization process. There is the motivation of adaptive optimizers. As the curvature in deep learning is very expansive to calculate, most adaptive optimizers use gradient norm instead of the curvature to estimate adaptive learning rates.</p>
 
-<p>Figure 5: GP confidence error curve. The x-axis, Confidence Percentile, ranks each test datapoint prediction according to the GP predictive variance. For example, molecules that reside above the 80th confidence percentile will correspond to the 20\% of test set molecules with the lowest GP predictive uncertainty. The prediction error at each confidence percentile is then measured over 20 random train/test splits (the standard error over the random splits is plotted in the figure above) to gauge if the model’s confidence is correlated with the prediction error. This figure shows that the SMILES GP’s uncertainty estimates are positively correlated with the prediction error. As such, it is possible that model uncertainty could be used as a component in the decision-making process for prioritising molecules for laboratory synthesis.
-A natural extension to the idea of using model uncertainty to prioritise the immediate next choice of molecule for laboratory synthesis is to automate a sequence of choices, feeding each queried molecule back into the GP model to provide a better model for the next step in an iterative fashion. This is the idea behind Bayesian optimisation.</p>
+<p>AdaGrad is among the earliest adaptive optimizers, first propsed simutaneously by [Streeter &amp; McMahan, 2010] and [Duchi et al., 2011]. Its update is very simple: at step \(t\), it calculates the sum of historical gradients \(\nu_t=\sum_{s=1}^t \nabla f(w_t)^2\), and use \(\frac{1}{\sqrt{\nu_t}}\) as the adaptive learning rate. The concrete psedo-code of AdaGrad is given as follows:</p>
 
-<p>A natural extension to the idea of using model uncertainty to prioritise the immediate next choice of molecule for laboratory synthesis is to automate a sequence of choices, feeding each queried molecule back into the GP model to provide a better model for the next step in an iterative fashion. This is the idea behind Bayesian optimisation.</p>
+<blockquote>
+  <p>Psedocode of AdaGrad</p>
 
-<h3 id="bayesian-optimisation">Bayesian Optimisation</h3>
+  <p><strong>Input:</strong> objective function \(f\), initial point \(w_0\), number of iterations \(T\), learning rate \(\eta\), initial conditioner \(\nu_0\)</p>
 
-<p>The uncertainty estimates produced by a GP can be leveraged directly to accelerate scientific discovery via a scheme called Bayesian optimisation [3]. Informally, Bayesian optimisation (BO) aims to quickly identify promising molecules or materials by using model uncertainty estimates to explore a space of candidates to be prioritised for laboratory synthesis. Formally, Bayesian optimisation may be described as a solution method for a black-box global optimisation problem</p>
+  <p><strong>For</strong> \(t=1\rightarrow T\):</p>
 
-\[\mathbf{x}^{\star} = \arg\max_{\mathbf{x} \in \mathcal{X}} f(\mathbf{x})\]
+  <p>    \(\nu_t=\nu_{t-1}+\nabla f(w_t)^2\)</p>
 
-<p>where \(f:\mathcal{X} \rightarrow\mathbb{R}\) is a function over an input space \(\mathcal{X}\). \(\mathcal{X}\) is discrete for molecular representations such as graphs and strings. Equation above is a black-box optimisation problem when the following properties hold:</p>
+  <p>    \(w_{t+1}=w_{t}-\frac{\eta}{\sqrt \nu_t} \nabla f(w_t)\)</p>
 
-<ol>
-  <li>Black-Box Objective: The analytic form of \(f\) and its gradients are unavailable. We may, however, evaluate \(f\) pointwise anywhere in the input space \(\mathcal{X}\).</li>
-  <li>Expensive Evaluations: Evaluating \(f(\mathbf{x})\) at a given molecule \(\mathbf{x}\) takes a long time or incurs a large financial penalty.</li>
-  <li>Noise: Evaluation of a molecule \(\mathbf{x}\) is a noisy process.</li>
-</ol>
+  <p><strong>Output:</strong> \(w_{T+1}\)</p>
+</blockquote>
 
-<center><img src="/img/Gaussian_Processes/bayesopt_illustration5.png" width="40%" height="40%" /></center>
+<p>AdaGrad converges faster than GD over many pratical problems (see Figure 2 as an example). Note that in the above we say “a natural thought is to adaptively choose \(\eta_t\) according to the curvature during the optimization process”, but AdaGrad chooses the adaptive learning rate based on gradient. Why AdaGrad still outperforms GD？Recent experimental results show that the curvature and the gradient norm of neural networks actually have strong correlationship. We invite interesting readers to see [Zhang et al., 2019] for details.</p>
 
-<center>Figure 6: An illustration of the Bayesian optimisation algorithm. Reprinted with permission from [11].</center>
+<p>Despite that AdaGrad outperforms GD, one may immediately observe that the adaptive learning rate \(\frac{\eta}{\sqrt \nu_t}\) is non-increasing. This is problematic since as long as there is a large gradient along the  training process, the adaptive learning rate will become small thereafter and contradict the intuition to be “adaptive”. RMSProp was proposed in Hinton’s lecture notes () to overcome this problem: it adds exponentially decayed weights to each term in \(\nu_t\), which makes \(\nu_t\) no longer non-decreasing. The psedo-code is given as follows:</p>
 
-<p>BO is a solution method for such black-box optimisation problems comprised of a probabilistic surrogate model and an acquisition function. The surrogate model is fit to a dataset of pointwise observations from the unknown black-box function and the acquisition function suggests new inputs to query based on the model’s predictions and uncertainties (exploitation vs. exploration). The BO algorithm is illustrated graphically in Figure 6.</p>
+<blockquote>
+  <p>Psedocode of RMSProp</p>
 
-<p>BO has been successfully employed in a number of scientific domains including molecule generation [14], drug discovery [18], as well as chemical reaction condition optimisation [15].</p>
+  <p><strong>Input:</strong> objective function \(f\), initial point \(w_0\), number of iterations \(T\), learning rate \(\eta\), initial conditioner \(\nu_0\), conditioner parameter \(\beta_2\in [0,1)\)</p>
 
-<h2 id="jupyter-notebook-demos">Jupyter Notebook Demos</h2>
+  <p><strong>For</strong> \(t=1\rightarrow T\):</p>
 
-<p>The following Jupyter notebook demos go into greater detail on the mechanics of GP regression, uncertainty quantification and Bayesian optimisation over molecular spaces.</p>
+  <p>    \(\nu_t=\beta_2\nu_{t-1}+(1-\beta_2)\nabla f(w_t)^2\)</p>
 
-<ol>
-  <li><a href="https://github.com/leojklarner/gauche/blob/main/notebooks/GP\%20Regression\%20on\%20Molecules.ipynb">Gaussian Process Regression on Molecules</a></li>
-  <li><a href="https://github.com/leojklarner/gauche/blob/main/notebooks/Bayesian\%20Optimisation\%20Over\%20Molecules.ipynb">Bayesian Optimisation on Molecules</a></li>
-</ol>
+  <p>    \(w_{t+1}=w_{t}-\frac{\eta}{\sqrt \nu_t} \nabla f(w_t)\)</p>
 
-<h2 id="further-reading">Further Reading</h2>
-<p>For further details on the methodology underpinning the methods discussed here I recommend the following resources grouped in ascending order of complexity/rigour:</p>
+  <p><strong>Output:</strong> \(w_{T+1}\)</p>
+</blockquote>
 
-<h3 id="gaussian-process">Gaussian Process</h3>
+<p>RMSProp achieves better performance than AdaGrad. Finally, note that using adaptive learning rate (AdaGrad, RMSProp) and using momentum (GDM) are two orthogonal ways to accelerate the convergence. A natural thought is to combine them and see if their advantages can superimposed. Such a methodology indeed works, and lead to currently dominate optimizer Adam.</p>
 
-<ol>
-  <li><strong>Webpage</strong>: A visual introduction to Gaussian processes. A great resource for visualising the different components of GP regression. https://distill.pub/2019/visual-exploration-gaussian-processes/</li>
-  <li><strong>Lecture</strong>: Introduction to Gaussian Processes by Prof. Sir David MacKay. Introductory lecture again with some nice visualisations https://www.youtube.com/watch?v=NegVuuHwa8Q</li>
-  <li><strong>Lecture</strong>: Introduction to Gaussian Processes by Prof. Philip Hennig. Lecture as part of the (highly recommended) probabilistic machine learning course at the University of Tuebingen. https://www.youtube.com/watch?v=s2_L86D4kUE</li>
-  <li><strong>PhD Thesis</strong>: David Duvenaud’s PhD thesis [10]. A great illustration of how different GP kernels can be combined. https://www.cs.toronto.edu/~duvenaud/thesis.pdf</li>
-  <li><strong>Book</strong>: Gaussian Processes for Machine Learning by Rasmussen and Williams. An encyclopedic resource on GP regression. Technically quite dense. https://gaussianprocess.org/gpml/ [1]</li>
-</ol>
+<blockquote>
+  <p>Psedocode of Adam</p>
 
-<h3 id="bayesian-optimisation-1">Bayesian Optimisation</h3>
+  <p><strong>Input:</strong> objective function \(f\), initial point \(w_0\), number of iterations \(T\), learning rate \(\eta\), initial conditioner \(\nu_0\), momentum parameter \(\beta_1\), conditioner parameter \(\beta_2\in [0,1)\)</p>
 
-<ol>
-  <li><strong>YouTube Clip</strong>: A short and visual introduction to Bayesian optimisation. https://www.youtube.com/watch?v=M-NTkxfd7-8</li>
-  <li><strong>Review Paper</strong>: Comprehensive review paper that does a great job of covering all major advances in bo pre-2015. [2] https://www.cs.ox.ac.uk/people/nando.defreitas/publications/BayesOptLoop.pdf</li>
-  <li><strong>Review Pape</strong>r: Another comprehensive review with a slightly different flavour. https://arxiv.org/abs/1807.02811</li>
-  <li><strong>Book</strong>: The recently published Bayesian optimisation book which is at the same time a great resource for learning about the topic, as well as an encyclopedia for technical details. https://bayesoptbook.com/. [3]</li>
-</ol>
+  <p><strong>For</strong> \(t=1\rightarrow T\):</p>
 
-<h3 id="gps-and-bo-for-science">GPs and BO for Science</h3>
-<ol>
-  <li><strong>Paper/Software Library</strong>: A Gaussian process regression software library for molecules used for the Jupyter notebook tutorials. https://arxiv.org/abs/2212.04450 [9]</li>
-  <li><strong>PhD Thesis</strong>: Applications of Gaussian Processes at Extreme Lengthscales: From Molecules to Black Holes - My PhD thesis - forthcoming!</li>
-  <li><strong>Review Paper</strong>: A nice review paper on Bayesian optimisation for accelerating drug discovery [18]. https://ieeexplore.ieee.org/abstract/document/8539993</li>
-  <li><strong>Paper</strong>: A recent high profile paper leveraging Bayesian optimisation for chemical reaction conditions [15, 16]. https://www.nature.com/articles/s41586-021-03213-y</li>
-  <li><strong>Paper</strong>: A shameless self-plug about an application of Gaussian processes for molecular photoswitch discovery. [17] https://pubs.rsc.org/en/content/articlehtml/2022/sc/d2sc04306h.</li>
-</ol>
+  <p>    \(m_t=\beta_1 m_{t-1}+(1-\beta_1) \nabla f(w_t)\)</p>
 
-<h2 id="reference">Reference</h2>
+  <p>    \(\nu_t=\beta_2\nu_{t-1}+(1-\beta_2)\nabla f(w_t)^2\)</p>
 
-<p>[1] Christopher K Williams and Carl Edward Rasmussen. <em>Gaussian processes for machine learning</em>. MIT press Cambridge, MA, 2006.</p>
+  <p>    \(w_{t+1}=w_{t}-\frac{\eta}{\sqrt \nu_t} m_t\)</p>
 
-<p>[2] Bobak Shahriari, Kevin Swersky, Ziyu Wang, Ryan P Adams, and Nando De Freitas. Taking the human out of the loop: A review of Bayesian optimization. <em>Proceedings of the IEEE</em>, 104(1):148–175, 2015.</p>
+  <p><strong>Output:</strong> \(w_{T+1}\)</p>
+</blockquote>
 
-<p>[3] Roman Garnett. <em>Bayesian Optimization</em>. Cambridge University Press, 2022. in preparation.</p>
+<p>In deep learning practice, \(f\) is usually an \(n\)-sum function, i.e., \(f(w)=\frac {1}{n}\sum_{i=1}^n f_i(w)\), where each \(f_i\) stands for the objective function calculated from a data. Thus, calculating \(\nabla f\) requires the calculation of every \(\nabla f_i\). As \(n\) is typically large (for example, 50k in Cifar 10), the calculation of \(\nabla f\) is costly. To resolve this obstackle, we estimate \(\nabla f\) by the average of gradients of a random subset (called batch) of \(\{f_1,\cdots, f_n\}\). Specifically, at the \(t\)-th iteration and with batch size \(b\), we uniformly sample \(b\) elements \(\{f_{\tau_{t,1}},\cdots, f_{\tau_{t,b}}\}\) from \(\{f_1,\cdots,f_n\}\) without replacement and calculate the estimation of \(\nabla f\) as \(\nabla \tilde{f}(w)=\frac{1}{b} \sum_{i=1 }^b \nabla f_{\tau_{t,i}}(w)\). By replacing \(\nabla f(w)\) by \(\nabla \tilde{f}(w)\) in the forementioned algorithms, we derive their stochastic version. We provide the psedo-code of stochastic GD (SGD) as follows, while the stochastic versionof other optimizers can be derived similarly.</p>
 
-<p>[4] Antoine Grosnit, Alexander Imani Cowen-Rivers, Rasul Tutunov, Ryan-Rhys Griffiths, Jun Wang, and Haitham Bou-Ammar. Are we forgetting about compositional optimisers in Bayesian optimisation? <em>J. Mach. Learn. Res.</em>, 22:160–1, 2021.</p>
+<blockquote>
+  <p>Psedocode of SGD</p>
 
-<p>[5] David Rogers and Mathew Hahn. Extended-connectivity fingerprints. <em>Journal of Chemical Information and Modeling</em>, 2010.</p>
+  <p><strong>Input:</strong> objective function \(f\), initial point \(w_1\), number of iterations \(T\), learning rate \(\{\eta_1,\cdots,\eta_T\}\), batch size \(b\)</p>
 
-<p>[6] Eric Anderson, Gilman D Veith, and David Weininger. SMILES, a line notation and computerized interpreter for chemical structures. <em>Environmental Research Laboratory</em>, 1987.</p>
+  <p><strong>For</strong> \(t=1\rightarrow T\):</p>
 
-<p>[7] David Weininger. SMILES, a chemical language and information system. 1. introduction to methodology and encoding rules. <em>Journal of Chemical Information and Computer Sciences</em>, 1988.</p>
+  <p>    Sample \(\{\tau_{t,1},\dots,\tau_{t,b}\}\) uniformly without replacement from \(\{1,\cdots,n\}\)</p>
 
-<p>[8] Henry B. Moss and Ryan-Rhys Griffiths. Gaussian Process Molecule Property Prediction with FlowMO. <em>arXiv e-prints</em>, page arXiv:2010.01118, October 2020.</p>
+  <p>      \(w_{t+1}=w_{t}-\eta_t \frac{1}{b}\sum_{i=1}^b\nabla f_{\tau_{t,i}}(w_{t})\)</p>
 
-<p>[9] Ryan-Rhys Griffiths, Leo Klarner, Henry Moss, Aditya Ravuri, Sang T. Truong, Bojana Rankovic, Yuanqi Du, Arian Rokkum Jamasb, Julius Schwartz, Austin Tripp, Gregory Kell, Anthony Bourached, Alex Chan, Jacob Moss, Chengzhi Guo, Alpha Lee, Philippe Schwaller, and Jian Tang. GAUCHE: A library for Gaussian processes in chemistry. In <em>ICML 2022 2nd AI for Science Workshop</em>, 2022.</p>
+  <p><strong>Output:</strong> \(w_{T+1}\)</p>
+</blockquote>
 
-<p>[10] David Duvenaud. <em>Automatic Model Construction with Gaussian Processes.</em> PhD thesis, Computational and Biological Learning Laboratory, University of Cambridge, 2014.</p>
+<p><img src="https://www.ruder.io/content/images/2016/09/saddle_point_evaluation_optimizers.gif" title="" alt="" width="428" /></p>
 
-<p>[11] Ryan-Rhys Griffiths. <em>Applications of Gaussian processes at Extreme Lengthscales from Molecules to Black Holes.</em> PhD thesis, University of Cambridge, 2022.</p>
+<p>Figure2: (Image 6, [Ruder, 2016]) The behaviour of the different optimizers.</p>
 
-<p>[12] Yoshua Bengio. <em>What are some Advantages of Using Gaussian Process Models vs Neural Networks?</em>, 2011. https://www.quora.com/What-are-some-advantages-of-using-Gaussian-Process-Models-vs-Neural-Networks.</p>
+<p>With \(b&lt;&lt;N\), stochastic gradient greatly saves the computation burden of each iteration, and allows stochatic optimizers to perform a lot more iterations than their deterministic counterparts given the same computation resources. While a single iteration of stochatic optimizers may not reduce \(f\) as effeciently as an iteration of their deterministic versions, the additional iterations make them performs better with limited computation resources. Thus, stochatic optimizers are more widely adopted.</p>
 
-<p>[13] David JC MacKay, David JC Mac Kay, et al. <em>Information theory, inference and learning algorithms.</em> Cambridge University Press, 2003.</p>
+<p>Moreover, stochastic gradient has an additional benefit: it can help the optimizer find the global minima. We will discuss this detailedly in the next section.</p>
 
-<p>[14] Ryan-Rhys Griffiths and Jos ́e Miguel Hern ́andez-Lobato. Constrained Bayesian optimization for automatic chemical design using variational autoencoders. <em>Chemical Science</em>, 11(2):577–586, 2020.</p>
+<h2 id="optimization-vs-sampling">Optimization vs. Sampling</h2>
 
-<p>[15] Benjamin J Shields, Jason Stevens, Jun Li, Marvin Parasram, Farhan Damani, Jesus I Martinez Alvarado, Jacob M Janey, Ryan P Adams, and Abigail G Doyle. Bayesian reaction optimization as a tool for chemical synthesis. <em>Nature</em>, 2021.</p>
+<p>In the last section, we have shown that the best solution that deterministic first-order optimizers can provide are the saddle points. This is because these optimizers can only access gradients. It is possible to provide better solutions by utilizing derivatives higher order. However, such derivatives are conputationally expansive due to the huge number of parameters of deep learning models. Surprisingly, we can step beyond saddle points by using stochatic first-order derivatives. We show this by leveraging the connection between optimization and sampling.</p>
 
-<p>[16] Bojana Rankovi ́c, Ryan-Rhys Griffiths, Henry B. Moss, and Philippe Schwaller. Bayesian optimisation for additive screening and yield improvements in chemical reactions – beyond one-hot encodings. <em>ChemRxiv</em>, 2022.</p>
+<p>Let us revisit the stochastic gradient descent (SGD) as an example. The update rule of SGD can be rewritten as</p>
 
-<p>[17] Ryan-Rhys Griffiths, Jake L Greenfield, Aditya R Thawani, Arian R Jamasb, Henry B Moss, Anthony Bourached, Penelope Jones, William McCorkindale, Alexander A Aldrick, Matthew J Fuchter, et al. Data-driven discovery of molecular photoswitches with multioutput Gaussian processes. <em>Chemical Science</em>, 13(45):13541–13551, 2022.</p>
+\[w_{t+1}=w_{t}-\eta_t \frac{1}{b}\sum_{i=1}^b\nabla f_{\tau_{t,i}}(w_{t})=w_{t}-\eta_t \frac{1}{n}\sum_{i=1}^n\nabla f_{i}(w_{t})+\\\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad \eta_t(\frac{1}{n}\sum_{i=1}^n\nabla f_{i}(w_{t})-\frac{1}{b}\sum_{i=1}^b\nabla f_{\tau_{t,i}}(w_{t})).\]
 
-<p>[18] Edward O Pyzer-Knapp. Bayesian optimization for accelerated drug discovery. <em>IBM Journal of Research and Development</em>, 62(6):2–1, 2018.</p>
+<p>In the right-hand-side of the above equality, the first two terms exactly agree with the update rule of GD, and thus the last term can be treated as the noise adding GD to get SGD. We denote the covariance of \(\frac{1}{n}\sum_{i=1}^n\nabla f_{i}(w_{t})-\frac{1}{b}\sum_{i=1}^b\nabla f_{\tau_{t,i}}(w_{t})\) by \(\mathcal{C}(w_t)\) and approximate the noise as a gaussian noise with same covariance, i.e.,</p>
 
+\[w_{t+1}\approx w_{t}-\eta_t \frac{1}{n}\sum_{i=1}^n\nabla f_{i}(w_{t})+\eta_t\mathcal{N}(0,\mathcal{C}(w_t)).\]
+
+<p>To further simplify the problem, we assume the noise covariance is independent of \(w_t\) and is isotropic, i.e., \(\mathcal{C}(w_t)\equiv \lambda \mathbb{I}\). We also assume that we use constant learning rate, i.e, \(\eta_t\equiv \eta\). The update rule of SGD then concides with the unadjusted langevin algorithm in sampling. Theoretical analysis tells us with proper conditions, the distribution of \(w_t\) will converge to \(p(w)\propto e^{-\frac{2}{\eta \lambda} \frac{1}{n}\sum_{i=1}^n\nabla f_{i}(w)}\). One can easily observe that \(p(w)\) is high when \(\frac{1}{n}\sum_{i=1}^n\nabla f_{i}(w)\) is small, and when \(w\) is the global minima, \(p(w)\) is largest. In other word, the global minima has the highest density, and thus SGD  drives us to the global minima.</p>
+
+<p>In general, optimization and sampling have deep connections. On the one hand, setting sampling density reversely proportional to the objective function and using sampling algorithms solve the optimization problem. On the other hand, acceleration techniques in optimization has inspired more effcient sampling algorithms.</p>
+
+<h2 id="interface-between-optimization-and-generalization-in-deep-learning-implicit-regularization">Interface between Optimization and Generalization in Deep Learning: Implicit Regularization</h2>
+
+<p>While derived through optimization over the training data, learning models are often applied to unseen data. There is a natural gap between the performance over the training data and that over the unseen data, which is called the generalization error. By classical generalization theory, the generalization error grows with the model complexity, which further correlates with the model parameters. However, experiments show that the generalization error of deep learning model decreases when the number of parameter increases (called the “scaling law”). Therefore, classical generalization theory fail to explain the generalization ability of deep learning models and calls for new explxxnations. A potential approach is through the implicit regularization of optimizers: in classical generalization theory, the model complexity measures the complexity of models with nearly all possible parameter choices. However, the models output by the optimizers are only a small fraction of forementioned models and are with certain properties. The complexity of such models may not increase with the number of parameters. In other words, optimizers implicitly regularize the models to low model complexity. We illustrate this idea through the following theorem.</p>
+
+<blockquote>
+  <p>Theorem. Consider the linear classification problem. Let the data be separable, that is, there exists a linear model that can classify all data correctly. Then, the model output by GD has the largest \(L^2\) margin.</p>
+</blockquote>
+
+<p>\(L^2\) margin has been proved to be positively correlate with the generalization error, and thus the above theorem indicate that GD implicitly regularize the model to possess good generalization ability. The above theorem has been extended to deep neural networks, and there are also other implicit regularization effect in deep learning. We invite the readers to see [Lyu &amp; Li, 2019]  for details.</p>
+
+<h2 id="references">References</h2>
+
+<p>Matthew Streeter and H Brendan McMahan, Less Regret via Online Conditioning, 2010</p>
+
+<p>John Duchi, Elad Hazan, Yoram Singer, Adaptive Subgradient Methods for Online Learning and Stochastic Optimization, 2011</p>
+
+<p>Sebastian Ruder, An overview of gradient descent optimization algorithms, 2016</p>
+
+<p>Kaifeng Lyu, Jian Li, Gradient Descent Maximizes the Margin of Homogeneous Neural Networks, 2019</p>
+
+<p>Jingzhao Zhang, Tianxing He, Suvrit Sra, Ali Jadbabaie, Why gradient clipping accelerates training: A theoretical justification for adaptivity, 2019</p>
 
 </div>
                 </div>

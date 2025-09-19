@@ -1,0 +1,750 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Computational Sustainability - AI4Science101</title>
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="shortcut icon" type="image/png"
+           href="/favicon.png" 
+    />
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Computational Sustainability | AI4Science101</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Computational Sustainability" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="AI for Science 101" />
+<meta property="og:description" content="AI for Science 101" />
+<link rel="canonical" href="http://localhost:4000/blogs/comp_sustainability/" />
+<meta property="og:url" content="http://localhost:4000/blogs/comp_sustainability/" />
+<meta property="og:site_name" content="AI4Science101" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Computational Sustainability" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"AI for Science 101","headline":"Computational Sustainability","url":"http://localhost:4000/blogs/comp_sustainability/"}</script>
+<!-- End Jekyll SEO tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-183522810-1"></script>
+<script>
+  window['ga-disable-UA-183522810-1'] = window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1";
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-183522810-1');
+</script><!-- head scripts --></head>
+
+  <body>
+    
+<nav class="navbar is-primary" >
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-brand" href="/">
+            <span><img src="/logonav.png" alt="Logo" style="height: auto; width: auto; max-height: 45px; max-width: 250px;"></span>
+            </a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu" id="navMenu">
+            <div class="navbar-end">
+                
+                
+                    
+                    <a href="/" class="navbar-item ">Home</a>
+                    
+                
+                    
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a href="/blogs/" class="navbar-link ">Blogs</a>
+                        <div class="navbar-dropdown">
+                            
+                            <a href="/blogs/announcement/" class="navbar-item ">Announcement</a>
+                            
+                            <a href="/blogs/ai_for_science_science/" class="navbar-item ">AI for Scientific Discovery</a>
+                            
+                            <a href="/blogs/ai_for_science_ai/" class="navbar-item ">Scientific Discovery in the era of AI</a>
+
+                            <a href="/blogs/progress/" class="navbar-item ">Progress Summary</a>
+                            
+                            <a href="/blogs/molecular_simulation/" class="navbar-item ">Molecular Simulation</a>
+                            
+                            <a href="/blogs/gaussian_processes/" class="navbar-item ">Gaussian Processes</a>
+                            
+                            <a href="/blogs/causal_machine_learning/" class="navbar-item ">Causal Machine Learning</a>
+                            
+                            <a href="/blogs/statistical_learning_theory/" class="navbar-item ">Statistical Learning Theory</a>
+                            
+                            <a href="/blogs/optimization/" class="navbar-item ">Optimization</a>
+                            
+                            <a href="/blogs/graph_machine_learning/" class="navbar-item ">Graph Machine Learning</a>
+                            
+                            <a href="/blogs/reinforcement_learning/" class="navbar-item ">Reinforcement Learning</a>
+                            
+                            <a href="/blogs/quantum_science/" class="navbar-item ">Quantum Science</a>
+                            
+                            <a href="/blogs/comp_sustainability/" class="navbar-item is-active">Computational Sustainability</a>
+                            
+                            <a href="/blogs/structural_biology/" class="navbar-item ">Structural Biology</a>
+                            
+                            <a href="/blogs/quantum_chemistry/" class="navbar-item ">Quantum Chemistry</a>
+                            
+                            <a href="/blogs/equivariant_neural_networks/" class="navbar-item ">Equivariant Neural Networks</a>
+                            
+                            <a href="/blogs/knowledge_base/" class="navbar-item ">Knowledge Base</a>
+                            
+                        </div>
+                    </div>
+                    
+                
+                    
+                    <a href="/resources/" class="navbar-item ">Resources</a>
+                    
+                
+                
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+    
+    
+
+
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                
+                <div class="column is-4-desktop is-4-tablet">
+                    
+
+<aside class="menu">
+
+</aside>
+                </div>
+                
+                <div class="column is-8">
+                    
+                    
+                    
+                    
+    
+    
+
+<div class="contents">
+    <div class="menu">
+        <p class="menu-label">Computational Sustainability</p>
+        <ul class="menu-list">
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#how-can-ai-help-address-the-sdgs">How can AI Help Address the SDGs?</a></li>
+  <li><a href="#dealing-with-missing-or-incomplete-data">Dealing with Missing or Incomplete Data</a>
+    <ul>
+      <li><a href="#mapping-and-monitoring-poverty-from-satellite-data">Mapping and Monitoring Poverty from Satellite Data</a></li>
+    </ul>
+  </li>
+  <li><a href="#dealing-with-biased-noisy-and-shifting-data">Dealing with Biased, Noisy, and Shifting Data</a>
+    <ul>
+      <li><a href="#avicaching-reducing-bias-in-citizen-science-data">Avicaching: Reducing Bias in Citizen Science Data</a></li>
+      <li><a href="#deep-hurdle-networks-for-zero-inflated-data">Deep Hurdle Networks for Zero-Inflated Data</a></li>
+    </ul>
+  </li>
+  <li><a href="#incorporating-ai-into-decision-making">Incorporating AI into Decision Making</a>
+    <ul>
+      <li><a href="#predict-then-optimize-to-improve-maternal-health-outcomes">Predict then Optimize to Improve Maternal Health Outcomes</a></li>
+    </ul>
+  </li>
+  <li><a href="#computational-themes">Computational Themes</a></li>
+  <li><a href="#resources">Resources</a>
+    <ul>
+      <li><a href="#readings">Readings</a></li>
+      <li><a href="#communities">Communities</a></li>
+      <li><a href="#conferences-and-workshops">Conferences and Workshops</a></li>
+      <li><a href="#benchmarks-and-datasets">Benchmarks and Datasets</a></li>
+      <li><a href="#references">References</a></li>
+    </ul>
+  </li>
+</ul>
+    </div>
+</div>
+
+
+
+
+<div class="content">
+    <script type="text/javascript" async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<p>Author(s): <a href="https://lauragreenstreet.github.io/about-me/">Laura Greenstreet</a> is currently a PhD student at Cornell University where she works on developing AI and optimization methods with sustainability applications.</p>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Computational sustainability is an emerging field which uses
+computational ideas and methods to address the United Nations
+Sustainable Development Goals (UN SDGs). While the term sustainability
+is commonly associated with environmental sustainability, the UN SDGs
+take a wider view, defining sustainable development as meeting
+environmental, social, and economic needs both now and in the future
+[1]. The 17 goals include alleviating hunger and poverty, access
+to healthcare and education, climate action and biodiversity
+preservation, and decent work and economic growth. The SDGs were adopted
+in 2015 with a target date of 2030, where progress is tracked through
+annual reports and comprehensive reviews conducted every four years.</p>
+
+<p>The SDGs are the successors to the Millennium Development Goals (MDGs),
+which showcase the benefits of international cooperation, planning, and
+monitoring. While not all MDGs were fully met, significant progress was
+made, including halving the portion of people in extreme poverty and
+reducing the under-five mortality rate by half [2]. However, the
+gap on some goals, such as ensuring environmental sustainability,
+widened and recent reports show new gaps emerging, such as increasing
+food insecurity related to the conflict in the Ukraine [3].</p>
+
+<center><img src="/img/Comp_Sustainability/UN-SDGs.png" /></center>
+<p><br /></p>
+
+<h2 id="how-can-ai-help-address-the-sdgs">How can AI Help Address the SDGs?</h2>
+
+<p>The SDGs highlight some of the most pressing issues for creating a
+future that is sustainable and equitable economically, socially, and
+environmentally. The global and interconnected nature of the goals
+creates challenges that are not addressed well by traditional approaches
+to development, creating opportunities for innovation in how to measure
+targets and impacts, maximize the benefit of limited resources, and
+improve and develop new technologies. Computational methods and ideas
+have the potential to scale existing methods as well as create new
+approaches.</p>
+
+<p>However, computational sustainability does not just benefit
+sustainability domains. The scale and complexity of sustainability
+problems highlights limitations in existing computational methods and
+motivates new approaches to address problems like noisy and biased data
+or shifting distributions. Further, core computational problems often
+arise that apply to multiple domains, leading to general computational
+solutions. For example, source separation problems arise in
+sustainability domains ranging from identifying birds calls in
+real-world audio [4] to identifying novel compounds from X-ray
+diffraction data [5].</p>
+
+<p>The broad scope of the SDGs leads computational sustainability to touch
+on many areas both within computer science and from other disciplines,
+as well as intersect with many computation for good communities. While
+specialized knowledge is critical for addressing computational
+sustainability problems, common problems and core computational ideas
+lead to benefits from sharing ideas and collaborating across
+disciplines. Thus the field of computational sustainability complements
+specialized communities, helping develop general methodologies that
+advance both computational disciplines and the Sustainable Development
+Goals.</p>
+
+<p>In the next section, we’ll highlight examples of successful
+computational sustainability projects that relate to three commonly
+occurring challenges:</p>
+
+<ol>
+  <li>
+    <p>Dealing with missing or incomplete data</p>
+  </li>
+  <li>
+    <p>Dealing with biased, noisy, or shifting data distributions</p>
+  </li>
+  <li>
+    <p>Incorporating AI into the decision making process</p>
+  </li>
+</ol>
+
+<h1 id="examples">Examples</h1>
+
+<h2 id="dealing-with-missing-or-incomplete-data">Dealing with Missing or Incomplete Data</h2>
+
+<p>Often the data that would be most useful for addressing computational
+sustainability problems is not available or is incomplete. Traditional
+data collection methods like censuses and scientific surveys are not
+scalable due to effort and cost and cannot be done with enough frequency
+to be used for time-sensitive tasks like disaster response or
+forecasting. AI can help scale and automate data collection as well as
+creatively leverage existing data sources for new tasks.</p>
+
+<h3 id="mapping-and-monitoring-poverty-from-satellite-data">Mapping and Monitoring Poverty from Satellite Data</h3>
+
+<p>Local economic measures are needed to assess and inform policy on SDGs
+such as poverty, health, education, and hunger. However, there is often
+a lack of recent data with high spatial resolution. Censuses are one of
+the best sources of this information, but they are difficult to compare
+across regions and are at most conducted every few years. In developing
+regions, censuses may be even more infrequent. From 2000-2010, 14 of 59
+African countries did not conduct a single census with questions that
+could inform poverty measures [6]. However, simply scaling
+existing efforts is prohibitively costly, with cost estimates for
+scaling existing methods to measure every SDG over a 15 year period are
+in the hundreds of billions of dollars for African countries alone
+[6].</p>
+
+<p>There are many open source remote sensing datasets that provide good
+spatial and temporal coverage. For example, the Sentinel satellites
+launched in 2014 provide 10-30m resolution images with a revisit time as
+low as 5 days, leading to more than 50 images of every location on earth
+each year [7]. However, it not obvious how to go from
+satellite imagery to indicators useful for achieving the SDGs.</p>
+
+<p>Jean et al. [6] developed a transfer learning approach to train
+a CNN to identify features that explain economic variation at a local
+level with only hundreds of economic surveys. The model was first
+trained to recognize nightlights, a noisy proxy for poverty with
+abundant labels [8, 9]. The model was then
+fine-tuned to estimate household-level assets at a local level. The
+model performed better than using nightlights alone or and even more
+difficult to obtain proxies like cellphone usage [10].
+Further, the model explained a similar amount of variation as
+traditional, less scalable approaches like surveys [11] and the
+results of the model are now used by the World Bank [12]. Two
+desirable aspects of this method are that is uses only open source data
+and that it provides a general methodology that could be applied to
+other mapping tasks.</p>
+
+<center><img src="/img/Comp_Sustainability/NASA-nightlights.jpeg" /></center>
+<center> Figure 1: Nightlights are a noisy proxy for economic indicators that help measure progress towards the SDGs. Researchers at Stanford developed a model that starting from nightlights learns features that predict economic variation as effectively as on-the-ground approaches like surveys. Image source: Google Earth</center>
+<p><br /></p>
+
+<p>Figure 1: Nightlights are a noisy proxy for economic indicators that help measure
+progress towards the SDGs. Researchers at Stanford developed a model
+that starting from nightlights learns features that predict economic
+variation as effectively as on-the-ground approaches like surveys. Image
+source: Google Earth</p>
+
+<p>There are many other examples of projects finding impactful ways to use
+remote sensing data including crop yield prediction [13], factory
+farm detection [14], and disaster response [15].
+Outside of remote sensing, creating conservation datasets from audio
+recordings [16,17] and citizen science data, covered in
+more detail below, are exciting approaches for creating and improving
+datasets.</p>
+
+<h2 id="dealing-with-biased-noisy-and-shifting-data">Dealing with Biased, Noisy, and Shifting Data</h2>
+
+<p>In many cases, complete data cannot be collected or the distribution of
+data actively changes over time. Further, data collection methods often
+introduce bias and some samples may even have incorrect labels. Many AI
+and machine learning methods assume correct labels and that examples
+represent i.i.d. samples from a static distribution. This creates the
+need for methods that can handle biased, noisy, and shifting data
+distributions.</p>
+
+<h3 id="avicaching-reducing-bias-in-citizen-science-data">Avicaching: Reducing Bias in Citizen Science Data</h3>
+
+<p>An exciting data source for biodiversity and conservation is citizen
+science data. Traditionally, observations of species were conducted
+through scientific surveys, creating small datasets that often only
+record a subset of species. Individual surveys cover small areas at a
+single point in time and require expert scientists, limiting their
+scalability. Citizen science initiatives like eBird [18] and
+iNaturalist [19] allow anyone to report observations,
+leveraging a combination of AI and online communities to label
+observations. These initiatives have collected vast datasets where new
+observations are continuously added, creating the opportunity to detect
+trends over time. However, observations are biased by a variety of
+factors including what species participants choose to report and where
+participants choose to make observations.</p>
+
+<p>Xue et al. [20] introduced Avicaching, a two-stage game that
+designs incentives to encourage citizen scientists to collect more
+uniform data. The method uses a structural SVM to estimate the utility
+of locations as well as develops a scalable optimization framework that
+embeds the goal of participants within the problem of the organizer to
+make optimization tractable. A notable aspect of this project is that
+the authors recognized that the participants’ problem could be reduced
+to an instance of the well-studied knapsack problem [21]. This
+allowed them to use several previously developed approximations as well
+as made their framework applicable to a broader class of problems. By
+partnering with eBird, Avicaching was tested in two counties in New York
+state and was found to significantly shift birder behaviour, where
+during the three month trial 20% of observations occurred in areas with
+no prior observations [20].</p>
+
+<center><img src="/img/Comp_Sustainability/wood-thrush-abundance.png" /></center>
+<center> Figure 2: Abundance map for wood thrushes created from eBird citizen science observations. Working with citizen science data can be challenging due to multiple sources of bias. Researchers from Cornell developed Avicaching to incentivize uniform data collection and deep hurdle networks to better handle zero-inflated data. Image source: eBird</center>
+<p><br /></p>
+
+<h3 id="deep-hurdle-networks-for-zero-inflated-data">Deep Hurdle Networks for Zero-Inflated Data</h3>
+
+<p>While methods like Avicaching can help collect more uniform data, other
+biases will still impact the data. For example, a species that is
+present in an area may not be reported because it requires expert skills
+to identify or may only be observable during certain times of the day or
+weather conditions. This leads to incorrect zeros in observation data.
+Multi-variate probit models (MVPs) are popular models for understanding
+species interactions [22]. Kong et al. [23] developed a
+deep hurdle network for multi-species abundance estimation that
+separately models the abundance of a species using a deep multi-variate
+probit model (DVMP) [24] and whether the ‘hurdle’ of a species
+being observed is crossed to account for zero-inflation. These models
+are connected by a shared covariance matrix and are integrated into an
+end-to-end deep learning model which can efficiently be trained on GPUs,
+unlike classic MVPs which require sequential steps. On the eBird
+dataset, the model achieved nearly 10% higher accuracy than the next
+best method and ran in less than a quarter of the time than the prior
+state-of-the-art. This example highlights that prior methods can provide
+the foundation for new computational sustainability methods, where
+limitations in current methods, such as scalability or assumptions about
+the data, are the motivation for new computational ideas.</p>
+
+<p>Other projects addressing biased, noisy, or shifting data include crop
+yield prediction [13], anomaly detection in weather sensors
+[25], and methods for domain generalization with
+applications including conservation, agriculture, and health
+[26,27,28].</p>
+
+<h2 id="incorporating-ai-into-decision-making">Incorporating AI into Decision Making</h2>
+
+<p>An exciting direction in computational sustainability research is
+incorporating AI into the decision making process. Decision tasks can
+take a variety of forms, including allocating limited resources or
+making decisions based on multiple conflicting objectives. Many
+traditional approaches to decision making are not scalable, make strong
+assumptions, or struggle to handle incomplete or uncertain data.</p>
+
+<p>While there is great potential to combine AI and decision making, there
+are also significant challenges. A common challenge in combining AI
+methods like deep learning into decision making problems is implementing
+hard, discrete constraints. While there are methods that can handle
+discrete or hard constraints, they often face challenges in scalability
+or require specific problem structures. A second common challenge is
+integrating modelling and decision making. Parameters for the
+optimization component of a decision problem are often predicted using
+models. However, many optimization methods do not take into account
+uncertainty in the parameters due to imperfect prediction models.</p>
+
+<h3 id="predict-then-optimize-to-improve-maternal-health-outcomes">Predict then Optimize to Improve Maternal Health Outcomes</h3>
+
+<p>Initiatives often have limited resources and want to design programs to
+maximize impact. For example, the non-profit ARMMAN operates maternal
+health programs in India that provide expecting and new mothers with
+health information through automated calls [29]. While some
+mothers drop out of the program, some will reengage with the program if
+visited by a health worker. However, as the program serves over 2
+million participants, ARMMAN only has the resources to visit a fraction
+of the mothers in the program.</p>
+
+<center><img src="/img/Comp_Sustainability/ARMMAN-mother.jpg" /></center>
+<center> Figure 3: ARMMAN is a non-profit that runs a program that provides calls with health information to over 2 million new and expecting mothers in India. Researchers at Harvard and Google worked with ARMMAN to develop and test a method to maximize the impact of health worker visits on reducing program dropout. Image source: Google AI</center>
+<p><br /></p>
+
+<p>Biwas et al. [29] designed a model to prioritize mothers to
+visit, modelling the problem as a restless multi-arm bandit problem. The
+authors found that previous work required an uncertainty model to be
+known <em>a priori</em>. However, these values would be difficult to
+approximate from existing data and were not expected to follow a
+particular distribution. Instead of estimating the parameters before the
+optimization or introducing strong assumptions, the authors developed a
+version of the prior Q-learning algorithm that simultaneously learned
+the values for the uncertainty model and the best strategy for
+contacting mothers. The authors proved the model converges to the
+optimal solution and demonstrated that it outperforms existing methods
+on several datasets. Further, the authors worked with ARMMAN to test the
+method in practice, finding the method was over 30% more effective in
+preventing drop out than baseline methods [30].</p>
+
+<p>An important aspect of this project is that the researchers worked with
+collaborators to solve an ongoing problem, working to develop an
+approach that would be feasible with available resources and data and
+testing the method in practice. While it is often the intent that
+research will be applied in practice, it takes concerted effort and time
+to build collaborations and take ideas from a model or publication to a
+real-world implementation. In fact, all of the examples described here
+involved collaborations between computer scientists and domain experts
+and often took years to go from initial questions to real-world
+demonstrations.</p>
+
+<p>Other examples of incorporating AI into decision making include
+efficient multi-objective optimization to for hydropower dam planning
+[31], using a combination of game theoretic methods and
+reinforcement learning to combat poaching[32], and power grid
+optimization [33].</p>
+
+<h2 id="computational-themes">Computational Themes</h2>
+
+<p>In addition to the common challenges outlined here, there are many
+computational themes that connect projects from disparate domains. Gomes
+et al. [12] use the metaphor of subway lines and stations, where
+projects are stations that are connected by themed subway routes. These
+common themes highlight the potential benefits of sharing ideas across
+the computational sustainability community and developing general
+computational methods that can be applied to multiple problems.</p>
+
+<center><img src="/img/Comp_Sustainability/subway-lines.png" /></center>
+<center> Figure 4: Gomes et al. [12] use the metaphor of subway lines to describe how projects (stations) are connected by computational themes (subway lines). These themes motivate sharing ideas across domains and developing general approaches. Image source: CompSustNet</center>
+<p><br /></p>
+
+<h1 id="getting-involved">Getting Involved</h1>
+
+<p>There are many ways to get involved in computational sustainability,
+depending on your background and desired level of involvement. First,
+while this post only had the space to highlight a few examples, there is
+a wide variety of computational sustainability research. The readings in
+the resource section are a good place to learn more about successful
+projects and open research problems. Many top AI and data science
+conferences have added sustainability or AI for good tracks or workshops
+in recent years and their proceedings are also a good resource to learn
+about active research areas. There are also several communities related
+to sustainable development that share information about seminars,
+workshops, conferences and funding opportunities as well as provide
+opportunities to interact with the community and build collaborations.
+Several of these communities offer ways to help individuals with either
+computational or domain experience get more involved in computation for
+good including <a href="https://www.climatechange.ai/events">Climate Change AI’s summer
+school</a> and the <a href="https://www.dssgfellowship.org/">Data Science for
+Social Good summer fellowship programs</a>
+hosted at universities around the globe.</p>
+
+<p>Finding and formulating computational sustainability problems is often a
+challenging and iterative process and greatly benefits from having both
+computational experts and domain specialists involved throughout. The
+article <em>Becoming good at AI for Good</em> [34] provides a good
+summary of some of the challenges doing research with social impacts as
+well as has suggestions for creating successful collaborations. While
+strong collaborations are often a key part of successful projects, the
+community has also created more accessible entry points through
+competitions and benchmark tasks.
+<a href="https://www.drivendata.org/">DrivenData</a> runs Kaggle-like competitions
+focused on AI for good and many organizations will create community
+competitions on Kaggle related to the SDGs, from identifying species in
+citizen science images to predicting air quality levels. There are also
+several collections of datasets that can be used for a variety of
+problems including <a href="https://sdgstoday.org/">SDGs Today</a> that includes a
+variety of continuosly updated spatial datasets related to the SDGs and
+<a href="https://github.com/shreyashankar/datasets-for-good">Datasets for Good</a>
+which complies datasets, tutorials, and challenges.</p>
+
+<p>We hope through this post you have gained a better understanding of
+computational sustainability as well as the resources available to
+become involved in the community!</p>
+
+<h2 id="resources">Resources</h2>
+
+<h3 id="readings">Readings</h3>
+
+<ul>
+  <li>
+    <p><a href="https://cacm.acm.org/magazines/2019/9/238970-computational-sustainability">Computational Sustainability: Computing for a Better World and a
+Sustainable
+Future</a>
+[12]</p>
+  </li>
+  <li>
+    <p><a href="https://dl.acm.org/doi/10.1145/3485128">Tackling Climate Change with Machine
+Learning</a> [35]</p>
+  </li>
+  <li>
+    <p><a href="https://www.nature.com/articles/s41467-019-14108-y.pdf">The Role of Artificial Intelligence in Achieving the Sustainable
+Development
+Goals</a>
+[36]</p>
+  </li>
+  <li>
+    <p><a href="https://arxiv.org/pdf/2104.11757.pdf">Becoming good at AI for Good</a>
+[34]</p>
+  </li>
+</ul>
+
+<h3 id="communities">Communities</h3>
+
+<ul>
+  <li>
+    <p><a href="https://www.compsust.net/">CompSustNet</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.climatechange.ai/">Climate Change AI (CCAI)</a></p>
+  </li>
+  <li>
+    <p><a href="https://beerys.github.io/#slack">AI for Conservation</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.md4sg.com/">Mechanism Design for Social Good (MD4SG)</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.datascienceforsocialgood.org/">Data Science for Social Good
+(DS4SG)</a></p>
+  </li>
+</ul>
+
+<h3 id="conferences-and-workshops">Conferences and Workshops</h3>
+
+<ul>
+  <li>
+    <p><a href="https://compass.acm.org/">COMPASS - ACM Conference on Computing and Sustainable
+Societies</a></p>
+  </li>
+  <li>
+    <p><a href="https://aaai-23.aaai.org/aaai23call/">AAAI - AI for Social Impact
+Track</a></p>
+  </li>
+  <li>
+    <p><a href="https://ijcai-23.org/special-track-on-ai-for-good/">ICJAI - AI for Good
+Track</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.climatechange.ai/events/aaaifss2023">AAAI Fall 2023 Symposium: The Role of AI in a Climate-Smart
+Sustainable Future</a></p>
+  </li>
+  <li>
+    <p><a href="https://ai4good.org/what-we-do/fragile-earth/">SigKDD 2023 Fragile Earth
+Workshop</a></p>
+  </li>
+  <li>
+    <p><a href="https://kdd-dssg.github.io/">SigKDD 2023 Data Science for Social Good
+Workshop</a></p>
+  </li>
+  <li>
+    <p><a href="https://neurips.cc/virtual/2023/workshop/66523">NeurIPS 2023 Workshop on Computational
+Sustainability</a></p>
+  </li>
+  <li>
+    <p><a href="https://neurips.cc/virtual/2023/workshop/66543">NeurIPS 2023 Climate Change AI
+Workshop</a></p>
+  </li>
+</ul>
+
+<h3 id="benchmarks-and-datasets">Benchmarks and Datasets</h3>
+
+<ul>
+  <li>
+    <p><a href="https://sustainlab-group.github.io/sustainbench/">SustainBench</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.drivendata.org/">DrivenData</a></p>
+  </li>
+  <li>
+    <p><a href="https://sdgstoday.org/">SDGs Today</a></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/shreyashankar/datasets-for-good">Datasets for
+Good</a></p>
+  </li>
+</ul>
+
+<h3 id="references">References</h3>
+
+<p>[1] <a href="https://sdgs.un.org/goals">United Nations. UN Sustainability Development Goals.</a></p>
+
+<p>[2] <a href="https://www.un.org/millenniumgoals/bkgd">United Nations. UN Millenium Development Goal Fact Sheets, 2013.</a></p>
+
+<p>[3] Statistics Division, Department of Economic and Social Affairs. Sustainable Development Goals Progress Chart 2022. Technical report, United Nations, 2022.</p>
+
+<p>[4] Stefan Kahl, Connor M Wood, Maximilian Eibl, and Holger Klinck. Birdnet: A deep learning solution for avian diversity monitoring. Ecological Informatics, 61:101236, 2021.</p>
+
+<p>[5] Junwen Bai, Yexiang Xue, Johan Bjorck, Ronan Le Bras, Brendan Rappazzo, Richard Bernstein, Santosh K Suram, Robert Bruce Van Dover, John M Gregoire, and Carla P Gomes. Phase mapper: Accelerating materials discovery with ai. AI Magazine, 39(1):15–26, 2018.</p>
+
+<p>[6] Neal Jean, Marshall Burke, Michael Xie, W Matthew Davis, David B Lobell, and Stefano Ermon. Combining satellite imagery and machine learning to predict poverty. Science, 353(6301):790–794, 2016.</p>
+
+<p>[7] ESA Sentinel. Msi user guide. Available online: Sentinel. esa. int/web/sentinel/user-guides/document-library (accessed on 12 June 2023), 2.</p>
+
+<p>[8] Xi Chen and William D Nordhaus. Using luminosity data as a proxy for economic statistics. Proceedings of the National Academy of Sciences, 108(21):8589–8594, 2011.</p>
+
+<p>[9] Maxim Pinkovskiy and Xavier Sala-i Martin. Lights, camera. . . income! illuminating the national accounts-household surveys debate. The Quarterly Journal of Economics, 131(2):579–631, 2016.</p>
+
+<p>[10] Joshua Blumenstock, Gabriel Cadamuro, and Robert On. Predicting poverty and wealth from mobile phone metadata. Science, 350(6264):1073–1076, 2015.</p>
+
+<p>[11] Christopher Yeh, Anthony Perez, Anne Driscoll, George Azzari, Zhongyi Tang, David Lobell, Stefano Ermon, and Marshall Burke. Using publicly available satellite imagery and deep learning to understand economic well-being in africa. Nature communications, 11(1):2583, 2020.</p>
+
+<p>[12] Carla Gomes, Thomas Dietterich, Christopher Barrett, Jon Conrad, Bistra Dilkina, Stefano Ermon, Fei Fang, Andrew Farnsworth, Alan Fern, Xiaoli Fern, et al. Computational sustainability: Computing for a better world and a sustainable future. Communications of the ACM, 62(9):56–65, 2019.</p>
+
+<p>[13] Anna X. Wang, Caelin Tran, Nikhil Desai, David Lobell, and Stefano Ermon. Deep transfer learning for crop yield prediction with remote sensing data. In Proceedings of the 1st ACM SIGCAS Conference on Computing and Sustainable Societies, COMPASS ’18, New York, NY, USA, 2018. Association for Computing Machinery.</p>
+
+<p>[14] Caleb Robinson, Ben Chugg, Brandon Anderson, Juan M Lavista Ferres, and Daniel E Ho. Mapping industrial poultry operations at scale with deep learning and aerial imagery. IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 15:7458–7471, 2022.</p>
+
+<p>[15] Ethan Weber and Hassan Kané. Building disaster damage assessment in satellite imagery with multi-temporal fusion. arXiv preprint arXiv:2004.05525, 2020.</p>
+
+<p>[16] Johan Bjorck, Brendan H Rappazzo, Di Chen, Richard Bernstein, Peter H Wrege, and Carla P Gomes. Automatic detection and compression for passive acoustic monitoring of the african forest elephant. In Proceedings of the AAAI conference on artificial intelligence, volume 33, pages 476–484, 2019.</p>
+
+<p>[17] Cornell Lab of Ornithology. Merlin bird id. Available online: <a href="https://merlin.allaboutbirds.org/">https://merlin.allaboutbirds.org/</a> (accessed on 20 June 2023).</p>
+
+<p>[18] Brian L Sullivan, Jocelyn L Aycrigg, Jessie H Barry, Rick E Bonney, Nicholas Bruns, Caren B Cooper, Theo Damoulas, André A Dhondt, Tom Dietterich, Andrew Farnsworth, et al. The ebird enterprise: An integrated approach to development and application of citizen science. Biological conservation, 169:31–40, 2014.</p>
+
+<p>[19] iNaturalist Network. inaturalist. Available online: <a href="https://www.inaturalist.org">https://www.inaturalist.org</a> (accessed on 20 June 2023).</p>
+
+<p>[20] Yexiang Xue, Ian Davies, Daniel Fink, Christopher Wood, and Carla P Gomes. Avicaching: A two stage game for bias reduction in citizen science. In Proceedings of the 2016 International Conference on Autonomous Agents &amp; Multiagent Systems, pages 776–785, 2016.</p>
+
+<p>[21] Richard M Karp. Reducibility among combinatorial problems. Springer, 2010.</p>
+
+<p>[22] JR Ashford and RR Sowden. Multi-variate probit analysis. Biometrics, pages 535–546, 1970.</p>
+
+<p>[23] Shufeng Kong, Junwen Bai, Jae Hee Lee, Di Chen, Andrew Allyn, Michelle Stuart, Malin Pinsky, Katherine Mills, and Carla P Gomes. Deep hurdle networks for zero-inflated multi-target regression: Application to multiple species abundance estimation. arXiv preprint arXiv:2010.16040, 2020.</p>
+
+<p>[24] Di Chen, Yexiang Xue, and Carla Gomes. End-to-end learning for the deep multivariate probit model. In International Conference on Machine Learning, pages 932–941. PMLR, 2018.</p>
+
+<p>[25] Tadesse Zemicheal and Thomas G Dietterich. Anomaly detection in the presence of missing values for weather data quality control. In Proceedings of the 2nd ACM SIGCAS Conference on Computing and Sustainable Societies, pages 65–73, 2019.</p>
+
+<p>[26] Sara Beery, Elijah Cole, and Arvi Gjoka. The iwildcam 2020 competition dataset. arXiv preprint arXiv:2004.10340, 2020.</p>
+
+<p>[27] Etienne David, Simon Madec, Pouria Sadeghi-Tehran, Helge Aasen, Bangyou Zheng, Shouyang Liu, Norbert Kirchgessner, Goro Ishikawa, Koichi Nagasawa, Minhajul A Badhon, Curtis Pozniak, Benoit de Solan, Andreas Hund, Scott C. Chapman, Frederic Baret, Ian Stavness, and Wei Guo. Global wheat head detection (gwhd) dataset: A large and diverse dataset of high-resolution rgb-labelled images to develop and benchmark wheat head detection methods. Plant Phenomics, 2020, 2020.</p>
+
+<p>[28] Peter Bandi, Oscar Geessink, Quirine Manson, Marcory Van Dijk, Maschenka Balkenhol, Meyke Hermsen, Babak Ehteshami Bejnordi, Byungjae Lee, Kyunghyun Paeng, Aoxiao Zhong, et al. From detection of individual metastases to classification of lymph node status at the patient level: the camelyon17 challenge. IEEE Transactions on Medical Imaging, 2018.</p>
+
+<p>[29] Arpita Biswas, Gaurav Aggarwal, Pradeep Varakantham, and Milind Tambe. Learning index policies for restless bandits with application to maternal healthcare. 2021.</p>
+
+<p>[30] Aditya Mate, Lovish Madaan, Aparna Taneja, Neha Madhiwalla, Shresth Verma, Gargi Singh, Aparna Hegde, Pradeep Varakantham, and Milind Tambe. Field study in deploying restless multi-armed bandits: Assisting non-profits in improving maternal and child health. In Proceedings of the AAAI Conference on Artificial Intelligence, volume 36, pages 12017–12025, 2022.</p>
+
+<p>[31] Xiaojian Wu, Jonathan Gomes-Selman, Qinru Shi, Yexiang Xue, Roosevelt Garcia-Villacorta, Elizabeth Anderson, Suresh Sethi, Scott Steinschneider, Alexander Flecker, and Carla Gomes. Efficiently approximating the pareto frontier: hydropower dam placement in the amazon basin. In Proceedings of the AAAI conference on artificial intelligence, volume 32, 2018.</p>
+
+<p>[32] Lily Xu. Learning, optimization, and planning under uncertainty for wildlife conservation. INFORMS Doing Good with Good OR, 2021.</p>
+
+<p>[33] Priya L Donti, David Rolnick, and J Zico Kolter. Dc3: A learning method for optimization with hard constraints. arXiv preprint arXiv:2104.12225, 2021.</p>
+
+<p>[34] Meghana Kshirsagar, Caleb Robinson, Siyu Yang, Shahrzad Gholami, Ivan Klyuzhin, Sumit Mukherjee, Md Nasir, Anthony Ortiz, Felipe Oviedo, Darren Tanner, et al. Becoming good at ai for good. In Proceedings of the 2021 AAAI/ACM Conference on AI, Ethics, and Society, pages 664–673, 2021.</p>
+
+<p>[35] David Rolnick, Priya L Donti, Lynn H Kaack, Kelly Kochanski, Alexandre Lacoste, Kris Sankaran, Andrew Slavin Ross, Nikola Milojevic-Dupont, Natasha Jaques, Anna Waldman-Brown, et al. Tackling climate change with machine learning. arXiv preprint arXiv:1906.05433, 2019.</p>
+
+<p>[36] Ricardo Vinuesa, Hossein Azizpour, Iolanda Leite, Madeline Balaam, Virginia Dignum, Sami Domisch, Anna Felländer, Simone Daniela Langhans, Max Tegmark, and Francesco Fuso Nerini. The role of artificial intelligence in achieving the sustainable development goals. Nature communications, 11(1):1–10, 2020.</p>
+
+</div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+        <!-- <footer class="footer">
+    <div class="container">
+        
+        <div class="columns is-mobile">
+            <div class="column is-8 has-text-left is-vcentered">
+                <a class="navbar-brand" href="/">
+                    <span><img src="/tdc_horizontal.png" alt="Logo" style="max-height: 40px; max-width: 250px;"></span>
+                </a>
+            </div>
+            <div class="column is-4 has-text-right is-vcentered">
+                <a href="https://arxiv.org/abs/2102.09548">
+                    <span class="icon is-large">
+                      <i class="fas fa-file-alt fa-3x"></i>
+                    </span>
+                </a>
+
+                <a href="https://github.com/mims-harvard/TDC">
+                    <span class="icon is-large">
+                      <i class="fas fab fa-github fa-3x"></i>
+                    </span>
+                </a>
+
+                <a href="https://twitter.com/ProjectTDC">
+                    <span class="icon is-large">
+                      <i class="fas fab fa-twitter fa-3x"></i>
+                    </span>
+                </a>
+
+                <a href="https://join.slack.com/t/pytdc/shared_invite/zt-x0ujg5v6-zwtQZt83fhRdgrYjXRFz5g">
+                    <span class="icon is-large">
+                      <i class="fas fab fa-slack fa-3x"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+        
+    </div>
+</footer> -->
+    
+    <script src="/assets/js/app.js" type="text/javascript"></script><!-- footer scripts --></body>
+</html>
+

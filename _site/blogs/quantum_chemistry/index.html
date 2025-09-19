@@ -1,0 +1,605 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quantum Chemistry - AI4Science101</title>
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="shortcut icon" type="image/png"
+           href="/favicon.png" 
+    />
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Quantum Chemistry | AI4Science101</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Quantum Chemistry" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="AI for Science 101" />
+<meta property="og:description" content="AI for Science 101" />
+<link rel="canonical" href="http://localhost:4000/blogs/quantum_chemistry/" />
+<meta property="og:url" content="http://localhost:4000/blogs/quantum_chemistry/" />
+<meta property="og:site_name" content="AI4Science101" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Quantum Chemistry" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"AI for Science 101","headline":"Quantum Chemistry","url":"http://localhost:4000/blogs/quantum_chemistry/"}</script>
+<!-- End Jekyll SEO tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-183522810-1"></script>
+<script>
+  window['ga-disable-UA-183522810-1'] = window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1";
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-183522810-1');
+</script><!-- head scripts --></head>
+
+  <body>
+    
+<nav class="navbar is-primary" >
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-brand" href="/">
+            <span><img src="/logonav.png" alt="Logo" style="height: auto; width: auto; max-height: 45px; max-width: 250px;"></span>
+            </a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu" id="navMenu">
+            <div class="navbar-end">
+                
+                
+                    
+                    <a href="/" class="navbar-item ">Home</a>
+                    
+                
+                    
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a href="/blogs/" class="navbar-link ">Blogs</a>
+                        <div class="navbar-dropdown">
+                            
+                            <a href="/blogs/announcement/" class="navbar-item ">Announcement</a>
+                            
+                            <a href="/blogs/ai_for_science_science/" class="navbar-item ">AI for Scientific Discovery</a>
+                            
+                            <a href="/blogs/ai_for_science_ai/" class="navbar-item ">Scientific Discovery in the era of AI</a>
+
+                            <a href="/blogs/progress/" class="navbar-item ">Progress Summary</a>
+                            
+                            <a href="/blogs/molecular_simulation/" class="navbar-item ">Molecular Simulation</a>
+                            
+                            <a href="/blogs/gaussian_processes/" class="navbar-item ">Gaussian Processes</a>
+                            
+                            <a href="/blogs/causal_machine_learning/" class="navbar-item ">Causal Machine Learning</a>
+                            
+                            <a href="/blogs/statistical_learning_theory/" class="navbar-item ">Statistical Learning Theory</a>
+                            
+                            <a href="/blogs/optimization/" class="navbar-item ">Optimization</a>
+                            
+                            <a href="/blogs/graph_machine_learning/" class="navbar-item ">Graph Machine Learning</a>
+                            
+                            <a href="/blogs/reinforcement_learning/" class="navbar-item ">Reinforcement Learning</a>
+                            
+                            <a href="/blogs/quantum_science/" class="navbar-item ">Quantum Science</a>
+                            
+                            <a href="/blogs/comp_sustainability/" class="navbar-item ">Computational Sustainability</a>
+                            
+                            <a href="/blogs/structural_biology/" class="navbar-item ">Structural Biology</a>
+                            
+                            <a href="/blogs/quantum_chemistry/" class="navbar-item is-active">Quantum Chemistry</a>
+                            
+                            <a href="/blogs/equivariant_neural_networks/" class="navbar-item ">Equivariant Neural Networks</a>
+                            
+                            <a href="/blogs/knowledge_base/" class="navbar-item ">Knowledge Base</a>
+                            
+                        </div>
+                    </div>
+                    
+                
+                    
+                    <a href="/resources/" class="navbar-item ">Resources</a>
+                    
+                
+                
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+    
+    
+
+
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                
+                <div class="column is-4-desktop is-4-tablet">
+                    
+
+<aside class="menu">
+
+</aside>
+                </div>
+                
+                <div class="column is-8">
+                    
+                    
+                    
+                    
+    
+    
+
+<div class="contents">
+    <div class="menu">
+        <p class="menu-label">Quantum Chemistry</p>
+        <ul class="menu-list">
+  <li><a href="#what-is-quantum-chemsitry">What is quantum chemsitry?</a></li>
+  <li><a href="#dive-in-to-quantum-chemistry">Dive in to quantum chemistry</a>
+    <ul>
+      <li><a href="#basic-concepts-of-quantum-chemistry">Basic concepts of quantum chemistry</a></li>
+      <li><a href="#methods-for-electron-correlation">Methods for electron correlation</a></li>
+      <li><a href="#topics-not-covered-here">Topics not covered here</a></li>
+    </ul>
+  </li>
+  <li><a href="#recent-advances-with-ml-in-quantum-chemistry">Recent advances with ML in quantum chemistry</a>
+    <ul>
+      <li><a href="#bypassing-the-need-to-solve-the-schrödinger-equation">Bypassing the need to solve the Schrödinger equation</a></li>
+      <li><a href="#neural-network-as-a-functional-approximator">Neural network as a functional approximator</a></li>
+      <li><a href="#integrating-ml-models-in-high-throughput-computation">Integrating ML models in high throughput computation</a></li>
+    </ul>
+  </li>
+  <li><a href="#outlook">Outlook</a></li>
+</ul>
+    </div>
+</div>
+
+
+
+
+<div class="content">
+    <script type="text/javascript" async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<p>Author(s): <a href="https://scholar.google.com/citations?user=vgR_go8AAAAJ&amp;hl=en">Hong-Zhou Ye</a> is currently a postdoctoral research scientist at Columbia University, working with Prof. Timothy C. Berkelbach on the development and application of highly accurate electronic structure theories to tackle complex chemistry challenges in condensed-phase systems. Hong-Zhou received his Ph.D. in chemistry from Massachusetts Institute of Technology (MIT), where he worked with Prof. Troy Van Voorhis on quantum embedding theory and methods for electronic excitations. Starting in the fall of 2024, Hong-Zhou will begin his independent career as an Assistant Professor of Chemistry at the University of Maryland (UMD). The Ye research group will be committed to leveraging theory and computational modeling to investigate intricate quantum phenomena in both molecules and condensed-phase materials, by combining existing wisdoms in quantum chemistry with recent developments in condensed-matter physics and artificial intelligence.</p>
+
+<p><a href="https://www.crduan.com/">Chenru Duan</a> is currently a research scientist at Microsoft Azure Quantum, working on building machine learning and quantum solutions for chemistry and materials industry. Chenru received his Ph.D. in chemistry from Massachusetts Institute of Technology (MIT), where he worked with Prof. Heather J. Kulik on AI applications in chemistry, building the first set of AI decision-making models and integrating them in high throughput computation, boosting the efficiency and accuracy for AI+computation centered chemical discovery. Chenru is a core member of AI4Science series workshop organizors and co-organizer the AI4Science workshop ICML2022, NeurIPS2022 and NeurIPS2023.</p>
+
+<h1 id="ai4science101-quantum-chemistry">AI4Science101-Quantum Chemistry</h1>
+
+<h2 id="what-is-quantum-chemsitry">What is quantum chemsitry?</h2>
+
+<p>A water molecule looks so much different from a protein molecule or a diamond crystal, but mathematically they are all the same: a set of positively charged nuclei being “glued” through Coulomb interaction by a set of negatively charged electrons. The electron “glue” is known as <em>chemical bonds</em>. In a nutshell, chemistry is the study and use of the electron “glue” to make new chemical species of desired properties. Quantum chemistry - often also known as <em>electronic structure theory</em> - aims to understand the electron “glue” itself using quantum mechanics.</p>
+
+<p>The core of quantum chemistry is to solve the time-independent Schrödinger equation for electrons, \(H \Psi_n = E_n \Psi_n\), which is an eigenvalue problem for the electronic Hamiltonian \(H\) that defines a chemical system. The eigenfunction \(\Psi_n\) is the system’s <em>wavefunction</em> and the eigenvalue \(E_n\) is the associated <em>energy</em>, with the lowest-energy solution, denoted by \(\Psi_0\), being called the “ground” state and all others the “excited” states. In this article, we will mostly focus on solving for the ground-state wavefunction \(\Psi_0\) and its energy \(E_0\) (from now on we will occasionally omit the subscript “0”), the knowledge of which provides key information for understanding many physical and chemical properties of a molecule or a material. For example,</p>
+
+<ul>
+  <li>Knowing the energy of the reactant and the product in a chemical reaction allows calculating the reaction energy, while knowing how the energy responds to external parameters provides access to atomic forces, dipole moments, and polarizabilities, to name a few, of a molecule.</li>
+  <li>Knowledge of the wavefunction enables analyzing the orbitals, electron densities, electron correlation and entanglement, <em>etc</em>., all of which help provide a microscopic understanding of a chemical system.</li>
+</ul>
+
+<!-- The core of quantum chemistry is to solve the time-independent Schrödinger equation, $$H \Psi_n = E_n \Psi_n$$, whose solution, the energy $$E$$ and the wavefunction $$\Psi$$, provides key information for understanding most physical and chemical properties of a molecule or a material. For example, knowing $$E$$ of the reactants and products of a chemical reaction allows us to calculate reaction energies, while knowing the response (i.e., derivative) of $$E$$ with respect to external parameters gives us access to atomic forces (for molecular dynamics) and various spectroscopic properties such as IR and Raman. On the other hand, knowledge of $$\Psi$$ gives us access to orbitals, electron densities, electron correlation and entanglament that help provide a miscroscopic understanding of a physical of chemical process. -->
+
+<p>Despite all the promises it makes, the Schrödinger equation for a general chemical system containing many electrons is computationally very challenging to solve. As we will see soon, the cost of obtaining an exact solution grows <em>exponentially</em> with the system size, and approximate solutions must be sought for in practice. Thus, the thesis of quantum chemistry is <strong>making approximations that balance accuracy and computational cost</strong>. This is exactly where recent developments in the machine learning (ML) community has stepped in and shown a great potential of addressing some perspectives of this challenge. In the rest of this article, we will first introduce basic context of quantum chemistry, followed by outlining recent progress in ML. We believe that this article will make quantum chemistry and ML research more accessible to readers from diversified backgrounds.</p>
+
+<!-- Quantum chemistry is a branch of chemistry that aims to understand and predict the behavior of electrons, atoms and molecules, and thus to describe the electronic structure and behavior of matter, particularly in the context of chemical reactions and interactions. The core of quantum chemistry is to solve the time-independent Schrödinger equation, $$H \Psi = E \Psi$$. Despite it is a eigenvalue problem that everyone of us has learned to solve during the linear algebra class, the difficuly lies in the extremely high numberof degree of freedom for the electronic Hamiltonian $$H$$, which has an exponential scaling on the size of system. This is called the *curse of dimensionality*. Solving this Schrödinger equation obtaining the ground state wave function $$\Psi$$, however, is the key to understand most of the physical and chemical properties of molecules and materials, such as light absorption/emission and conductivity. Getting the ground state energy, $$E$$, allows us to predict which chemical reactions are possible and how one should manipulate the external environment to control reactions of interest. Recently, machine learning (ML) has stepped in this long-standing problem and shown promising sign of addressing some perspectives of this challenge. In the rest of this article, we will introduce basic context of quantum chemistry, followed by outlining these recent progress in ML. -->
+
+<!-- QC part for Hongzhou to draft  -->
+<h2 id="dive-in-to-quantum-chemistry">Dive in to quantum chemistry</h2>
+
+<p>This section is designed to offer a tailored introduction to quantum chemistry for readers who are familiar with linear algebra and probability theory but may not be well-versed in quantum mechanics. We begin with introducing some <a href="#basic-concepts-of-quantum-chemistry">basic concepts of quantum chemistry</a>, including variational principle, orbitals, and Hartree-Fock theory. This is followed by a survey of <a href="#methods-for-electron-correlation">methods for electron correlation</a> that can achieve “chemical accuracy”, with the goal of acquainting readers with many of the “buzz words” in quantum chemistry, such as DFT, CCSD(T), FCI, DMRG, QMC, to name a few. That’s quite a bit of information, so buckle up and let’s go!</p>
+
+<blockquote>
+  <p>For readers interested in diving deeper into quantum chemistry systematically, we recommend the classical textbook by Szabo and Ostlund, titled <em><a href="https://store.doverpublications.com/0486734420.html">Modern Quantum Chemistry: Introduction to Advanced Electronic Structure Theory</a></em>. We believe that the materials presented below serve as a good preview.</p>
+</blockquote>
+
+<h3 id="basic-concepts-of-quantum-chemistry">Basic concepts of quantum chemistry</h3>
+
+<p><strong>Electronic Hamiltonian</strong>. The electronic Hamiltonian \(H\) includes all energy components related to the electrons in a molecule or material. For an \(N\)-electron system, \(H\) has two major contributions: the sum of individual electron Hamiltonians and the pairwise Coulomb interactions between electrons, i.e.,</p>
+
+\[H(x_1,\cdots,x_N) = \sum_{i=1}^{N} h(x_i) + \frac{1}{2} \sum_{i \neq j}^{N} v(x_i,x_j)\]
+
+<!-- The specific forms of $$h$$ and $$v$$ are not crucial for our discussion below. However, it's worth making two comments about the Hamiltonian: -->
+<!-- 1. The Coulomb interaction makes the probability of finding a single electron **correlated** with finding other electrons. This correlation is what makes the Schrödinger equation hard to solve. -->
+<p>The specific forms of \(h\) and \(v\) are not crucial for our discussion below. However, it’s worth noting that \(h\) includes the Coulomb attraction between an electron and the nuclei, which introduces a parametric dependence of the full Hamiltonian \(H\) on the atomic coordinates \(R\). Solving the Schrödinger equation for various atomic configurations yields an energy profile as a function of these coordinates, denoted as \(E(R)\). This energy profile is commonly referred to as the “<em>potential energy surface</em>” and its derivatives \(\nabla_{R} E\) give the atomic forces, forming the basis for molecular dynamics, a topic discussed in a <a href="https://ai4science101.github.io/blogs/molecular_simulation/">previous post</a> on our blog.</p>
+
+<!-- We only mention that $$h$$ includes the Coulomb attraction of an electron by all the nuclei and hence depends parametrically on the atomic coordinates $$R$$. Thus, when we say a "system" in what follows, we really mean a Hamiltonian with some fixed $$R$$, i.e., a snapshot of a molecule with all the nuclei being "clamped". For example, both the folded and unfolded states of a protein contains the same set of atoms but are two different "systems" since the atomic coordinates have changed. -->
+
+<!-- **Electronic Hamiltonian**. The electronic Hamiltonian is a sum of all energy components of the electrons in a chemical system. This includes the electrons' kinetic energy $$T$$, their interaction with the nuclei, $$V_{\mathrm{nuc}}$$,  -->
+
+<p><strong>Wavefunction is probability amplitude</strong>. God does play dice, and her dice is wavefunction. For an \(N\)-electron system, the probability density of simultaneously finding electron 1 at position \(x_1\), electron 2 at position \(x_2\), <em>etc</em>. is</p>
+
+\[\rho(X) = |\Psi(X)|^2\]
+
+<p>with the normalization condition</p>
+
+\[\int \mathrm{d}^N X\, |\Psi(X)|^2 = 1\]
+
+<p>where \(X = (x_1,\cdots,x_N)\). For this reason, wavefunction is a probability <em>amplitude</em> that encodes the <em>correlation</em> between electrons. Many properties of a molecule or a material can be calculated directly from its wavefunction as an expectation</p>
+
+\[A = \int \mathrm{d}^N X\, |\Psi(X)|^2 A(X) \equiv \langle \Psi | A | \Psi \rangle\]
+
+\[\langle \Psi |\cdot| \Psi\rangle\]
+
+<p>where the <a href="https://en.wikipedia.org/wiki/Bra%E2%80%93ket_notation">“bra-ket” notation</a></p>
+
+\[\langle \Psi |\cdot| \Psi\rangle\]
+
+<p>is due to Dirac. An relevant example for the discussion below is that the energy is an expectation of the Hamiltonian,</p>
+
+\[E = \langle \Psi | H | \Psi\rangle\]
+
+<p><strong>Variational principle</strong>. A powerful tool to guide the construction of approximate wavefunction is <em>variational principle</em>, which states that the energy of any inexact “trial” wavefunction \(\tilde{\Psi}\) is no lower than the ground-state energy, i.e.,</p>
+
+\[E[\tilde{\Psi}]
+    = \langle \tilde{\Psi} | H | \tilde{\Psi} \rangle
+    \geq E_0\]
+
+<p>where the equality is taken if and only if \(\tilde{\Psi} = \Psi_0\). This theorem allows us to <em>optimize</em> an approximate wavefunction by <em>minimizing</em> its energy, a point we will frequently return to later.</p>
+
+<!-- **Slater determinants**. The Hamiltonian of an $$N$$-electron system can be broken down into two parts, the sum of one-electron Hamiltonians and the Coulomb interaction between them, i.e.,
+
+$$H = \sum_{i}^{N} h(x_i) + \frac{1}{2} \sum_{i \neq j}^{N} v(x_i,x_j)$$
+
+In an imaginary world where electrons do not interact (i.e., no second term), the Schrödinger equation is solved by a [**Slater determinant**](https://en.wikipedia.org/wiki/Slater_determinant) -->
+
+<p><strong>Slater determinants</strong>. In an imaginary world where electrons do not interact, i.e., with the following non-interacting Hamiltonian</p>
+
+\[H_{\mathrm{NI}} = \sum_{i = 1}^{N} h(x_i)\]
+
+<p>the Schrödinger equation is solved by a <a href="https://en.wikipedia.org/wiki/Slater_determinant"><strong>Slater determinant</strong></a></p>
+
+\[\Phi(X)
+    \equiv \Phi(x_1,\cdots,x_N)
+    = \frac{1}{\sqrt{N!} }
+    \begin{vmatrix}
+        \phi_1(x_1) &amp; \cdots &amp; \phi_1(x_N)  \\
+        \vdots &amp; \ddots &amp; \vdots  \\
+        \phi_N(x_1) &amp; \cdots &amp; \phi_N(x_N)
+    \end{vmatrix}\]
+
+<p>where the one-electron wavefunction, <em>aka</em> <strong>orbitals</strong>, \(\{\phi_i\}\) are solutions to the one-electron Schrödinger equation</p>
+
+\[h(x) \phi_i(x) = \epsilon_i \phi_i(x)\]
+
+<p>with the eigenvalues \(\{\epsilon_i\}\) the <strong>orbital energies</strong> (which also form the energy bands in crystalline solids).</p>
+
+<blockquote>
+  <p>Readers familiar with probability theory may find the <em>Hartree product</em>, \(\Phi_{\mathrm{H}}(X) = \prod_{i=1}^{N} \phi_i(x_i)\), be their first guess for a non-interacting wavefunction. Indeed, one can show that the Slater determinant arises from antisymmetrizing the Hartree product, \(\Phi(X) = \mathcal{A} [\Phi_{\mathrm{H}}](X)\), where \(\mathcal{A}[f](x_1,x_2) = -\mathcal{A}[f](x_2,x_1)\). The reason behind this can be traced back to the <a href="https://en.wikipedia.org/wiki/Pauli_exclusion_principle">Pauli exclusion principle</a>, which states that the interchange of any electron pair leads to a change in the wavefunction’s sign. The distinction between \(\Phi\) and \(\Phi_{\mathrm{H}}\) is called the <em>exchange</em> effect, which is purely a quantum phenomenon. We will revisit this concept when discussing density functional theory (DFT) later.</p>
+</blockquote>
+
+<p><strong>Orbitals</strong>. In practice, the one-electron Schrödinger equation can be solved by expanding the unknown orbitals \(\phi_i(x)\) in a known set of \(K\) basis functions \(\chi_{\mu}(x)\) as \(\phi_i(x) = \sum_{\mu}^{K} c_{\mu i} \chi_{\mu}(x)\), turning the Schrödinger equation into a (Hermitian) matrix eigenvalue problem</p>
+
+<p>\(\sum_{\nu}^{K} h_{\mu\nu} c_{\nu i}
+    = \epsilon_i c_{\mu i}\)     ( where \(h_{\mu\nu} = \langle \chi_{\mu} | h | \chi_{\nu} \rangle\) )</p>
+
+<p>which can be solved readily by e.g., <code class="language-plaintext highlighter-rouge">scipy.linalg.eigh</code>. In almost all cases, we have \(K &gt; N\) to minimize the basis incompleteness error. This leads to the concept of <em>occupied</em> and <em>unoccupied</em> orbitals.</p>
+
+<p><img src="https://hackmd.io/_uploads/Hyvvm_YZT.png" alt="" /></p>
+
+<p>In the figure on the left, we show the valence orbitals and the corresponding orbital energy diagram for a benzene molecule generated using a minimal set of 6 basis functions. In the non-interacting ground-state \(\Phi_0\), the 6 valence electrons occupy the 3 orbitals with lowest energy. This is the theoretical foundation of the well-known picture where electrons in a molecule fill in the orbitals by their energy from low to high. The remaining 3 <em>unoccupied orbitals</em> do not contribute to \(\Phi_0\) but will become important in the correlated wavefunction theories that we will explore later. In the figure on the right, we show the orbital energy diagram for the diamond crystal. Here, the crystalline orbitals can be organized by symmetry labels of the crystal, and their orbital energy collectively forms what we known as <strong>energy bands</strong>. The occupied and unoccupied bands are often referred to as <em>valence</em> and <em>conduction</em> bands, respectively.</p>
+
+<p>Of particular interest are the “frontier” orbitals located near the energy gap between the occupied and unoccupied manifolds. For example, the highest occupied and the lowest unoccupied molecular orbitals, i.e., <strong>HOMO</strong> and <strong>LUMO</strong>, are often the most active orbitals in a chemical reaction. Their counterparts in materials, the valence band maximum (VBM) and the conduction band minimum (CBM), determine the <strong>band gap</strong> and the <strong>effective mass</strong> for electron and hole transport.</p>
+
+<blockquote>
+  <p>We won’t delve into specifics here, but it’s worth noting that the basis functions \(\{\chi_{\mu}\}\) used to expand the orbitals are commonly referred to as <em>Gaussian basis sets</em> or <em>atomic orbitals</em> in molecular calculations and as <em>plane waves</em> in materials. Gaussian basis sets come in various flavors, often denoted by acronyms (e.g., 6-311G**, cc-pVTZ, def2-QZVPP, etc), while the plane-wave basis is characterized by a single parameter, its kinetic energy cutoff.</p>
+</blockquote>
+
+<p><strong>Hartree-Fock (HF) theory</strong>. Now going back to the physical world where electrons do interact, the single-determinant wavefunction \(\Phi\) is not exact anymore, but we can nonetheless use it as a trial wavefunction and apply variational principle. This leads to the <strong>Hartree-Fock (HF) theory</strong> with the following <em>effective</em> one-electron Schrödinger equation</p>
+
+\[F[\{\phi_i\}](x) \phi_i(x) = \epsilon_i \phi_i(x)\]
+
+<p>where the Fock operator \(F[\{\phi_i\}] = h + v_{\mathrm{HF}}[\{\phi_i\}]\) replaces the bare one-electron Hamiltonian \(h\). Like in the non-interacting case, the HF equation can be turned into a matrix eigenvalue problem by introducing a basis, and the picture where electrons fill in orbitals by energy discussed above still holds. However, two new features are worth some words.</p>
+
+<ol>
+  <li>The actual Coulomb potential \(v(x_1,x_2)\) in the HF theory is replaced by an effective Coulomb potential, \(v_{\mathrm{HF}}(x)\), <em>averaged</em> over all other \(N-1\) electrons. This is why HF is often referred to as the <em>mean-field approximation</em>.</li>
+  <li>The Fock operator that needs to be diagonalized depends on its own eigenfunctions (i.e., orbitals), which necessitates the iterative solution of the HF equation until self-consistency is achieved. This is why HF is also often referred to as the <em>self-consistent field (SCF)</em> theory.</li>
+</ol>
+
+<p>A shocking fact about the HF theory is that it recovers &gt; 99% of the total energy of a molecule or a material (Similar to the accuracy that you will get by plugging in a naive CNN to the MNIST dataset)! For this reason, HF provides a decent <em>qualitative</em> description for most chemistry problems. However, <strong>getting the remaining 1% correctly</strong> is what really makes a theory <em>quantitative</em> and <em>predictive</em>. The reason here is about relevant energy scales: the total energy of a molecule is often hundreds or even thousands of <em>Hartree</em>, while chemical reactions occur on the scale of <em>kcal/mol</em> (1 Hartree ≈ 630 kcal/mol). In quantum chemistry, people often refer 1 kcal/mol as “chemical accuracy.” In the next subsection, we will introduce theories that are capable of achieving this level of precision, which form the core of quantum chemistry.</p>
+
+<blockquote>
+  <p>It is interesting to note that <a href="https://www.science.org/doi/10.1126/science.abb9811">one of Google’s “quantum computing for quantum chemistry” papers</a> implemented exactly the HF theory on a quantum computer and used it to study a simple reaction. Now you know (the chemistry part of) what they were doing!</p>
+</blockquote>
+
+<h3 id="methods-for-electron-correlation">Methods for electron correlation</h3>
+
+<p><strong>Overview</strong>. Two primary strategies exist for going beyond the HF mean-field approach. <strong>Correlated wavefunction theories</strong> employ a more sophisticated wavefunction <em>ansatz</em> than the HF single Slater determinant. In contrast, <strong>density functional theory (DFT)</strong> – in its most widely used <em>Kohn-Sham (KS)</em> formulation – retains the single determinantal wavefunction but alters the HF potential into a KS potential that accounts for electron correlation effects. Both approaches have their strengths and weaknesses, which can potentially be harnesses or addressed through integration with ML. We believe that having a fundamental grasp of each of these methods is essential for achieving this goal.</p>
+
+<hr />
+
+<!-- **Density functional theory (DFT)**. The theories introduced thus far are all about improving the wavefunction to approach FCI. An alternative formalism was introduced by Hohenberg and Kohn (HK) in 1964, who demonstrated that the **electron density** -->
+
+<p><strong>Density functional theory (DFT)</strong>. Up to this point, our discussion has primarily revolved around wavefunctions. However, an alternative formalism was introduced by Hohenberg and Kohn (HK) in 1964, who demonstrated that the <strong>electron density</strong></p>
+
+\[\rho(x)
+    = \int \mathrm{d}x_2\cdots\mathrm{d}x_{N}\,
+    |\Psi(x,x_2,\cdots,x_N)|^2\]
+
+<p>could serve as the fundamental quantity instead. Specifically, HK proved <a href="https://en.wikipedia.org/wiki/Density_functional_theory#Hohenberg%E2%80%93Kohn_theorems">two mathematical theorems</a> about \(\rho(x)\):</p>
+
+<!-- ![](https://hackmd.io/_uploads/S1JiFKt-T.png) -->
+
+<center><img src="https://hackmd.io/_uploads/S1JiFKt-T.png" width="300" height="300" /></center>
+
+<ol>
+  <li>The first theorem (HK-I) establishes the <em>equivalence</em> between \(\rho\) and \(\Psi\) by proving that given a system’s electron density, one can uniquely determine the Hamiltonian (up to a constant energy shift) and hence in principle, determine the wavefunction.</li>
+  <li>The second theorem (HK-II) establishes a <em>variational principle</em> for \(\rho\) by showing that the ground-state electron density \(\rho_0\) minimizes the energy functional \(E[\rho]\), i.e., just like \(\Psi_0\) minimizing \(E[\Psi]\).</li>
+</ol>
+
+<p>Unfortunately, the precise expression for \(E[\rho]\) remains unknown. However, HK theorems provide a valuable decomposition of \(E[\rho]\), as follows:</p>
+
+\[E[\rho] = \int\mathrm{d}x\, \rho(x) v_{\mathrm{ext}}(x) + F[\rho]\]
+
+<p>Here, the first term accounts for the energy resulting from the external potential that is system-dependent (e.g., the nuclear potential in a molecule), while the second term, known as the <strong>universal energy functional</strong>, encompasses all the electron-electron interaction and is universal for all molecules and materials for their ground-state properties.</p>
+
+<p><strong>Kohn-Sham (KS)-DFT</strong>. At the heart of DFT lies the quest for practical approximations to \(F[\rho]\). Thus far, the most popular variant is <em>KS-DFT</em>, where one aims to construct a non-interacting system – described by a Hartree product \(\Phi_{\mathrm{H}}\) – whose electron density is equal to the exact ground-state density \(\rho_0\). The KS energy functional is</p>
+
+\[E_{\mathrm{KS}}[\rho]
+    = \langle\Phi_{\mathrm{H}}|H|\Phi_{\mathrm{H}}\rangle
+    + E_{\mathrm{xc}}[\rho]
+    = \sum_{i} \langle\phi_i|h|\phi_i\rangle
+    + J[\rho] + E_{\mathrm{xc}}[\rho]\]
+
+<p>In the second equality, the first term is simply a sum of one-electron energy and the second term is the classical electrostatic energy which includes <em>self-interaction</em>. The last term, known as the <strong>exchange-correlation (xc) functional</strong>, encapsulates the missing exchange and electron correlation effects and necessitates practical approximation. On initial inspection, it might seem like this rewriting doesn’t solve any problem: the exact form of \(E_{\mathrm{xc}}[\rho]\) remains elusive. Nevertheless, the KS approach proves effective because \(E_{\mathrm{xc}}[\rho]\) is relatively small in magnitude (similar to the correlation energy). Consequently, it can be reasonably approximated in practice.</p>
+
+<p>Applying variational principle, i.e., making \(E_{\mathrm{KS}}[\rho]\) stationary w.r.t the underlying orbitals leads to the KS equation</p>
+
+\[F_{\mathrm{KS}}[\rho](x) \phi_i(x) = \epsilon_i \phi_i(x)\]
+
+<p>where the KS operator, \(F_{\mathrm{KS}}[\rho] \equiv \delta E_{\mathrm{KS}}[\rho] / \delta \rho = h + v_{J}[\rho] + v_{\mathrm{xc}}[\rho]\), parallels the Fock operator in HF theory. The KS equation can be solved in a manner analogous to solving the HF equation, with the \(\rho\)-dependence of the KS operator also necessitating an iterative approach to achieve self-consistency. Similar to HF, KS-DFT is an <em>effective</em> one-electron theory where the quantum (i.e., exchange) and many-body (i.e., correlation) effects of electrons are encapsulated in the <em>xc potential</em>, \(v_{\mathrm{xc}}[\rho] =  \delta E_{\mathrm{xc}}[\rho] / \delta \rho\). This renders KS-DFT rather convenient because it preserves all the one-electron concepts discussed earlier, including HOMO/LUMO, energy bands, <em>etc</em>.</p>
+
+<p><strong>The “Jacob’s Ladder” of KS-DFT</strong>. Different approximations to \(E_{\mathrm{xc}}[\rho]\) define the “level of theory” in KS-DFT. Define the xc energy density \(\varepsilon_{\mathrm{xc}}[\rho](x)\) as in</p>
+
+\[E_{\mathrm{xc}}[\rho] = \int \mathrm{d}x\, \rho(x) \varepsilon_{\mathrm{xc}}[\rho](x)\]
+
+<p>There are three classes of “<em>pure</em>” DFT methods where \(\varepsilon_{\mathrm{xc}}[\rho](x)\) is a local <em>function</em> (i.e., not a functional) as in</p>
+
+\[E_{\mathrm{xc}}^{\mathrm{pure}}[\rho] = \int \mathrm{d}x\, \rho(x) \varepsilon_{\mathrm{xc}}(x)\]
+
+<ol>
+  <li><strong>Local density approximation (LDA)</strong>, where \(\varepsilon^{\mathrm{LDA}}_{\mathrm{xc}}(x) = \varepsilon_{\mathrm{xc}}(\rho(x))\) depends only on the local electron density \(\rho(x)\).</li>
+  <li><strong>Generalized gradient approximation (GGA)</strong>, where \(\varepsilon_{\mathrm{xc}}^{\mathrm{GGA}}(x) = \varepsilon_{\mathrm{xc}}(\rho(x),\nabla\rho(x))\) further depends on the local density gradient \(\nabla \rho(x)\).</li>
+  <li><strong>meta-GGA</strong>, where \(\varepsilon_{\mathrm{xc}}^{\mathrm{mGGA}}(x) = \varepsilon_{\mathrm{xc}}(\rho(x),\nabla\rho(x),\tau(x))\) further depends on the kinetic energy density, \(\tau(x)\).</li>
+</ol>
+
+<!-- 1. **Local density approximation (LDA)**, where $$\varepsilon_{\mathrm{xc}}[\rho]$$ is a local *function* (rather than a functional) of the electron density, $$\varepsilon_{\mathrm{xc}}^{\mathrm{LDA}}[\rho](x) \equiv \varepsilon_{\mathrm{xc}}(\rho(x))$$.
+2. **Generalized gradient approximation (GGA)**, where $$\varepsilon_{\mathrm{xc}}$$ further depends on the density gradient, $$\varepsilon_{\mathrm{xc}}^{\mathrm{GGA}}[\rho](x) \equiv \varepsilon_{\mathrm{xc}}(\rho(x),\nabla\rho(x))$$.
+3. **meta-GGA**, where $$\varepsilon_{\mathrm{xc}}$$ further depends on the kinetic energy density, $$\varepsilon_{\mathrm{xc}}^{\mathrm{mGGA}}[\rho](x) = \varepsilon_{\mathrm{xc}}(\rho(x),\nabla\rho(x),\tau(x))$$. -->
+
+<p>There are also “<em>hybrid</em>” DFT methods where the xc functional has explicit dependence on orbitals:</p>
+
+<ol>
+  <li><strong>Hybrid DFT</strong>, where the exchange part of \(E_{\mathrm{xc}}[\rho]\) is a mixture of a pure exchange functional and the HF exchange, which depends on the occupied orbitals, \(E_{\mathrm{xc}}^{\mathrm{hyb}}[\{\phi_i\}_{i=1}^{N}] = (1-a) E_{\mathrm{x}}^{\mathrm{pure}}[\rho] + a E_{\mathrm{x}}^{\mathrm{HF}}[\{\phi_i\}_{i=1}^{N}] + E_{\mathrm{c}}^{\mathrm{pure}}[\rho]\).</li>
+  <li><strong>Double-hybrid DFT</strong>, where the correlation part of \(E_{\mathrm{xc}}[\rho]\) is also mixed with the correlation energy from some correlated wavefunction theory, which depends on both the occupied and the virtual orbitals, \(E_{\mathrm{xc}}^{\textrm{double-hyb}}[\{\phi_i\}_{i=1}^{K}] = E_{\mathrm{x}}^{\mathrm{hyb}}[\{\phi_i\}_{i=1}^{N}] + (1-b)E_{\mathrm{c}}^{\mathrm{pure}}[\rho] + b E_{\mathrm{c}}^{\mathrm{WFT}}[\{\phi_i\}_{i=1}^{K}]\).</li>
+</ol>
+
+<p><img src="https://hackmd.io/_uploads/SkLcwqY-T.png" alt="" /></p>
+
+<p>The five approximate classes together form a hierarchy of KS-DFT that is termed <a href="https://doi.org/10.1063/1.1390175">the “Jacob’s ladder”</a> by John Perdew. Higher accuracy is obtained in general as we ascend the ladder, at the price of a higher computational cost. Specifically, pure DFT has a cost scaling of \(O(N^3)\), hybrid DFT (comparable to HF) has a scaling of \(O(N^4)\), and commonly used double-hybrid DFT, which is based on MP2 or the closely related random-phase approximation (RPA), scales as \(O(N^5)\). There are a few hundreds of xc functionals available in the <a href="https://www.tddft.org/programs/libxc/functionals/libxc-6.2.2/">Libxc</a> library, making a “zoo” of KS-DFT methods. Some widely used xc functionals are <strong>PBE</strong> (a GGA),  <strong>B3LYP</strong> (a hybrid GGA), and <strong>M06-2X</strong> (a hybrid meta-GGA), to name a few. Recent developments include self-interaction correction (SIC), range-separated hybrid (RSH), and dispersion correction (e.g., <a href="https://doi.org/10.1063/1.3382344">DFT-D</a>). A comprehensive benchmark of xc functionals for chemical problems can be found <a href="https://www.tandfonline.com/doi/full/10.1080/00268976.2017.1333644">here</a>. Despite hundreds of xc functionals have been developed, none of them is universally accurate across the entire chemical space, motivating a Tiktok-like recommender approach of matching chemical systems and their “best-performing” xc functionals, as will be discussed later in the <em>Navigating through the zoo of density functional</em> section.</p>
+
+<p><strong>Developing an xc functional</strong>. Finally, we give a brief overview on <em>how xc functionals are developed</em>. There are two major strategies:</p>
+
+<ol>
+  <li>The <strong>physics-driven</strong> or <strong>non-empirical</strong> strategy employs functional forms that satisfy known mathematical constraints the exact functional must obey (see <a href="https://www.annualreviews.org/doi/full/10.1146/annurev-physchem-062422-013259">here</a> for a review). The most famous example is perhaps the <strong><a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.77.3865">Perdew-Burke-Ernzerhof (PBE)</a></strong> GGA functional, which satisfies 11 constraints. A more recent development is the <strong>strongly-constrained and appropriately-normed (SCAN)</strong> meta-GGA functional, which satisfies all 17 known constraints that a meta-GGA functional can satisfy.</li>
+  <li>The <strong>data-driven</strong> or <strong>semi-empirical</strong> strategy employes a flexible functional form (usually a power series) with undetermined parameters and fits the parameters to accurate reference data, such as CCSD(T) results on small molecules. The most well-known example in this category is perhaps the <strong>Minnesota family</strong>, which consists of nearly 20 highly-parameterized functionals published by the Trular group since 2005. For example, the <a href="https://pubs.rsc.org/en/content/articlelanding/2016/sc/c6sc00705h">MN15</a> functional has a total of 59 fitted parameters.</li>
+</ol>
+
+<p>The distinction between the two “schools” of functional design is not absolute, and many semi-empirical functionals also include parameters that are determined by satisfying known exact constraints. Indeed, many of the most successful “chemists’ xc functionals” are developed this way, including BLYP, B3LYP, and more recently, the “combinatorially optimized” <strong>\(\omega\)B97X</strong> functional. The data-driven nature also renders ML a natural choice for functional design. A recent example of success in this direction is the deep neural network-based <a href="https://www.science.org/doi/10.1126/science.abj6511"><strong>DM21</strong></a> functional developed by DeepMind.</p>
+
+<blockquote>
+  <p>For readers interested in learning DFT more systematically, we recommend <a href="https://dft.uci.edu/learnDFT.php">Burke’s website</a>, which features an introductory textbook titled <a href="https://dft.uci.edu/doc/g1.pdf">The ABC of DFT</a> and an extensive collection of review articles. This compilation also includes resources on time-dependent DFT for excited states, a topic that we have not covered in this article.</p>
+</blockquote>
+
+<hr />
+
+<p><strong>Correlated wavefunction theories</strong>. Different correlated wavefunction theories differ in two ways: (i) how the wavefunction is parameterized (i.e., what the <em>ansatz</em> is), and (ii) how the parameters are determined. The former gives rise to different families of correlated wavefunction methods such as configuration interaction (CI), coupled cluster (CC), quantum Monte Carlo (QMC), and many more. The latter determines if a method is variational or perturbative, or is deterministic or stochastic.</p>
+
+<p><strong>Variational methods: CI, DMRG, and VMC</strong>. The first class of methods we introduce are based on the variational principle that we briefly discussed above. Let \(\Psi(\vec{c})\) depend on some parameters \(\vec{c}\), which makes the energy a function of these parameters as well</p>
+
+\[E(\vec{c}) = \langle\Psi(\vec{c})|H|\Psi(\vec{c})\rangle\]
+
+<p>By variational principle, \(E(\vec{c}) \geq E_0\) (the true ground-state energy) for all \(\vec{c}\), and we can optimize our wavefunction by minimizing its energy</p>
+
+<p>\(\vec{c} \gets \min_{\vec{c}} E(\vec{c})\).</p>
+
+<p>All variational methods share the following two computational advantages.</p>
+
+<ol>
+  <li>The energy is an <em>upper bound</em> of the exact ground-state energy, which can often be used as a means to gauge the quality of a wavefunction form.</li>
+  <li>The energy obeys the <a href="https://en.wikipedia.org/wiki/Hellmann%E2%80%93Feynman_theorem"><em>Hellmann-Feynman theorem</em></a>, which simplifies the calculation of energy derivatives (e.g., atomic forces).</li>
+</ol>
+
+<p>Different variational methods differ by the specific wavefunction <em>ansatze</em> being used.</p>
+
+<p><img src="https://hackmd.io/_uploads/BJTYbFY-6.png" alt="" /></p>
+
+<ul>
+  <li><strong>Full configuration interaction (FCI)</strong>. Recall that we solve the one-electron Schrödinger equation (and the HF equation) by introducing a set of \(K\) basis functions and transforming it into a matrix eigenvalue problem of size \(K^2\). The same approach can be applied to solve an \(N\)-electron Schrödinger equation – if we can find a proper \(N\)-electron basis set! A legitimate choice is all \(K \choose N\) determinants one can obtain by populating the \(K\) HF orbitals with \(N\) electrons. The HF determinant \(\Phi_0\) has the lowest energy and is called the ground-state <em>configuration</em>. Promoting electrons from the HF occupied orbitals to the unoccupied ones leads to excited-state configurations that can be classified as single (S), double (D), triple (T), <em>etc</em>. excitations, based on how many electrons are excited from \(\Phi_0\). The <strong>full configuration interaction (FCI)</strong> wavefunction is a linear combination of all configurations
+\(\Psi_{\mathrm{FCI}}
+  = \sum_{I} c_{I} \Phi_{\mathrm{I}}
+  = c_0 \Phi_0 + c_{\mathrm{S}} \Phi_{\mathrm{S}} + c_{\mathrm{D}} \Phi_{\mathrm{D}} + c_{\mathrm{T}} \Phi_{\mathrm{T}} + \cdots\)
+This transforms the \(N\)-electron Schrödinger equation into a gigantic matrix eigenvalue problem of size \({K \choose N}^2\), solving which results in the <em>exact</em> solution to the \(N\)-electron Schrödinger equation within the chosen one-electron basis set. Since the dimension of the FCI problem \(K \choose N\) grows <em>exponentially</em> with both \(K\) and \(N\), we say that FCI has an exponential computational scaling. In practice, FCI is limited to systems with up to 20 electrons, but nonetheless serves as the absolute reference for benchmarking more approximate methods on small molecules.</li>
+  <li><strong>Truncated CI</strong>. Restricting the FCI expansion to a subset of configurations gives the <em>truncated CI</em> theory, which is the most straightforward approximation to FCI. For example, a CI with singles and doubles (CISD) wavefunction is
+\(\Psi_{\mathrm{CISD}}
+  = \sum_{I} c_{I} \Phi_{\mathrm{I}}
+  = c_0 \Phi_0 + c_{\mathrm{S}} \Phi_{\mathrm{S}} + c_{\mathrm{D}} \Phi_{\mathrm{D}}\)
+Following the same logic, there is a hierarchy of truncated CI methods, CISD (\(N^6\)), CISDT (\(N^8\)), CISDTQ (\(N^{10}\)), and so on, which systematically approaches FCI. However, truncated CI is not commonly used in quantum chemistry these days due to its violation of size-consistency, a point that will become clear below when discussing perturbation theory.</li>
+</ul>
+
+<p align="center">
+  <img width="400" src="https://hackmd.io/_uploads/Skp3zKYbp.png" />
+</p>
+
+<!-- ![](https://hackmd.io/_uploads/Skp3zKYbp.png =400x) -->
+
+<ul>
+  <li><strong>Tensor networks</strong>. An alternative to parameterizing the CI expansion is <em>tensor networks</em>, exemplified by the <strong><a href="https://arxiv.org/pdf/1407.2040.pdf">density matrix renormalization group</a> (DMRG)</strong> method. The tensor networks theory is motivated by the <em><a href="https://en.wikipedia.org/wiki/Second_quantization">second-quantization</a></em> formulation of quantum mechanics, in which the FCI expansion can be written as
+\(\Psi_{\mathrm{FCI}}
+  = \sum_{n_1,n_2,\cdots} C_{n_1n_2\cdots} |n_1,n_2,\cdots\rangle\)
+where \(|n_1,n_2,\cdots\rangle\) is a Slater determinant with \(n_1\) electron(s) in orbital 1, \(n_2\) electron(s) in orbital 2, and so on. Here, the key observation is that the coefficients \(C_{n_1n_2\cdots}\) are elements of a <em>high-dimensional tensor</em>. Similar to how a matrix can possess a low-rank structure that can be exploited using algorithms such as the <a href="https://en.wikipedia.org/wiki/Singular_value_decomposition">singular value decomposition</a> (SVD), higher-dimensional tensors can also be broken down into products of tensors with lower dimensions or ranks, which is why they are termed “tensor networks.” In particular, DMRG employs a <a href="https://tensornetwork.org/mps/">matrix product state</a> (MPS) to approximate the coefficient tensor
+\(C_{n_1n_2n_3\cdots}
+  \approx \sum_{s_1s_2s_3\cdots}^M A_{n_1}^{s_1} A_{n_2}^{s_1s_2} A_{n_3}^{s_2s_3} \cdots\)
+where the \(\mathbf{A}\) tensors are variational parameters. The DMRG wavefunction can be progressively improved to approach FCI by increasing the “bond dimension”, \(M\), which controls the rank of the product tensor. The cost scaling of DMRG is \(O(N^4)\) but the prefactor grows with bond dimension as \(O(M^3)\). Recent implementations have demonstrated the ability to attain FCI-level accuracy for about 80 electrons (see e.g., a recent preprint from <a href="https://arxiv.org/abs/2310.03920">the Chan group</a>). Methods like DMRG thus significantly expand the scope for FCI-like methods.</li>
+  <li><strong>Variational Monte Carlo (VMC)</strong>. A major difficulty preventing one from using an arbitrary wavefunction <em>ansatz</em> in variational optimization is the high computational cost associated with evaluating the energy (and its gradients), which, when written explicitly, is a multi-dimensional integral explicitly</li>
+</ul>
+
+\[E[\Psi]
+    = \frac{\int \mathrm{d} X |\Psi(X)|^2 H(X)}
+    {\int \mathrm{d} X |\Psi(X)|^2}\]
+
+<p><em>Varitional Monte Carlo (VMC)</em> bypasses this curse of dimensionality by using Monte Carlo sampling to stochastically evaluate the needed integrals. As a result, VMC enables using some wavefunction forms that are otherwise inaccessible to direct variational optimization. A commonly used one is the <em>Slater-Jastrow ansatz</em></p>
+
+\[\Psi_{\mathrm{SJ}}(X)
+    = \Phi_0(X) \exp\left[ \sum_{i &lt; j} u_{ij}(x_i,x_j) \right]\]
+
+<p>where the Jastrow correlation factor \(u_{ij}\), being the variational degrees of freedom, explicitly encodes the correlation effect between two electrons. One disadvantage of VMC (and any other stochastic methods) is the inherent statistical error, which can complicate the evaluation of atomic forces and other properties.</p>
+
+<hr />
+
+<p><strong>Perturbation methods: MBPT and CC</strong>. While giving an energy upper bound by variational methods seems an appealing property, in practice what is often more important is <strong>size-consistency</strong>. A method is size-consistent if it predicts the energy of two non-interacting molecules to be the same as the sum of the energies of the two individual molecules, i.e., \(E(A+B) = E(A) + E(B)\). Methods violating size-consistency introduce bias based on system size, resulting in poor performance for e.g., reaction energy calculations. A closely related concept for condensed-phase materials is <strong>size-extensiveness</strong>. A method is size-extensive if the energy scales <em>linearly</em> with system size in the bulk limit, i.e., \(E(N) \propto N\) for \(N \to \infty\). Unfortunately, most variational methods are neither size-consistent nor size-extensive, rendering them unsuitable for simulating chemical reactions or condensed-phase systems in general. An important exception is FCI, which is both variational and size-consistent/extensive for the trivial reason that FCI being the exact solution. Consequently, variational methods are mostly used for generating highly accurate reference results for small molecules (or small <a href="https://chemistry.stackexchange.com/questions/64483/what-are-complete-active-space-methods-and-how-are-such-spaces-defined-for-molec">active space</a> in CAS methods) where one can reliably approach the FCI limit.</p>
+
+<p>The above discussion motivates the introduction of many-body perturbation theory (MBPT) and coupled cluster (CC) theory, both of which are rigorously size-consistent and size-extensive and hence more applicable to large systems.</p>
+
+<ul>
+  <li>
+    <p><strong>Many-body perturbation theory (MBPT)</strong>. For systems where electron correlation is not strong, the HF ground state \(\Phi_0\) dominates the FCI expansion with \(c_0 \sim 1\). The remaining CI coefficients, being small in magnitude, can be determined in a <em>perturbative</em> manner. Mathematically, this is done by separating the Hamiltonian into two parts, \(H = F + V\), where the eigen spectrum of the Fock operator \(F\) is already known (\(\Phi_0, \Phi_{\mathrm{S}}, \Phi_{\mathrm{D}}, \cdots\)). The wavefunction and energy are then expanded as power series of the “fluctuation potential” \(V\) and can be solved for <em>order by order</em>. The leading order correction to the HF energy comes from double excitations and is at second order, resulting in the <strong>MP2</strong> theory (named after its two original developers, <a href="https://en.wikipedia.org/wiki/M%C3%B8ller%E2%80%93Plesset_perturbation_theory">Møller and Plesset</a>). MP2 has been widely used in molecules and more recently in materials for its size-consistency/extensiveness and, perhaps more important, it being the cheapest correlated theories, with a modest \(O(N^5)\) computational scaling. MP2 is the first member of the MP\(n\) series, followed by MP3 (\(N^6\) cost), MP4 (\(N^7\) cost), and so on that include triple excitations and higher-order effects. However, these higher-order perturbation theories are not as commonly used as MP2 due to their slow convergence to FCI or, in some cases, divergence. Additionally, MP3 and higher-order methods share similar cost scalings with more powerful theories like coupled cluster, which we will introduce now.</p>
+  </li>
+  <li>
+    <p><strong>Coupled cluster (CC)</strong>. The CC wavefunction takes an exponential form
+\(\Psi_{\mathrm{CC}}
+  = \mathrm{e}^{T} \Phi_0
+  = \left( 1 + T + \frac{1}{2}T^2 + \cdots \right) \Phi_0\)
+where \(T = T_1 + T_2 + \cdots\) generate single, double, <em>etc</em>. excitations from \(\Phi_0\). It can be shown that when \(T\) is untruncated, the full CC wavefunction is equivalent to FCI and hence exact. In practice, \(T\) is truncated to include only low-level excitations just like truncated CI. For example, \(T = T_1 + T_2\) gives <strong>coupled cluster with singles and doubles (CCSD)</strong>. The cost scaling of CCSD is \(O(N^6)\) and equivalent to MP3 and CISD. However, CCSD has two key advantages that make it the most widely used \(O(N^6)\)-scaling method.</p>
+    <ol>
+      <li>CCSD iteratively determines coefficients for the single (\(T_1\)) and double (\(T_2\)) excitations, encompassing their contributions to an <em>infinite</em> order. This is similar to CISD but much better than MP3, which is only correct up to the second order in double excitations (<em>cf</em>. MP2 is first order in double excitations).</li>
+      <li>The exponential form of the wavefunction generates <em>products</em> of excitations that correspond to <em>disconnected</em> higher-order excitations. For example, the simultaneous excitation of two distant electron pairs is important for electron correlation in large molecules or materials, but being a (disconnected) quadruple excitation means that it requires at least MP4 (\(\geq N^7\) cost) or CISDTQ (\(\geq N^8\) cost). By contrast, CCSD naturally includes this excitation type through the \(T_2^2\) term generated by expanding the exponential, as well as many more disconnected higher-order terms such as \(T_1 T_2\), \(T_1^2 T_2\), \(T_1 T_2^2\), <em>etc</em>.</li>
+    </ol>
+
+    <p>For many chemistry problems where electron correlation is weak, CCSD can be further improved by <em>perturbatively</em> including the triple excitations, leading to one of the most successful correlated wavefunction theories in quantum chemistry, <strong>coupled cluster with singles, doubles, and perturbative triples [CCSD(T)]</strong>. CCSD(T) consistently delivers chemical accuracy for weakly correlated problems and is often dubbed the <strong>quantum chemistry “gold standard”</strong>. The \(O(N^7)\) cost scaling of CCSD(T) limits its application to small molecules of approximately 10 atoms, but various <em>linear-scaling</em> techniques, exemplified by the <em>domain local pair natural orbitals (DLPNO)</em> and <em>local natural orbitals (LNO)</em> approximation, have significantly expanded the scope of CCSD(T) to systems with up to 100 atoms. For example, in <a href="https://arxiv.org/abs/2309.14640">a recent work</a>, Ye and Berkelbach employed a periodic implementation of LNO-CCSD(T) to study water dissociation on TiO2 surfaces.</p>
+  </li>
+</ul>
+
+<blockquote>
+  <p>For readers eager to learn MBPT and the CC theory systematically, especially the powerful diagrammatic tools that simplify the derivation of seemingly complex algebraic expressions, we recommend the textbook by Shavitt and Bartlett, titled <em><a href="https://www.cambridge.org/core/books/manybody-methods-in-chemistry-and-physics/D12027E4DAF75CE8214671D842C6B80C">Many-Body Methods in Chemistry and Physics: MBPT and Coupled-Cluster Theory</a></em>.</p>
+</blockquote>
+
+<h3 id="topics-not-covered-here">Topics not covered here</h3>
+
+<p>The above only serves as an outline for a subset of quantum chemistry methods. Here’s a list of other developments you may find interesting.</p>
+
+<ul>
+  <li><strong>Strongly correlated systems</strong>. The correlated wavefunction theories we’ve discussed are primarily categorized as “<strong>single-reference</strong>” methods, which operate under the assumption \(c_0 \approx 1\) in the FCI expansion, implying that HF already offers a reasonable starting point. Systems satisfying this criterion are often referred to as <strong>weakly correlated</strong>. This includes most closed-shell systems (which lack unpaired electrons) with a sizeable HOMO-LUMO/band gap. Classical examples include many organic molecules and simple insulating solids. On the other hand, <strong>strongly correlated</strong> systems are those where multiple configurations contribute significantly to the FCI wavefunction, meaning that \(c_0 \ll 1\). Such systems typically require <strong>multi-reference</strong> methods for an accurate description. Many single-reference methods have corresponding multi-reference extensions, such as <em>complete active space self-consistent field (CASSCF)</em>, <em>CAS perturbation theory to the second-order (CASPT2)</em>, <em>multi-reference configuration interaction (MRCI)</em>, among others. Strongly correlated systems are often characterized by the presence of unpaired electrons, found in radical molecules and magnetic materials, or by a small energy gap. In this context, DFT behaves more like a mean-field approximation and often fails catastrophically when applied to strongly correlated systems.</li>
+  <li><strong>Excited states</strong>. The discussion above is limited to the electronic ground states. Excited states, being higher-energy solutions to the Schrödinger equation, are crucial for understanding photochemistry and many physical processes in solids, such as excitons and plasmons. Two primary strategies exist for expanding a ground-state theory to simulate excited states. The <em>direct</em> approach involves directly seeking higher-energy solutions to the Schrödinger equation within the same approximation as the ground-state theory. The <em>response</em> approach, on the other hand, describes excited states as the response of the ground state to a time-dependent perturbation. Examples of the former category include ΔSCF (<em>aka</em> <a href="https://pubs.acs.org/doi/10.1021/acs.jpclett.1c00744">orbital-optimized DFT</a> within the KS-DFT framework), state-specific/average CASSCF, while examples of the latter include time-dependent DFT (TDDFT), equation of motion CC (EOM-CC), among others. For an introductory review on excited-state methods, we recommend a 2005 Chemical Review article by <a href="https://doi.org/10.1021/cr0505627">Dreuw and Head-Gordon</a>.</li>
+</ul>
+
+<!-- ### Opportunities for ML x Quantum chemistry -->
+
+<!-- ML part for Chenru to draft  -->
+<h2 id="recent-advances-with-ml-in-quantum-chemistry">Recent advances with ML in quantum chemistry</h2>
+
+<h3 id="bypassing-the-need-to-solve-the-schrödinger-equation">Bypassing the need to solve the Schrödinger equation</h3>
+
+<p>It has been a while <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.108.058301">since 2013</a> that people use machine learning (ML) to predict chemical properties of molecules or the energy and forces for <a href="https://ai4science101.github.io/blogs/molecular_simulation/">molecular dynamics</a>, but these ML model do not really learn the foundamental electronic structures of the molecules and materials from a perspective of solving the Schrödinger equation and alike. However,  there has been a recent surge of development where ML is directly baked in quantum chemistry, such as predicting the electron density, Hamiltonian matrix, and wavefunctions. These models have become increasingly accurate with the widespread of equivariant neural networks, which preserve all the symmetries required for these tensorial foundamental quantum chemistry properties (e.g., <a href="https://github.com/e3nn/e3nn">e3nn</a>).</p>
+
+<p><em>Predicting electron density.-</em> Electron density is a fundamental variable in density functional theory (DFT), from which, in principle, all ground state properties can be derived. Therefore, it is the “to-go” target for chemistry and materials system beyond energy and forces. Well ahead of the rise of equivariant models, <a href="https://pubs.acs.org/doi/10.1021/acscentsci.8b00551">Grisafi et al.</a> built a symmetry-adapted Gaussian process regression (SA-GPR) model to matain the correct symmetries that an ML model needs for electron density prediction. They found that, trained on short alkanes (CH4, C2H6, C3H8, …), SA-GPR can readily generalize to larger alkanes of different conformations. Besides enforcing the ML model to have the correct symmetry, many attemped to encode the symmetry in the molecular representation. For example, <a href="https://www.mdpi.com/2079-4991/13/12/1853">Achar et al.</a> used Smooth Overlap of Atomic Positions (<a href="https://singroup.github.io/dscribe/0.3.x/tutorials/soap.html#:~:text=Smooth%20Overlap%20of%20Atomic%20Positions%20(SOAP)%20is%20a%20descriptor%20that,harmonics%20and%20radial%20basis%20functions.">SOAP</a>) as representation to learn the electron density for both molecular and materials systems. More recently, people have adapted <a href="https://www.nature.com/articles/s41467-020-20471-y">density fitting</a>, a conventional quantum chemistry approach to partition the total electron density to the single-atom basis,</p>
+
+<p>\(\rho(r) = \sum_{\mu, \nu} D_{\mu \nu} \chi_\mu(r) \chi_\nu(r) = \sum_{A,Q} C_A^Q \phi_Q(r-r_A) = \sum_A \rho_A(r)\)
+which projects the original basis functions based electron density (with density matrix \(D_{\mu \nu}\)) to atom-centered auxilliary basis (\(C_A^Q\)). Therefore, with equivariant neural networks, <a href="https://iopscience.iop.org/article/10.1088/2632-2153/acb314">we can directly learn these decomposed tensors</a> from electron density, boosting both the model accuracy and transferability.</p>
+
+<!-- ![](https://hackmd.io/_uploads/ryBbIakeT.png) -->
+
+<center><img src="https://hackmd.io/_uploads/ryBbIakeT.png" width="500" height="500" /></center>
+
+<p><em>Predicting Hamiltonian matrix.-</em> The goal of SCF calculations in DFT (or HF) is to obtain the converged Hamiltonian matrix as the solution of \(H_{DFT} \Psi = E \Psi\) in the non-interacting basis representation. Then almost all electron-related physical quantities in the single-particle picture can be derived, such as charge density, band structure, and physical responses to electromagnetic fields. Compared to electron density, \(H_{DFT}\) is practically more straightforward to derive these property. However, \(H_{DFT}\) is at the size of \(N^2\), where \(N\) is the number of basis function, which is too large to learn. Luckily, one can ultilize the principle of locality in normal chemical system (this assumption breaks down for “quantum matter” that has very strong correlation). Thus, there is no need to study the entire \(H_{DFT}\), but only its sparsed approximation, which then reduce the scaling to O(N). Combined with equivariant model architecture, <a href="https://www.nature.com/articles/s43588-022-00265-6">Li et al.</a> showed that they can learn the Hamiltonian quite accurately, even to a degree that unveils the band structure of bilayer twisted graphene.</p>
+
+<!-- ![](<https://hackmd.io/_uploads/rJtp10kep.png>) -->
+
+<center><img src="https://hackmd.io/_uploads/rJtp10kep.png" width="500" height="500" /></center>
+
+<h3 id="neural-network-as-a-functional-approximator">Neural network as a functional approximator</h3>
+
+<p>Many complication in quantum chemistry boils down to the high-dimentional mapping between a system of study to its electronic structure properties, such as electron density and wavefunction. Therefore, a school of thought is to approximate this underlying mapping when we construct the solution.</p>
+
+<p><em>Neural network as a density functional.-</em> The Kohn–Sham (KS) DFT, in which only the exchange-correlation (xc) energy needs to be approximated as a functional of the density, has greatly improved accuracy while “only” scales to \(O(N^3)\). Due to the approximation in xc functional, there would be errors that are somewhat unpredictable during its application. Once the exact xc was found, however, all ground-state properties would be solved in agreement with FCI at a \(O(N^3)\) cost, which is the dream of quantum chemistry. ML has already helped with functional development. Almost 20 years ago, using <a href="(https://journals.aps.org/prb/abstract/10.1103/PhysRevB.85.235149)">Bayesian inference</a>, a new DFA can be assembled as a linear combination of functional forms with statistically inferred coefficients, accelerating DFA design using known functional forms and alleviating the risk of overfitting during DFA parameterization. ANNs have been used as an ansatz for designing DFAs due to their ability to represent any function. <a href="https://www.nature.com/articles/s41467-017-00839-3">Brockherde et al.</a> developed ML models that directly learn the ground-state density of a system, reducing the computational cost of solving the Kohn–Sham (KS) DFT equations iteratively. By incorporating the KS equations as a regularization term in the loss function and providing feedback to ANNs in each training iteration, <a href="(https://www.nature.com/articles/s41524-020-0310-0)">Nagai et al.</a> and <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.126.036401">Li et al.</a> demonstrated that the ANN functional can be learned with very few training molecules. <a href="https://www.nature.com/articles/s41467-020-19093-1">Kasim et al.</a> recast KS-DFT in a fully differentiable framework, enabling a density functional expressed as an ANN to be optimized with backpropagation, which demonstrated transferability to other small molecules containing elements and bond types not in the training set. Again, with the widespread of open-source packages for equivariant neural networks, people have recently shifted towards including symmetries and exact constraints of the exact xc during learing density functional, with a prominent example as <a href="https://www.science.org/doi/10.1126/science.abj6511">DM21</a>, where the piece-wise linearilty and flat-plane condition were explicitly considered.</p>
+
+<!-- ![](<https://hackmd.io/_uploads/HyvQ1Cgla.png>) -->
+
+<center><img src="https://hackmd.io/_uploads/HyvQ1Cgla.png" width="500" height="500" /></center>
+
+<p><em>Neural network as ansatz in quantum Monte Carlo (QMC).-</em> As a variantional approach, QMC has the great property that for whatever guess wavefunction, the resulting electronic energy will always smaller or equal (if the guess is the true wavefunction) to the ground state energy. Therefore, by <a href="https://www.science.org/doi/10.1126/science.aag2302">modeling wave functions as NNs</a> and using the resulting energy expectation as the loss function, one can employ self-consistently sampling from the square of the wave function with QMC and generates its own data on the fly. This approach has been applied to spin systems on lattices and Hubbard model. By modifying the ansatz to include anti-symmetry constraints, <a href="https://www.nature.com/articles/s41557-020-0544-y">Hermann et al.</a> parameterized a multi-determinant Slater-Jastrow-backflow type wavefunction with NN. By applying the variational principle on this ANN wavefunction ansatz, they showed that the correlation energy can be quickly recovered (ca. 99%) for most of their test systems using very few (i.e., 10) determinants. To date most approaches have only been demonstrated on small systems with paired electrons, where MR WFT calculations can be performed easily. It is imperative to extend these developments to large systems with challenging electronic structure (e.g., metal–organic bonding) in order to impact ML-accelerated discovery of novel materials.</p>
+
+<center><img src="https://hackmd.io/_uploads/SJh2GJWea.png" width="600" height="500" /></center>
+<!-- ![](<https://hackmd.io/_uploads/SJh2GJWea.png>) -->
+
+<h3 id="integrating-ml-models-in-high-throughput-computation">Integrating ML models in high throughput computation</h3>
+
+<p>With the advancement of cloud infrastructure and workflow automation, high throughput computation (HTC), where thousands of jobs are simutaneously run under workflow management instead of one, has been a common tool to generate large databsets for chemical and materials discovery. Despite there are so many quantum chemistry methods out in the market, DFT remains the most accurate method among all that are practical (e.g., force field, semi-emperical) in HTC. However, the accuracy of DFT depends on the choice of density functional. That is where ML can help.</p>
+
+<p><em>Addressing DFT sensitivity.-</em> Density functionals are conventionally selected based on intuition or computational cost, thus introducing bias in data generation and reducing the quality of the data in a way that degrades utility for discovery efforts. To address this challenge, <a href="https://pubs.acs.org/doi/10.1021/acs.jcim.7b00542">McAnanama-Brereton and Waller</a> developed an approach to identify optimal DFA-basis set combinations using game theory. They devised a three-player game addressing accuracy, complexity, and similarity of DFA-basis set combinations and solved the Nash equilibrium to yield the optimal combination. Alternatively, <a href="https://pubs.rsc.org/en/content/articlelanding/2021/SC/D1SC03701C">Duan et al.</a> treated different density functionals as multiple experts, who can sometimes give contradicting suggestions. By requiring consensus among predictions of more than half of the density functionals, they overcame the limitation of the single-functional approach in HTC, producing robust candidate materials in agreement with experiment.</p>
+
+<!-- ![](<https://hackmd.io/_uploads/rkCctgbxT.png>) -->
+
+<center><img src="https://hackmd.io/_uploads/rkCctgbxT.png" width="400" height="400" /></center>
+
+<p><em>Navigating through the zoo of density functional.-</em> The consensus approach mentioned above, though practically useful, would loose the strength of quantum chemistry, where multiple properties can be derived at once (e.g., with electron density). Inspired by modern scheme of recommendation in Spotify and Tiktok, Duan et al. recently developed a <a href="https://www.nature.com/articles/s43588-022-00384-0">density functional recommender</a>, which is native to the current HTC. For every single systems, this density functional recommender recommends a functional that is expected to yield the lowest error compared to the reference (e.g., experiment). Their recommender approach yields a mean absolute error of 2.1 kcal/mol, outperforming the use of any single functional in the HTC for discovering spin-crossover compounds, which are particularly sensitive to the choise of functional. Due to the use of electron density as underlying representation for their models, the recommender is transferable to out-of-distribution experimental data and molecules of completely different coordination chemistry.
+<img src="https://hackmd.io/_uploads/SkmtRl-gT.png" alt="" /></p>
+
+<h2 id="outlook">Outlook</h2>
+
+<p>Quantum chemistry lies in the core of how people understand chemical reactions, which forms the world in which we live. Most of the pain in quantum chemistry can be attributed to the curse of dimensionality, where ML has proven to be useful to address. ML integration in quantum chemistry is a young, yet rising direction, with the potential to uncover the understanding to more complicated and large-scale chemical behavior that are both difficult to simulate in cloud and wet lab. It is an interdisciplinary field that welcomes knowledge and contribution from chemistry, physics, computer science, applied math, and more. It also welcomes you.</p>
+
+</div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+        <!-- <footer class="footer">
+    <div class="container">
+        
+        <div class="columns is-mobile">
+            <div class="column is-8 has-text-left is-vcentered">
+                <a class="navbar-brand" href="/">
+                    <span><img src="/tdc_horizontal.png" alt="Logo" style="max-height: 40px; max-width: 250px;"></span>
+                </a>
+            </div>
+            <div class="column is-4 has-text-right is-vcentered">
+                <a href="https://arxiv.org/abs/2102.09548">
+                    <span class="icon is-large">
+                      <i class="fas fa-file-alt fa-3x"></i>
+                    </span>
+                </a>
+
+                <a href="https://github.com/mims-harvard/TDC">
+                    <span class="icon is-large">
+                      <i class="fas fab fa-github fa-3x"></i>
+                    </span>
+                </a>
+
+                <a href="https://twitter.com/ProjectTDC">
+                    <span class="icon is-large">
+                      <i class="fas fab fa-twitter fa-3x"></i>
+                    </span>
+                </a>
+
+                <a href="https://join.slack.com/t/pytdc/shared_invite/zt-x0ujg5v6-zwtQZt83fhRdgrYjXRFz5g">
+                    <span class="icon is-large">
+                      <i class="fas fab fa-slack fa-3x"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+        
+    </div>
+</footer> -->
+    
+    <script src="/assets/js/app.js" type="text/javascript"></script><!-- footer scripts --></body>
+</html>
+
